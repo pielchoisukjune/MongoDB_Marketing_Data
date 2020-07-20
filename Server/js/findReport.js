@@ -85,14 +85,14 @@ var deleteLines = function( str, n ){
 var paramToObject = function( url ){
 	
 	var r =  url.split("?")[ 1 ];
-	var a = r.split("=");
+	var a = r.split("&");
 	var o = {};
 	var i = 0,iLen = a.length,io;
 	
 	for(;i<iLen;++i){
 		io = a[ i ];
-		if( i % 2 == 0 ) o[ io ] = "";
-		else o[ a[ i - 1] ] = io;
+		var _ta = io.split( "=" );
+		o[ io[0] ] = io[ 1 ];
 	}
 
 	return o;
