@@ -144,6 +144,11 @@ var paramToObject = function( url ){
 		if( fs.existsSync( FILE_PATH ) )
 		{
 			console.log( routerNm + " - Exec Query - " + paramsO.dbjs + ".dbjs - " + Date.now() );
+			res.headers = {
+				"Access-Control-Allow-Headers" : "*",
+				"Access-Control-Allow-Origin": "*",
+				"Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+			}
 			res.end( exec_query_DB( paramsO.dbjs ) )	
 		}
 		else
