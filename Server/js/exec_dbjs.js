@@ -152,7 +152,7 @@ var paramToObject = function( url ){
 			}
 			var r = exec_query_DB( paramsO.dbjs )
 			console.log( "data : " +  r );
-			res.send( r )	
+			res.end( r )	
 		}
 		else
 		{
