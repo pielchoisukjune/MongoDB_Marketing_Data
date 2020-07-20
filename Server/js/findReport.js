@@ -137,38 +137,35 @@ var paramToObject = function( url ){
 		
 		var routerNm = req.url.split("?")[0];
 		var paramsO = paramToObject( req.url );
-		var _tdbjs_nm = "find_report_by_month"
-		console.log( routerNm + " - Exec Query - " + paramsO.dbjs + ".dbjs - " + Date.now() );
-		res.statusCode = 200;
-		res.setHeader( "Access-Control-Allow-Headers", "Content-Type" )
-		res.setHeader( "Access-Control-Allow-Origin", "*" )
-		res.setHeader( "Access-Control-Allow-Methods", "OPTIONS,POST,GET" )
-		console.log( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ); 
-		var _tQuery = fs.readFileSync( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ).toString();
-		console.log( _tQuery )
-		var query = _tQuery.replace( "<!=BRAND_NM=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
+		var _tdbjs_nm = "find_report_by_month";
 		
+		res.statusCode = 200;
+		res.setHeader( "Access-Control-Allow-Headers", "Content-Type" );
+		res.setHeader( "Access-Control-Allow-Origin", "*" );
+		res.setHeader( "Access-Control-Allow-Methods", "OPTIONS,POST,GET" );
+		console.log( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ); 
+		
+		try
+		{
+			var _tQuery = fs.readFileSync( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ).toString();
+		}
+		catch( err )
+		{
+			console.log( routerNm + " - DBJS File Not Found! - " + err );
+			res.end("{ sucess : 0, data : null }");
+		}
+		
+		var query = _tQuery.replace( "<!=BRAND_NM=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
 		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.month + ".dbjs";
 
 		var FILE_PATH = DBJS_DIRECTORY_PATH + dbjs_nm;
+		
 		console.log( FILE_PATH )
+
 		fs.writeFileSync( DBJS_DIRECTORY_PATH + dbjs_nm , query, { flag : "w" } );
 
-		if( fs.existsSync( FILE_PATH ) )
-		{
-			var r = exec_query_DB( dbjs_nm )
-			res.end( r )	
-		}
-		else
-		{
-			
-			var r = exec_query_DB( dbjs_nm )
-			res.end( r )	
-
-//			console.log( routerNm + " - DBJS File Not Found! - " + paramsO.dbjs + ".dbjs - " + Date.now() );
-//			res.end( "DBJS File Not Found!" )
-		}
-		
+		var r = exec_query_DB( dbjs_nm )
+		res.end( r )	
 
 	});
 })();
