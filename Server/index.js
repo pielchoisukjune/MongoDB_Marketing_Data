@@ -97,7 +97,7 @@ global.server = http.createServer(function(req, res){
 	}
 	else
 	{
-		var filePath = '.' + request.url;
+		var filePath = '.' + req.url;
 		var extname = path.extname(filePath);
 		var contentType = 'text/html';
 			switch (extname) {
