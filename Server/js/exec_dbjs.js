@@ -150,7 +150,7 @@ var paramToObject = function( url ){
 				"Access-Control-Allow-Origin": "*",
 				"Access-Control-Allow-Methods": "OPTIONS,POST,GET"
 			}
-			res.end( exec_query_DB( paramsO.dbjs ) )	
+			res.send( exec_query_DB( paramsO.dbjs ) )	
 		}
 		else
 		{
