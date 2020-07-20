@@ -155,7 +155,7 @@ var paramToObject = function( url ){
 			res.end("{ sucess : 0, data : null }");
 		}
 		
-		var query = _tQuery.replace( "<!=BRAND_NM=!>", paramsO.brand )
+		var query = _tQuery.replace( "<!=BRAND_NM=!>", paramsO.brand ).replace( "<!=TARGET_DATE=!>", paramsO.date )
 		var dbjs_nm = "find_planning_by_brand_" + paramsO.brand + ".dbjs";
 
 		var FILE_PATH = DBJS_DIRECTORY_PATH + dbjs_nm;
