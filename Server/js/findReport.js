@@ -19,7 +19,7 @@ var CP_COMMAND = {};
 	CP_COMMAND.MONGO = "mongo";
 
 var DBJS_DIRECTORY_PATH = ROOT_PATH + "/../dbjs/";
-var _tDbjs_PATH = "/../tdbjs/";
+var _tDbjs_PATH = ROOT_PATH + "/../tdbjs/";
 //-------------------------------------------------------;
 // FUNCTION;
 //-------------------------------------------------------;
