@@ -144,7 +144,7 @@ var paramToObject = function( url ){
 		res.setHeader( "Access-Control-Allow-Origin", "*" )
 		res.setHeader( "Access-Control-Allow-Methods", "OPTIONS,POST,GET" )
 		console.log( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ); 
-		var _tQuery = fs.readFileSync( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" );
+		var _tQuery = fs.readFileSync( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ).toString();
 		console.log( _tQuery )
 		var query = _tQuery.replace( "<!=BRAND=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
 		
