@@ -140,7 +140,7 @@ var paramToObject = function( url ){
 
 		var DBJS_NM = paramsO.dbjs + ".dbjs";
 		var FILE_PATH = DBJS_DIRECTORY_PATH + DBJS_NM;
-
+		console.log( FILE_PATH )
 		if( fs.existsSync( FILE_PATH ) )
 		{
 			console.log( routerNm + " - Exec Query - " + paramsO.dbjs + ".dbjs - " + Date.now() );
