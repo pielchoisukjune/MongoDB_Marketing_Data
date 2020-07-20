@@ -48,7 +48,7 @@ var exec_query_DB = function( dbjsNm, bResult ){
 		.replace( "<!=HOST=!>", global.CONST.MongoDB.OPTIONS.self.HOST )
 		.replace( "<!=PORT=!>", global.CONST.MongoDB.OPTIONS.self.PORT )
 		.replace( "<!=FILE_PATH=!>", FILE_PATH );
-
+	console.log( command )
 	var r = cp.execSync( command ).toString();
 		r = deleteLines( r , 4 )
 	return r;
@@ -149,7 +149,6 @@ var paramToObject = function( url ){
 		var query = _tQuery.replace( "<!=BRAND=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
 		
 		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.month + ".dbjs";
-		fs.writeFileSync( DBJS_DIRECTORY_PATH + dbjs_nm , query, { flag : "w" } );
 
 		var FILE_PATH = DBJS_DIRECTORY_PATH + dbjs_nm;
 		console.log( FILE_PATH )
@@ -161,8 +160,12 @@ var paramToObject = function( url ){
 		}
 		else
 		{
-			console.log( routerNm + " - DBJS File Not Found! - " + paramsO.dbjs + ".dbjs - " + Date.now() );
-			res.end( "DBJS File Not Found!" )
+			fs.writeFileSync( DBJS_DIRECTORY_PATH + dbjs_nm , query, { flag : "w" } );
+			var r = exec_query_DB( dbjs_nm )
+			res.end( r )	
+
+//			console.log( routerNm + " - DBJS File Not Found! - " + paramsO.dbjs + ".dbjs - " + Date.now() );
+//			res.end( "DBJS File Not Found!" )
 		}
 		
 
