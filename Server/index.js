@@ -131,15 +131,15 @@ global.server = http.createServer(function(req, res){
 				}
 				else
 				{
-					response.writeHead(500);
-					response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
-					response.end(); 
+					res.writeHead(500);
+					res.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
+					res.end(); 
 				}
 			}
 			else
 			{
-				response.writeHead(200, { 'Content-Type': contentType });
-				response.end(content, 'utf-8');
+				res.writeHead(200, { 'Content-Type': contentType });
+				res.end(content, 'utf-8');
 			}
 		});
 	}
