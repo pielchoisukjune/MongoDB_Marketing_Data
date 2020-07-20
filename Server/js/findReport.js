@@ -146,7 +146,7 @@ var paramToObject = function( url ){
 		console.log( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ); 
 		var _tQuery = fs.readFileSync( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ).toString();
 		console.log( _tQuery )
-		var query = _tQuery.replace( "<!=BRAND=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
+		var query = _tQuery.replace( "<!=BRAND_NM=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
 		
 		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.month + ".dbjs";
 
