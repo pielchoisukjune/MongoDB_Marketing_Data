@@ -100,28 +100,18 @@ global.server = http.createServer(function(req, res){
 		var filePath = '.' + req.url.split("?")[0];
 		console.log( filePath );
 		var extname = path.extname(filePath);
-		var contentType = 'text/html';
-			switch (extname) {
-			case '.js':
-			contentType = 'text/javascript';
-			break;
-			case '.css':
-			contentType = 'text/css';
-			break;
-			case '.json':
-			contentType = 'application/json';
-			break;
-			case '.png':
-			contentType = 'image/png';
-			break;      
-			case '.jpg':
-			contentType = 'image/jpg';
-			break;
-			case '.wav':
-			contentType = 'audio/wav';
-			break;
-		}
-
+		
+		_oContentTypes = {
+			'.html' : "text/html"
+			, '.js' : 'text/javascript'
+			, '.css' : 'text/css'
+			, '.json' : 'application/json'
+			, '.png' : 'image/png'
+			, '.jpg' : 'image/jpg'
+			, '.wav' : 'audio/wav'
+		};
+		var contentType = _oContentTypes[ extname ];
+		
 		fs.readFile(filePath, function(error, content) {
 			if(error)
 			{
@@ -139,6 +129,7 @@ global.server = http.createServer(function(req, res){
 			}
 			else
 			{
+				
 				res.writeHead(200, { 'Content-Type': contentType });
 				res.end(content, 'utf-8');
 			}
