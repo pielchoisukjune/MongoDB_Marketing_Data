@@ -37,7 +37,7 @@ var _tDbjs_PATH = ROOT_PATH + "/../tdbjs/";
  */
 var exec_query_DB = function( dbjsNm, bResult ){
 	
-	var DBJS_NM = dbjsNm + ".dbjs";
+	var DBJS_NM = dbjsNm;
 	var FILE_PATH = DBJS_DIRECTORY_PATH + DBJS_NM;
 
 	var _t_command = CP_COMMAND.MONGO + " --username <!=ID=!> --password <!=PWD=!> --authenticationDatabase admin --host <!=HOST=!> --port <!=PORT=!> admin <!=FILE_PATH=!>";
@@ -148,7 +148,7 @@ var paramToObject = function( url ){
 		console.log( _tQuery )
 		var query = _tQuery.replace( "<!=BRAND=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
 		
-		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.month;
+		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.month + ".dbjs";
 		fs.writeFileSync( DBJS_DIRECTORY_PATH + dbjs_nm , query, { flag : "w" } );
 
 		var FILE_PATH = DBJS_DIRECTORY_PATH + dbjs_nm;
