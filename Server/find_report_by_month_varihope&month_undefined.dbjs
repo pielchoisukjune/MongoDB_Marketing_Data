@@ -1,0 +1,9 @@
+var brand_nm = "<!=BRAND_NM=!>";
+var target_month = undefined;
+
+var db0 = db.getSiblingDB("Report");
+var col0 = db0.getCollection( brand_nm );
+
+col0.findOne({ _id : target_month });
+
+printjson( a )
