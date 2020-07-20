@@ -92,7 +92,7 @@ var paramToObject = function( url ){
 	for(;i<iLen;++i){
 		io = a[ i ];
 		var _ta = io.split( "=" );
-		o[ io[0] ] = io[ 1 ];
+		o[ _ta[0] ] = _ta[ 1 ];
 	}
 	console.log( o )
 	return o;
