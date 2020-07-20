@@ -51,7 +51,7 @@ global.CONST.MongoDB.OPTIONS = {
 var CWD = global.process.cwd();
 var server_port = 8888;
 
-var ROUTER_DIRECTORY_PATH = CWD + "\\js\\";
+var ROUTER_DIRECTORY_PATH = CWD + "/js/";
 
 //router등록을 한다.
 (function(){
