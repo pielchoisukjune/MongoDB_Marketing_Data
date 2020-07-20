@@ -137,14 +137,14 @@ var paramToObject = function( url ){
 		
 		var routerNm = req.url.split("?")[0];
 		var paramsO = paramToObject( req.url );
-
+		var _tdbjs_nm = "find_report_by_month"
 		console.log( routerNm + " - Exec Query - " + paramsO.dbjs + ".dbjs - " + Date.now() );
 		res.statusCode = 200;
 		res.setHeader( "Access-Control-Allow-Headers", "Content-Type" )
 		res.setHeader( "Access-Control-Allow-Origin", "*" )
 		res.setHeader( "Access-Control-Allow-Methods", "OPTIONS,POST,GET" )
 
-		var _tQuery = fs.readFileSync( _tDbjs_PATH + "find_report_by_month.tdbjs" );
+		var _tQuery = fs.readFileSync( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" );
 		var query = _tQuery.replace( "<!=BRAND=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
 		
 		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.month + ".dbjs";
