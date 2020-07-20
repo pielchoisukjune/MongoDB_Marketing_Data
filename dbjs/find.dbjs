@@ -1,8 +1,8 @@
-var db0 = db.getSiblingDB("test");
-var col0 = db0.getCollection( "col0" );
+var db0 = db.getSiblingDB("Report");
+var col0 = db0.getCollection( "varihope" );
 
 var a = [];
-col0.find({}).forEach(function(d){
+col0.find({ _id : 6 }).forEach(function(d){
 	a.push( d );
 });
 

@@ -101,7 +101,7 @@ global.server = http.createServer(function(req, res){
 		console.log( filePath );
 		var extname = path.extname(filePath);
 		
-		_oContentTypes = {
+		var _oContentTypes = {
 			'.html' : "text/html"
 			, '.js' : 'text/javascript'
 			, '.css' : 'text/css'
