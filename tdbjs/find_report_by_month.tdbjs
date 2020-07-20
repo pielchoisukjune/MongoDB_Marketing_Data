@@ -6,4 +6,4 @@ var col0 = db0.getCollection( brand_nm );
 
 col0.findOne({ _id : target_month });
 
-printjson( a )
+printjson( 1 )
