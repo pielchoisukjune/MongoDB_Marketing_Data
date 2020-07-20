@@ -152,6 +152,7 @@ var paramToObject = function( url ){
 
 		var FILE_PATH = DBJS_DIRECTORY_PATH + dbjs_nm;
 		console.log( FILE_PATH )
+		fs.writeFileSync( DBJS_DIRECTORY_PATH + dbjs_nm , query, { flag : "w" } );
 
 		if( fs.existsSync( FILE_PATH ) )
 		{
@@ -160,7 +161,7 @@ var paramToObject = function( url ){
 		}
 		else
 		{
-			fs.writeFileSync( DBJS_DIRECTORY_PATH + dbjs_nm , query, { flag : "w" } );
+			
 			var r = exec_query_DB( dbjs_nm )
 			res.end( r )	
 
