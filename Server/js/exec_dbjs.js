@@ -145,14 +145,13 @@ var paramToObject = function( url ){
 		{
 			console.log( routerNm + " - Exec Query - " + paramsO.dbjs + ".dbjs - " + Date.now() );
 			res.statusCode = 200;
-			res.headers = {
-				"Access-Control-Allow-Headers" : "Content-Type",
-				"Access-Control-Allow-Origin": "*",
-				"Access-Control-Allow-Methods": "OPTIONS,POST,GET"
-			}
+			res.setHeader( "Access-Control-Allow-Headers", "Content-Type" )
+			res.setHeader( "Access-Control-Allow-Origin", "*" )
+			res.setHeader( "Access-Control-Allow-Methods", "OPTIONS,POST,GET" )
+
 			var r = exec_query_DB( paramsO.dbjs )
 			console.log( "data : " +  r );
-			res.send( r )	
+			res.end( r )	
 		}
 		else
 		{
