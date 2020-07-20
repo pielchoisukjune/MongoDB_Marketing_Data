@@ -4,6 +4,6 @@ var target_month = <!=TARGET_MONTH=!>;
 var db0 = db.getSiblingDB("Report");
 var col0 = db0.getCollection( brand_nm );
 
-col0.findOne({ _id : target_month });
+var r = col0.findOne({ _id : target_month });
 
-printjson( 1 )
+printjson( r )
