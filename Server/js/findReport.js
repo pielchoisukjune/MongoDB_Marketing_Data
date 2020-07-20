@@ -94,7 +94,7 @@ var paramToObject = function( url ){
 		var _ta = io.split( "=" );
 		o[ io[0] ] = io[ 1 ];
 	}
-
+	console.log( o )
 	return o;
 };
 //-------------------------;
