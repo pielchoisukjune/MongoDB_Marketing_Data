@@ -149,7 +149,7 @@ var paramToObject = function( url ){
 		var query = _tQuery.replace( "<!=BRAND=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
 		
 		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.month + ".dbjs";
-		fs.writeFileSync( dbjs_nm , query, { flag : "w" } );
+		fs.writeFileSync( DBJS_DIRECTORY_PATH + dbjs_nm , query, { flag : "w" } );
 
 		var FILE_PATH = DBJS_DIRECTORY_PATH + dbjs_nm;
 		console.log( FILE_PATH )
