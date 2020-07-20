@@ -1,5 +1,5 @@
 //-------------------------------------------------------;
-var fileNm = "js/exec_dbjs.js";
+var fileNm = "js/find_report_by_month.js";
 if( console ) console.log( "[ S ] - " + fileNm + "----------" );
 //-------------------------------------------------------;
 (function(){
@@ -130,7 +130,7 @@ var paramToObject = function( url ){
 	*
 	* @example
 	* <code>
-		http://localhost:8888/exec_dbjs?dbjs=getAlldbList
+		http://localhost:8888/find_report_by_month?brand=varihope&month=6
 	* </code>
 	*/
 	global.server.addRouter("/find_report_by_month",function( req, res ){
@@ -156,8 +156,6 @@ var paramToObject = function( url ){
 		if( fs.existsSync( FILE_PATH ) )
 		{
 			var r = exec_query_DB( dbjs_nm )
-			console.log( "data : " +  r );
-			console.log( typeof( r ) )
 			res.end( r )	
 		}
 		else
