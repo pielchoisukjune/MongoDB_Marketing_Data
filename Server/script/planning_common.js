@@ -1088,7 +1088,7 @@
 		var _idx = 0;
 		for( s in _to ){
 			so = _to[ s ];
-			if( _idx == 0 ){
+			if( _idx == 0 && s != "" ){
 				r += '<p style="text-align: center;"><span style="font-size: 14px; color: rgb(255, 255, 255);">' + s + '</span></p>';
 				r += '<p style="text-align: center;"><span style="color: rgb(255, 255, 255);"><span style="font-size: 20px;"><s>' + so + '</s></span></span></p>';
 				r += '<p style="text-align: center;"><br></p>';

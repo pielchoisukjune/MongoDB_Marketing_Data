@@ -6,7 +6,6 @@
 			console.log( " Start - window.PIEL" )
 	window.PIEL = {};
 	window.PIEL.REPORT= {};
-	window.PIEL.REPORT.FUNCS = {};
 
 	window.PIEL.REPORT.thumnail_icon = {
 		"뷰티유튜버" : "red youtube"
