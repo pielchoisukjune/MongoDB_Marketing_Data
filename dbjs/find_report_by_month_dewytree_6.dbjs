@@ -1,4 +1,4 @@
-var brand_nm = "varihope";
+var brand_nm = "dewytree";
 var target_month = 6;
 
 var db0 = db.getSiblingDB("Report");
