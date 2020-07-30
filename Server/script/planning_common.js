@@ -697,7 +697,7 @@
 			}
 
 
-			if( io[ "이미지" ].indexOf( "<iframe class='ifr_thumb'" ) != -1 )
+			if( io[ "이미지" ].indexOf( "<iframe" ) != -1 )
 			{
 				//iframe_url = iframe.replace( "<!=FB_URL=!>", io[ "해당링크" ] )
 				iframe_url = io[ "이미지" ];
@@ -836,7 +836,7 @@
 			}
 
 
-			if( io[ "이미지" ].indexOf( "<iframe class='ifr_thumb'" ) != -1 )
+			if( io[ "이미지" ].indexOf( "<iframe" ) != -1 )
 			{
 				//iframe_url = iframe.replace( "<!=FB_URL=!>", io[ "해당링크" ] )
 				iframe_url = io[ "이미지" ];
