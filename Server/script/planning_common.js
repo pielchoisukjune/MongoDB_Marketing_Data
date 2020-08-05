@@ -1118,4 +1118,19 @@
 	  n = n + '';
 	  return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
 	}
+	
+	/*
+	 *
+	 */
+	window.PIEL.PLANNING.pramsToObject = function( url ){
+		var b = a.split( "?" )[1].split( "&" );
+		var r = {};
+		var i = 0,iLen = b.length,io;
+		for(;i<iLen;++i){
+			io = b[ i ].split( "=" );
+			r[ io[ 0 ] ] = io[ 1 ];
+		}
+		console.log( r )
+		return r
+	}
 })()
