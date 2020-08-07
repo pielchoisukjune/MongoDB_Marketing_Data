@@ -640,7 +640,7 @@
 			
 			<div style=""><!=THUMNAIL_CONTENTS=!></div>
 			<br>
-			<div style="height:500px;"><!=IFRAME_CONTENTS=!></div>
+			<!=IFRAME_CONTENTS=!>
 					
 			<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
 			<div class="icon_cate">
