@@ -638,10 +638,12 @@
 		var _tStr = `
 		<div class="four wide column">
 			
-			<div style=""><!=THUMNAIL_CONTENTS=!></div>
+			<!=THUMNAIL_CONTENTS=!>
 			<br>
 			<!=IFRAME_CONTENTS=!>
 					
+			<div class="ui divider"></div>
+
 			<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
 			<div class="icon_cate">
 				<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
@@ -717,7 +719,7 @@
 		var share_col = '<tr><td><span class="font12px"><i class="share alternate icon"></i>Share</span></td><td><span class="font12px"><!=CNT_SHARE=!></span></td></tr>';
 		var update_col = '<tr><td><span class="font12px"><i class="calendar alternate alternate icon"></i>Update Date</span></td><td><span class="font12px"><!=DATE=!></span></td></tr>';
 
-		var thumb = `<img class="ads_list_thumb" src="<!=THUMBNAIL=!>" style='width:100%;height : 100%;'></img>`;
+		var thumb = `<div style=""><img class="ads_list_thumb" src="<!=THUMBNAIL=!>" style='width:100%;height : 100%;'></img></div>`;
 		var iframe = `<iframe src="https://www.facebook.com/plugins/video.php?height=266&href=<!=FB_URL=!>&show_text=0"  height="266" style="border:none;overflow:hidden;min-height:266px;" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>`;
 
 		for(;i<iLen;i++){
