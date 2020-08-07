@@ -639,11 +639,10 @@
 		<div class="card">
 			<div class="image">
 				<!=THUMNAIL_CONTENTS=!>
+				<!=IFRAME_CONTENTS=!>
 			</div>
 			<div class="content">
-				<div>
-					<!=IFRAME_CONTENTS=!>
-				</div>
+					
 				<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
 				<div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;'>
 					<br>
