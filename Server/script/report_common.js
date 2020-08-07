@@ -638,7 +638,7 @@
 		var _tStr = `
 		<div class="four wide column">
 			
-			<div style="min-height:400px;"><!=THUMNAIL_CONTENTS=!></div>
+			<div style=""><!=THUMNAIL_CONTENTS=!></div>
 			<br>
 			<!=IFRAME_CONTENTS=!>
 					
