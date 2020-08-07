@@ -639,8 +639,8 @@
 		<div class="card">
 			<div class="image">
 				<!=THUMNAIL_CONTENTS=!>
-				<!=IFRAME_CONTENTS=!>
 			</div>
+			<!=IFRAME_CONTENTS=!>
 			<div class="content">
 					
 				<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
