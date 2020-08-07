@@ -639,7 +639,6 @@
 		<div class="four wide column">
 			
 			<!=THUMNAIL_CONTENTS=!>
-			<br>
 			<!=IFRAME_CONTENTS=!>
 					
 			<div class="ui divider"></div>
