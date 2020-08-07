@@ -640,8 +640,8 @@
 			<div class="image">
 				<!=THUMNAIL_CONTENTS=!>
 			</div>
+			<!=IFRAME_CONTENTS=!>
 			<div class="content">
-				<!=IFRAME_CONTENTS=!>
 				<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
 				<div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;'>
 					<br>
