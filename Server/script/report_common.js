@@ -636,42 +636,76 @@
 	window.PIEL.REPORT.make_marketing_list_html = function( arr ){
 		
 		var _tStr = `
-		<div class="card">
-			<div class="image">
-				<!=THUMNAIL_CONTENTS=!>
-			</div>
+		<div class="four wide column">;
+			
+			<!=THUMNAIL_CONTENTS=!>
+			<br>
 			<!=IFRAME_CONTENTS=!>
-			<div class="content">
 					
-				<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
-				<div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;'>
-					<br>
-					<div class="icon_cate">
-						<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
-					</div>
-				</div>
-				<div class="ui divider"></div>
-				<div class="description">
-					<span><!=COMMENT=!></span>
-					<table class="ui very compact full-width celled table" style="font-size:11px;">
-						<tbody>
-							<!=CNT_VIEW=!>
-							<!=CNT_CLICK=!>
-							<!=CNT_COMMENT=!>
-							<!=CNT_LIKE=!>
-							<!=CNT_SHARE=!>
-							<!=DATE=!>
-						</tbody>
-					</table>
-				</div>
+			<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
+			<div class="icon_cate">
+				<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
 			</div>
-			<div class="extra content">
-				<span class="right floated"></span>
-				<span><a href="<!=LINK=!>" target="_blank"><button class="mini ui button">바로가기</button></a></span>
-			</div>
+			
+			<div class="ui divider"></div>
+			
+			<span><!=COMMENT=!></span>
+			<table class="ui very compact full-width celled table" style="font-size:11px;">
+				<tbody>
+					<!=CNT_VIEW=!>
+					<!=CNT_CLICK=!>
+					<!=CNT_COMMENT=!>
+					<!=CNT_LIKE=!>
+					<!=CNT_SHARE=!>
+					<!=DATE=!>
+				</tbody>
+			</table>
+				
+			
+			
+			<span class="right floated"></span>
+			<span><a href="<!=LINK=!>" target="_blank"><button class="mini ui button">바로가기</button></a></span>
+			
 		</div>
 		`;
 		
+//		var _tStr = `
+//		<div class="card">
+//			<div class="image">
+//				<!=THUMNAIL_CONTENTS=!>
+//			</div>
+//			<!=IFRAME_CONTENTS=!>
+//			<div class="content">
+//					
+//				<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
+//				<div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;'>
+//					<br>
+//					<div class="icon_cate">
+//						<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
+//					</div>
+//				</div>
+//				<div class="ui divider"></div>
+//				<div class="description">
+//					<span><!=COMMENT=!></span>
+//					<table class="ui very compact full-width celled table" style="font-size:11px;">
+//						<tbody>
+//							<!=CNT_VIEW=!>
+//							<!=CNT_CLICK=!>
+//							<!=CNT_COMMENT=!>
+//							<!=CNT_LIKE=!>
+//							<!=CNT_SHARE=!>
+//							<!=DATE=!>
+//						</tbody>
+//					</table>
+//				</div>
+//			</div>
+//			<div class="extra content">
+//				<span class="right floated"></span>
+//				<span><a href="<!=LINK=!>" target="_blank"><button class="mini ui button">바로가기</button></a></span>
+//			</div>
+//		</div>
+//		`;
+
 		var i = 0,iLen = arr.length,io;
 		var r = "";
 		var _html;
@@ -757,11 +791,11 @@
 			so = data[ s ];
 			var _html = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
 				_html += '<div class="ui grid">';
-				_html += '<div class="sixteen wide column">';
-				_html += '<div class="ui four stackable cards">';
+//				_html += '<div class="sixteen wide column">';
+//				_html += '<div class="ui four stackable cards">';
 				_html += window.PIEL.REPORT.make_marketing_list_html( so )
-				_html += '</div>';
-				_html += '</div>';
+//				_html += '</div>';
+//				_html += '</div>';
 				_html += '</div>';
 				r += _html;
 		}
