@@ -444,50 +444,66 @@
 	window.PIEL.REPORT.drawTable__make_statistic_google_html = function( domId, o0, o1,  target_month ){
 
 		var tDom = window.document.getElementById( domId );
-		var _tStr = `<table class="ui very compact celled table"><thead><!=TABLE_HEAD=!></thead><tbody><!=TABLE_BODY=!></tbody></table>`;	
+
+		var _tStr = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
+			_tStr += '<div class="ui grid">';
+			_tStr += '<div class="sixteen wide column">';
+			_tStr += '<div class="ui four stackable cards">';
+			_tStr += '<!=CONTENTS=!>'
+			_tStr += '</div>';
+			_tStr += '</div>';
+			_tStr += '</div>';
+
+		var _tStr00 = `
+		<div class="card">
+			<div class="content">
+				<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
+				<div class="description">
+					<span><!=COMMENT=!></span>
+					<span><!=KEYWORD=!></span>
+					<table class="ui very compact full-width celled table" style="font-size:11px;">
+						<tbody>
+							<!=CNT_VIEW=!>
+							<!=CNT_CLICK=!>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		`;
+
 		if( !tDom ) return;
 
-		var _html0 = "";
-		var _html1 = "";
+		var view_col = '<tr><td><span class="font12px"><i class="eye icon"></i>View</span></td><td><span class="font12px"><!=CNT_VIEW=!></span></td></tr>';
+		var click_col = '<tr><td><span class="font12px"><i class="hand point down outline icon"></i>Click</span></td><td><span class="font12px"><!=CNT_CLICK=!></span><br></td></tr>';
+	//	var comment_col = '<tr><td><span class="font12px"><i class="comment icon"></i>Comment</span></td><td><span class="font12px"><!=CNT_COMMENT=!></span></td></tr>';
+	//	var like_col = '<tr><td><span class="font12px"><i class="heart icon"></i>Like</span></td><td><span class="font12px"><!=CNT_LIKE=!></span></td></tr>';
+	//	var share_col = '<tr><td><span class="font12px"><i class="share alternate icon"></i>Share</span></td><td><span class="font12px"><!=CNT_SHARE=!></span></td></tr>';
+	//	var update_col = '<tr><td><span class="font12px"><i class="calendar alternate alternate icon"></i>Update Date</span></td><td><span class="font12px"><!=DATE=!></span></td></tr>';
+
+
 		var r = "";
 		var s,so;
 		var i = 0;
 		var _bg_check = -1;
-		_html0 += "<tr>"
+
 		for( s in o0 ){
 			so = o0[ s ];
-				
-				var k,ko;
-				_html1 += "<tr>"
 
-				for( k in so ){
-					ko = so[ k ]
-					if( i == 0 )
-					{
-						if( k != "월" ) _html0 += "<th style='width:20%;font-weight: 400;font-size: 12px;'>" + k + "</th>\n";
-					}
-					if( k == "키워드") var value = ko.replace(/\n/g,"<br>");
-					else var value = ko;
+			var _click_col = "";
+			var _view_col = "";
 
-					if( k != "월" )
-					{
-						_html1 += "<td style='font-size:11px;'>" + value + "</td>\n";
-
-					}
-
-				}
-				_html1 += "<td style='font-size:11px;'>" + o1[ s ][ "노출수" ] + "</td>\n";
-				_html1 += "<td style='font-size:11px;'>" + o1[ s ][ "클릭수" ] + "</td>\n";
-				_html1 += "</tr>\n"
-				
-			++i;
+			if( so[ "노출" ] ) _view_col = update_col.replace( "<!=CNT_VIEW=!>", window.PIEL.REPORT.numberWithCommas( so[ "노출" ] ) );
+			if( so[ "클릭" ] ) _click_col = view_col.replace( "<!=CNT_CLICK=!>", window.PIEL.REPORT.numberWithCommas( so[ "클릭" ] ) );
+			
+			var _html1 += _tStr00.replace( "<!=TITLE=!>", s )
+				.replace( "<!=COMMENT=!>", so['설명'] )
+				.replace( "<!=CNT_VIEW=!>", _view_col )
+				.replace( "<!=CNT_CLICK=!>", _click_col )
+				.replace( "<!=KEYWORD=!>", o1[ s ][ "키워드" ] )
 		}
 
-		_html0 += "<th style='width:26%;font-weight: 400;font-size: 12px;'>노출</th>\n";
-		_html0 += "<th style='width:26%;font-weight: 400;font-size: 12px;'>클릭</th>\n";
-		_html0 += "</tr>\n"
-		
-		r = _tStr.replace( "<!=TABLE_HEAD=!>", _html0 ).replace( "<!=TABLE_BODY=!>", _html1 )
+		r = _tStr.replace( "<!=CONTENTS=!>", _html1 )
 		tDom.innerHTML = r;
 		return;
 	};
@@ -725,7 +741,7 @@
 			io = arr[ i ];
 			_html = "";
 			var bigo = "";
-			if( io[ "비고" ] ) bigo = io[ "비고" ];
+			//if( io[ "비고" ] ) bigo = io[ "비고" ];
 
 			var _update_col = "";
 			var _share_col = "";
