@@ -150,7 +150,7 @@
 
 		chart.legend = new am4charts.Legend();
 		// Export
-		debugger;
+		//debugger;
 		chart.exporting.menu = new am4core.ExportMenu();
 
 		/* Create axes */
@@ -486,10 +486,11 @@
 		var s,so;
 		var i = 0;
 		var _bg_check = -1;
+		var _html1 = "";
 
 		for( s in o1 ){
 			so = o1[ s ];
-			debugger;
+			//debugger;
 			var _click_col = "";
 			var _view_col = "";
 			var _keyword = "";
@@ -501,7 +502,7 @@
 		//	else if( so[ "검페인 유형" ] == "쇼핑" ) _keyword =  "구글 쇼핑 광고"
 			if( o0[ s ] && o0[ s ][ "설명" ] != "" ) _comment = o0[ s ][ "설명" ];
 
-			var _html1 = _html1 + _tStr00.replace( "<!=TITLE=!>", s )
+			_html1 = _html1 + _tStr00.replace( "<!=TITLE=!>", s )
 				.replace( "<!=COMMENT=!>", _comment )
 				.replace( "<!=CNT_VIEW=!>", _view_col )
 				.replace( "<!=CNT_CLICK=!>", _click_col )
