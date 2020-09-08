@@ -492,16 +492,20 @@
 			debugger;
 			var _click_col = "";
 			var _view_col = "";
+			var _keyword = "";
 
 			if( so[ "노출" ] ) _view_col = update_col.replace( "<!=CNT_VIEW=!>", window.PIEL.REPORT.numberWithCommas( so[ "노출" ] ) );
 			if( so[ "클릭" ] ) _click_col = view_col.replace( "<!=CNT_CLICK=!>", window.PIEL.REPORT.numberWithCommas( so[ "클릭" ] ) );
-			
+			if(	o0[ s ] ) _keyword = o0[ s ][ "키워드" ];
+			else if( so[ "검페인 유형" ] == "쇼핑" ) _keyword =  "구글 쇼핑 광고"
+
+
 			var _html1 = _html1 + _tStr00.replace( "<!=TITLE=!>", s )
 				.replace( "<!=COMMENT=!>", so['설명'] )
 				.replace( "<!=CNT_VIEW=!>", _view_col )
 				.replace( "<!=CNT_CLICK=!>", _click_col )
-			if(	o0[ s ] ) _html1 = _html1 + _tStr00.replace( "<!=KEYWORD=!>", o0[ s ][ "키워드" ] )
-			else if( so[ "검페인 유형" ] == "쇼핑" ) _html1 = _html1 + _tStr00.replace( "<!=KEYWORD=!>", "구글 쇼핑 광고" )
+				.replace( "<!=CNT_CLICK=!>", _keyword )
+
 		}
 
 		r = _tStr.replace( "<!=CONTENTS=!>", _html1 )
