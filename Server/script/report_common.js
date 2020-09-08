@@ -16,6 +16,7 @@
 		, "언론사 노출" : "red newspaper outline"
 		, "Fime.vn" : "red edit outline"
 		, "Google Top SEO" : "red google outline"
+		, "Google" : "red google outline"
 	};
 
 
