@@ -493,19 +493,19 @@
 			var _click_col = "";
 			var _view_col = "";
 			var _keyword = "";
+			var _comment = ""
 
-			if( so[ "노출" ] ) _view_col = view_col.replace( "<!=CNT_VIEW=!>", window.PIEL.REPORT.numberWithCommas( so[ "노출" ] ) );
-			if( so[ "클릭" ] ) _click_col = click_col.replace( "<!=CNT_CLICK=!>", window.PIEL.REPORT.numberWithCommas( so[ "클릭" ] ) );
-			if(	o0[ s ] ) _keyword = o0[ s ][ "키워드" ];
-			else if( so[ "검페인 유형" ] == "쇼핑" ) _keyword =  "구글 쇼핑 광고"
-
+			if( so[ "노출수" ] ) _view_col = view_col.replace( "<!=CNT_VIEW=!>", window.PIEL.REPORT.numberWithCommas( so[ "노출수" ] ) );
+			if( so[ "클릭수" ] ) _click_col = click_col.replace( "<!=CNT_CLICK=!>", window.PIEL.REPORT.numberWithCommas( so[ "클릭수" ] ) );
+		//	if(	o0[ s ] ) _keyword = o0[ s ][ "키워드" ];
+		//	else if( so[ "검페인 유형" ] == "쇼핑" ) _keyword =  "구글 쇼핑 광고"
+			if( o0[ s ] && o0[ s ][ "설명" ] != "" ) _comment = o0[ s ][ "설명" ];
 
 			var _html1 = _html1 + _tStr00.replace( "<!=TITLE=!>", s )
-				.replace( "<!=COMMENT=!>", so['설명'] )
+				.replace( "<!=COMMENT=!>", _comment )
 				.replace( "<!=CNT_VIEW=!>", _view_col )
 				.replace( "<!=CNT_CLICK=!>", _click_col )
 				.replace( "<!=KEYWORD=!>", _keyword )
-
 		}
 
 		r = _tStr.replace( "<!=CONTENTS=!>", _html1 )
