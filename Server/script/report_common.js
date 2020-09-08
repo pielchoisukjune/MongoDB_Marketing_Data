@@ -530,7 +530,7 @@
 				<div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;'>
 					<br>
 					<div class="icon_cate">
-						<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
+						<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;margin-bottom: 10px;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
 					</div>
 				</div>
 				<div class="ui divider"></div>
@@ -668,7 +668,7 @@
 
 			<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
 			<div class="icon_cate">
-				<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
+				<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;margin-bottom: 10px;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
 			</div>
 			
 			<div class="ui divider"></div>
