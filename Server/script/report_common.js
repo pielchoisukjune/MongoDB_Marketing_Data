@@ -526,7 +526,7 @@
 			</div>
 			<!=IFRAME_CONTENTS=!>
 			<div class="content">
-				<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
+				<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;margin-bottom: 10px;'><!=TITLE=!></div>
 				<div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;margin-bottom: 10px;'>
 					<br>
 					<div class="icon_cate">
@@ -666,7 +666,7 @@
 					
 			<div class="ui divider"></div>
 
-			<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
+			<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;margin-bottom: 10px;'><!=TITLE=!></div>
 			<div class="icon_cate">
 				<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
 			</div>
