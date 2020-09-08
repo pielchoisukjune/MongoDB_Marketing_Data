@@ -489,7 +489,7 @@
 
 		for( s in o0 ){
 			so = o0[ s ];
-
+			debugger;
 			var _click_col = "";
 			var _view_col = "";
 
