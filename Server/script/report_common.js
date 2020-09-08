@@ -496,7 +496,7 @@
 			if( so[ "노출" ] ) _view_col = update_col.replace( "<!=CNT_VIEW=!>", window.PIEL.REPORT.numberWithCommas( so[ "노출" ] ) );
 			if( so[ "클릭" ] ) _click_col = view_col.replace( "<!=CNT_CLICK=!>", window.PIEL.REPORT.numberWithCommas( so[ "클릭" ] ) );
 			
-			var _html1 += _tStr00.replace( "<!=TITLE=!>", s )
+			var _html1 = _html1 + _tStr00.replace( "<!=TITLE=!>", s )
 				.replace( "<!=COMMENT=!>", so['설명'] )
 				.replace( "<!=CNT_VIEW=!>", _view_col )
 				.replace( "<!=CNT_CLICK=!>", _click_col )
