@@ -487,8 +487,8 @@
 		var i = 0;
 		var _bg_check = -1;
 
-		for( s in o0 ){
-			so = o0[ s ];
+		for( s in o1 ){
+			so = o1[ s ];
 			debugger;
 			var _click_col = "";
 			var _view_col = "";
@@ -500,7 +500,7 @@
 				.replace( "<!=COMMENT=!>", so['설명'] )
 				.replace( "<!=CNT_VIEW=!>", _view_col )
 				.replace( "<!=CNT_CLICK=!>", _click_col )
-				.replace( "<!=KEYWORD=!>", o1[ s ][ "키워드" ] )
+				.replace( "<!=KEYWORD=!>", o0[ s ][ "키워드" ] )
 		}
 
 		r = _tStr.replace( "<!=CONTENTS=!>", _html1 )
