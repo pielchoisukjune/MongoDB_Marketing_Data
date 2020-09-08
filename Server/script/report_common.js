@@ -618,7 +618,7 @@
 			var _html = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
 				_html += '<div class="ui grid">';
 				_html += '<div class="sixteen wide column">';
-				_html += '<div class="ui eight stackable cards">';
+				_html += '<div class="ui four stackable cards">';
 				_html += window.PIEL.REPORT.make_google_seo_html( so )
 				_html += '</div>';
 				_html += '</div>';
@@ -636,7 +636,7 @@
 	window.PIEL.REPORT.make_marketing_list_html = function( arr ){
 		
 		var _tStr = `
-		<div class="four wide column">
+		<div class="eight wide column">
 			
 			<!=THUMNAIL_CONTENTS=!>
 			<!=IFRAME_CONTENTS=!>
