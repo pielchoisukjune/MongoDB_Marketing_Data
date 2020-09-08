@@ -756,6 +756,12 @@
 				iframe_url = io[ "이미지" ];
 				thumb_url = "";
 			}
+			else if(io[ "이미지" ].indexOf( "<div" ) != -1 )
+			{
+				//iframe_url = iframe.replace( "<!=FB_URL=!>", io[ "해당링크" ] )
+				iframe_url = io[ "이미지" ];
+				thumb_url = "";
+			}
 
 			_html = _tStr.replace( "<!=THUMNAIL_CONTENTS=!>", thumb_url )
 				.replace( "<!=IFRAME_CONTENTS=!>", iframe_url )
