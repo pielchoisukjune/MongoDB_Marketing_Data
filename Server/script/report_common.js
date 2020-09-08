@@ -396,7 +396,7 @@
 			, "여" : "red venus"
 		};
 		var tDom = window.document.getElementById( domId );
-		var _tStr = `<div class="card"><div class="image"><!=THUMNAIL_CONTENTS=!></div><div class="content"><div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!><i class="<!=GENDER_ICON=!> icon" style="margin : 0px"></i></div><div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;'><span style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=CATEGORY=!></span></div><div class="description"></div></div><div class="extra content"><span class="right floated"><!=FACEBOOK_ICON=!><!=YOUTUBE_ICON=!><!=INSTAGRAM_ICON=!></span><span><i class="red heart icon"></i><span style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'> <!=FOLLOWER=!></span></span></div></div>`;
+		var _tStr = `<div class="card"><div class="image"><!=THUMNAIL_CONTENTS=!></div><div class="content"><div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!><i class="<!=GENDER_ICON=!> icon" style="margin : 0px"></i></div><div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;margin-bottom: 10px;'><span style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=CATEGORY=!></span></div><div class="description"></div></div><div class="extra content"><span class="right floated"><!=FACEBOOK_ICON=!><!=YOUTUBE_ICON=!><!=INSTAGRAM_ICON=!></span><span><i class="red heart icon"></i><span style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'> <!=FOLLOWER=!></span></span></div></div>`;
 		if( !tDom ) return;
 
 		var i = 0,iLen = data.length,io;
@@ -527,10 +527,10 @@
 			<!=IFRAME_CONTENTS=!>
 			<div class="content">
 				<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
-				<div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;'>
+				<div class="meta" style='font-size : 12px;font-family: "Noto Sans KR", sans-serif;margin-bottom: 10px;'>
 					<br>
 					<div class="icon_cate">
-						<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;margin-bottom: 10px;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
+						<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
 					</div>
 				</div>
 				<div class="ui divider"></div>
@@ -668,7 +668,7 @@
 
 			<div style='font-size : 12px; font-family: "Noto Sans KR", sans-serif;'><!=TITLE=!></div>
 			<div class="icon_cate">
-				<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;margin-bottom: 10px;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
+				<span style='font-size : 11px; font-family: "Noto Sans KR", sans-serif;'> <i class="large <!=CATE_ICON=!> icon" style="margin : 0px"></i> <!=CATEGORY=!> - <!=TYPE=!></span>
 			</div>
 			
 			<div class="ui divider"></div>
