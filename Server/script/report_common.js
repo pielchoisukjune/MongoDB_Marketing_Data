@@ -445,7 +445,7 @@
 
 		var tDom = window.document.getElementById( domId );
 
-		var _tStr = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
+		var _tStr = '<h3  class="ui left aligned header"></h3>';
 			_tStr += '<div class="ui grid">';
 			_tStr += '<div class="sixteen wide column">';
 			_tStr += '<div class="ui four stackable cards">';
