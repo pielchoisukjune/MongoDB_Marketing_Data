@@ -636,7 +636,7 @@
 	window.PIEL.REPORT.make_marketing_list_html = function( arr ){
 		
 		var _tStr = `
-		<div class="four wide column">
+		<div class="five wide column">
 			
 			<!=THUMNAIL_CONTENTS=!>
 			<!=IFRAME_CONTENTS=!>
