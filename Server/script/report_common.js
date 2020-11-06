@@ -451,7 +451,6 @@
 			, "여" : "red venus"
 		};
 		var tDom = window.document.getElementById( domId );
-	
 		if( !tDom ) return;
 		var _tStr = `
 			<table class="ui very compact celled table" style="width:100%;font-size:12px;">
@@ -510,6 +509,7 @@
 		}
 		
 		_tStr.replace( "<!=TABLE_CONTENTS=!>", _html );
+		console.log( _tStr );
 		tDom.innerHTML = _tStr;
 		return;
 
