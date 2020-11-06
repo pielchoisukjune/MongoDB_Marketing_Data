@@ -892,7 +892,6 @@
 			if( window.marketing.report.varihope[ "202010" ][ postId ] )
 			{
 				_fbImgUrl = window.marketing.report.varihope[ "202010" ][ postId ].attachments.data[ 0 ].media.image.src;
-				var thumb_url = thumb.replace( "<!=THUMBNAIL=!>", _fbImgUrl );
 				console.log( _fbImgUrl )
 			}
 
