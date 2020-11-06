@@ -887,8 +887,6 @@
 				postId = io[ "해당링크" ].split("/").reverse()[ 1 ];
 			}
 			
-			debugger;
-			
 			if( window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ] )
 			{
 				if( typeSns == "facebook") _fbImgUrl = window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ].attachments.data[ 0 ].media.image.src;
@@ -948,6 +946,120 @@
 			var _html = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
 				_html += "<br>"
 				_html += window.PIEL.REPORT.make_marketing_list_html_table( so, dateObj, brandNm )
+				_html += "<br>"
+				r += _html;
+		}
+
+		tDom.innerHTML = r;
+		return;
+
+	};
+
+
+//-------------------------------------------------------;
+	//마케팅리스트 테이블생성;
+	//-------------------------------------------------------;
+	window.PIEL.REPORT.make_marketing_list_html_table_none_img = function( arr ){
+		
+		var _tStr = `
+			<table class="ui very compact celled table" style="width:100%;font-size:12px;">
+			  <thead>
+				<tr>
+				  <th>구분</th>
+				  <th>타입</th>
+				  <th>업데이트일자</th>
+				  <th>제목</th>
+				  <th>해당링크</th>
+				  <th>조회건수</th>
+				  <th>클릭률</th>
+				  <th>댓글수</th>
+				  <th>좋아요</th>
+				  <th>공유</th>
+				  <th>비고</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  	<!=TABLE_CONTENTS=!>
+			  </tbody>
+			</table>
+		`;
+		
+		var i = 0,iLen = arr.length,io;
+		var r = "";
+		var _html = "";
+
+		for(;i<iLen;i++){
+			
+			io = arr[ i ];
+			
+//			var postId = io[ "해당링크" ].split("/").reverse()[ 0 ];
+//			var _fbImgUrl = "https://semantic-ui.com/images/logo.png"
+//			var typeSns = "facebook";
+//			if( io[ "해당링크" ].indexOf( "instagram" ) != -1 ) 
+//			{
+//				typeSns = "instagram";
+//				postId = io[ "해당링크" ].split("/").reverse()[ 1 ];
+//			}
+//			
+//			if( window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ] )
+//			{
+//				if( typeSns == "facebook") _fbImgUrl = window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ].attachments.data[ 0 ].media.image.src;
+//				else _fbImgUrl = window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ].media_url;
+//				console.log( _fbImgUrl )
+//			}
+//			else
+//			{
+//				_fbImgUrl = io[ "이미지" ];
+//			}
+
+			
+			var col0 = io[ "구분" ]?io[ "구분" ]:"";
+			var col1 = io[ "타입" ]?io[ "타입" ]:"";
+			var col2 = io[ "업데이트날짜" ]?io[ "업데이트날짜" ]:"";
+			var col3 = io[ "제목" ]?io[ "제목" ]:"";
+			var col4 = io[ "해당링크" ]?io[ "해당링크" ]:"";
+			var col5 = io[ "조회건수" ]?io[ "조회건수" ]:"";
+			var col6 = io[ "클릭률" ]?io[ "클릭률" ]:"";
+			var col7 = io[ "댓글수" ]?io[ "댓글수" ]:"";
+			var col8 = io[ "좋아요" ]?io[ "좋아요" ]:"";
+			var col9 = io[ "공유" ]?io[ "공유" ]:"";
+			var col10 = io[ "비고" ]?io[ "비고" ]:"";
+
+
+			_html = _html + "<tr>";
+			_html = _html + "<td style='width:10%'>" + col0 + "</td>"
+			_html = _html + "<td style='width:15%'>" + col1 + "</td>"
+			_html = _html + "<td style='width:10%'>" + col2 + "</td>"
+			//_html = _html + "<td style='width:100px'><img src='" + _fbImgUrl + "' style='width:100px;'></td>"
+			_html = _html + "<td style='width:30%'>" + col3 + "</td>"
+			_html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col4 + "' targe='_blank' style='color:#fff;'>바로가기</a></button></td>"
+			_html = _html + "<td style='width:5%'>" + col5 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col6 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col7 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col8 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col9 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col10 + "</td>"
+			_html = _html + "</tr>"
+		}
+		
+		return _tStr.replace( "<!=TABLE_CONTENTS=!>", _html );
+	};
+
+	//-------------------------------------------------------;
+	// 광고집행리스트생성;
+	//-------------------------------------------------------;
+	window.PIEL.REPORT.drawTable__make_marketing_list_none_img = function( domId, data, target_month ){
+
+		var tDom = window.document.getElementById( domId );
+		if( !tDom ) return;
+
+		var r = "";
+		var s,so;
+		for( s in data ){
+			so = data[ s ];
+			var _html = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
+				_html += "<br>"
+				_html += window.PIEL.REPORT.make_marketing_list_html_table_none_img( so )
 				_html += "<br>"
 				r += _html;
 		}
