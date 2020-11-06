@@ -766,27 +766,35 @@
 			if( io[ "좋아요" ] ) _like_col = like_col.replace( "<!=CNT_LIKE=!>", window.PIEL.REPORT.numberWithCommas( io[ "좋아요" ] ) )
 			if( io[ "공유" ] ) _share_col = share_col.replace( "<!=CNT_SHARE=!>", window.PIEL.REPORT.numberWithCommas( io[ "공유" ] ) )
 
-			var thumb_url = thumb.replace( "<!=THUMBNAIL=!>", io[ "이미지" ] );
-			var iframe_url = "";
+			var postId = io[ "해당링크" ].split("/").reverse()[ 0 ];
 
-			if( io[ "구분" ] == "인스타그램" )
+			if( window.marketing.report.varihope[ "202010" ][ postId ] )
 			{
-				thumb_url = thumb.replace( "<!=THUMBNAIL=!>", io[ "해당링크" ] +  "media/?size=l" );
+				var thumb_url = thumb.replace( "<!=THUMBNAIL=!>", attachments.data[ 0 ].media.image.src );			
+				var iframe_url = "";
+			}
+			else
+			{
+				if( io[ "구분" ] == "인스타그램" )
+				{
+					thumb_url = thumb.replace( "<!=THUMBNAIL=!>", io[ "해당링크" ] +  "media/?size=l" );
+				}
+
+
+				if( io[ "이미지" ].indexOf( "<iframe" ) != -1 )
+				{
+					//iframe_url = iframe.replace( "<!=FB_URL=!>", io[ "해당링크" ] )
+					iframe_url = io[ "이미지" ];
+					thumb_url = "";
+				}
+				else if(io[ "이미지" ].indexOf( "<div" ) != -1 )
+				{
+					//iframe_url = iframe.replace( "<!=FB_URL=!>", io[ "해당링크" ] )
+					iframe_url = io[ "이미지" ];
+					thumb_url = "";
+				}	
 			}
 
-
-			if( io[ "이미지" ].indexOf( "<iframe" ) != -1 )
-			{
-				//iframe_url = iframe.replace( "<!=FB_URL=!>", io[ "해당링크" ] )
-				iframe_url = io[ "이미지" ];
-				thumb_url = "";
-			}
-			else if(io[ "이미지" ].indexOf( "<div" ) != -1 )
-			{
-				//iframe_url = iframe.replace( "<!=FB_URL=!>", io[ "해당링크" ] )
-				iframe_url = io[ "이미지" ];
-				thumb_url = "";
-			}
 
 			_html = _tStr.replace( "<!=THUMNAIL_CONTENTS=!>", thumb_url )
 				.replace( "<!=IFRAME_CONTENTS=!>", iframe_url )
