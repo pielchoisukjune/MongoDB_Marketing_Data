@@ -849,6 +849,97 @@
 		return;
 
 	};
+
+	//-------------------------------------------------------;
+	//마케팅리스트 테이블생성;
+	//-------------------------------------------------------;
+	window.PIEL.REPORT.make_marketing_list_html_table = function( arr ){
+		
+		var _tStr = `
+			<table class="ui celled table">
+			  <thead>
+				<tr>
+				  <th>구분</th>
+				  <th>타입</th>
+				  <th>업데이트일자</th>
+				  <th>제목</th>
+				  <th>해당링크</th>
+				  <th>조회건수</th>
+				  <th>클릭률</th>
+				  <th>댓글수</th>
+				  <th>좋아요</th>
+				  <th>공유</th>
+				  <th>비고</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  	<!=TABLE_CONTENTS=!>
+			  </tbody>
+			  <tfoot>
+				<tr><th>3 People</th>
+				<th>2 Approved</th>
+				<th></th>
+			  </tr></tfoot>
+			</table>
+		`;
+		
+		var i = 0,iLen = arr.length,io;
+		var r = "";
+		var _html;
+
+		for(;i<iLen;i++){
+			io = arr[ i ];
+			_html = "<tr>";
+			_html = "<td>" + io[ "구분" ] + "</td>"
+			_html = "<td>" + io[ "타입" ] + "</td>"
+			_html = "<td>" + io[ "업데이트일자" ] + "</td>"
+			_html = "<td>" + io[ "제목" ] + "</td>"
+			_html = "<td>" + io[ "해당링크" ] + "</td>"
+			_html = "<td>" + io[ "조회건수" ] + "</td>"
+			_html = "<td>" + io[ "클릭률" ] + "</td>"
+			_html = "<td>" + io[ "댓글수" ] + "</td>"
+			_html = "<td>" + io[ "좋아요" ] + "</td>"
+			_html = "<td>" + io[ "공유" ] + "</td>"
+			_html = "<td>" + io[ "비고" ] + "</td>"
+			_html = _html + "</tr>"
+		}
+		
+		return _tStr.replace( "<!=TABLE_CONTENTS=!>", _html );
+	};
+
+	//-------------------------------------------------------;
+	// 광고집행리스트생성;
+	//-------------------------------------------------------;
+	window.PIEL.REPORT.drawTable__make_marketing_list = function( domId, data, target_month ){
+
+		var tDom = window.document.getElementById( domId );
+		if( !tDom ) return;
+
+		var r = "";
+		var s,so;
+		for( s in data ){
+			so = data[ s ];
+			var _html = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
+				_html += '<div class="ui three column grid">';
+//				_html += '<div class="three column row">'
+//				_html += '<div class="sixteen wide column">';
+//				_html += '<div class="ui four stackable cards">';
+				_html += window.PIEL.REPORT.make_marketing_list_html_table( so )
+//				_html += '</div>';
+//				_html += '</div>';
+//				_html += '</div>';
+				_html += '</div>';
+				r += _html;
+		}
+
+		tDom.innerHTML = r;
+		return;
+
+	};
+
+
+
+
 	//-------------------------------------------------------;
 	//마케팅집행 통계 생성;
 	//-------------------------------------------------------;
