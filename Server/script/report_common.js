@@ -897,7 +897,7 @@
 			}
 
 			_html = _html + "<tr>";
-			_html = _html + "<td style='width:15%'>" + io[ "구분" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "구분" ] + "</td>"
 			_html = _html + "<td style='width:15%'>" + io[ "타입" ] + "</td>"
 			_html = _html + "<td style='width:10%'>" + io[ "업데이트날짜" ] + "</td>"
 			_html = _html + "<td style='width:100px'><img src='" + _fbImgUrl + "' style='width:100px;'></td>"
