@@ -862,6 +862,7 @@
 				  <th>구분</th>
 				  <th>타입</th>
 				  <th>업데이트일자</th>
+				  <th>이미지</th>
 				  <th>제목</th>
 				  <th>해당링크</th>
 				  <th>조회건수</th>
@@ -888,8 +889,9 @@
 			_html = _html + "<td style='width:15%'>" + io[ "구분" ] + "</td>"
 			_html = _html + "<td style='width:15%'>" + io[ "타입" ] + "</td>"
 			_html = _html + "<td style='width:15%'>" + io[ "업데이트날짜" ] + "</td>"
+			_html = _html + "<td style='width:15%'><img src='" + "https://semantic-ui.com/images/logo.png" + "'></td>"
 			_html = _html + "<td style='width:30%'>" + io[ "제목" ] + "</td>"
-			_html = _html + "<td style='width:10%'><button class='ui red basic button'><a href='" + io[ "해당링크" ] + "' targe='_blank'>바로가기</a></button></td>"
+			_html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + io[ "해당링크" ] + "' targe='_blank'>바로가기</a></button></td>"
 			_html = _html + "<td style='width:5%'>" + io[ "조회건수" ] + "</td>"
 			_html = _html + "<td style='width:5%'>" + io[ "클릭률" ] + "</td>"
 			_html = _html + "<td style='width:5%'>" + io[ "댓글수" ] + "</td>"
