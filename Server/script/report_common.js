@@ -446,6 +446,7 @@
 	 * KOL카드생성
 	 */
 	window.PIEL.REPORT.drawTable__make_kols_html = function( domId, data, target_month ){
+		debugger;
 		var gender_icon = {
 			"남" : "blue mars stroke vertical"
 			, "여" : "red venus"
