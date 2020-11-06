@@ -509,9 +509,9 @@
 			_html = _html + "</tr>"
 		}
 		
-		_tStr.replace( "<!=TABLE_CONTENTS=!>", _html );
-		console.log( _tStr );
-		tDom.innerHTML = _tStr;
+		r = _tStr.replace( "<!=TABLE_CONTENTS=!>", _html );
+		console.log( r );
+		tDom.innerHTML = r;
 		return;
 
 	};
