@@ -894,7 +894,8 @@
 
 			if( window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ] )
 			{
-				_fbImgUrl = window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ].attachments.data[ 0 ].media.image.src;
+				if( typeSns == "facebook") _fbImgUrl = window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ].attachments.data[ 0 ].media.image.src;
+				else _fbImgUrl = window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ].media_url;
 				console.log( _fbImgUrl )
 			}
 
