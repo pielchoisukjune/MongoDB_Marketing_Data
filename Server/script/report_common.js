@@ -909,19 +909,33 @@
 				_fbImgUrl = io[ "이미지" ];
 			}
 
+			
+			var col0 = io[ "구분" ]?io[ "구분" ]:"";
+			var col1 = io[ "타입" ]?io[ "타입" ]:"";
+			var col2 = io[ "업데이트날짜" ]?io[ "업데이트날짜" ]:"";
+			var col3 = io[ "제목" ]?io[ "제목" ]:"";
+			var col4 = io[ "해당링크" ]?io[ "해당링크" ]:"";
+			var col5 = io[ "조회건수" ]?io[ "조회건수" ]:"";
+			var col6 = io[ "클릭률" ]?io[ "클릭률" ]:"";
+			var col7 = io[ "댓글수" ]?io[ "댓글수" ]:"";
+			var col8 = io[ "좋아요" ]?io[ "좋아요" ]:"";
+			var col9 = io[ "공유" ]?io[ "공유" ]:"";
+			var col10 = io[ "비고" ]?io[ "비고" ]:"";
+
+
 			_html = _html + "<tr>";
-			_html = _html + "<td style='width:10%'>" + io[ "구분" ] + "</td>"
-			_html = _html + "<td style='width:15%'>" + io[ "타입" ] + "</td>"
-			_html = _html + "<td style='width:10%'>" + io[ "업데이트날짜" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + col0 + "</td>"
+			_html = _html + "<td style='width:15%'>" + col1 + "</td>"
+			_html = _html + "<td style='width:10%'>" + col2 + "</td>"
 			_html = _html + "<td style='width:100px'><img src='" + _fbImgUrl + "' style='width:100px;'></td>"
-			_html = _html + "<td style='width:30%'>" + io[ "제목" ] + "</td>"
-			_html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + io[ "해당링크" ] + "' targe='_blank' style='color:#fff;'>바로가기</a></button></td>"
-			_html = _html + "<td style='width:5%'>" + io[ "조회건수" ] + "</td>"
-			_html = _html + "<td style='width:5%'>" + io[ "클릭률" ] + "</td>"
-			_html = _html + "<td style='width:5%'>" + io[ "댓글수" ] + "</td>"
-			_html = _html + "<td style='width:5%'>" + io[ "좋아요" ] + "</td>"
-			_html = _html + "<td style='width:5%'>" + io[ "공유" ] + "</td>"
-			_html = _html + "<td style='width:5%'>" + io[ "비고" ] + "</td>"
+			_html = _html + "<td style='width:30%'>" + col3 + "</td>"
+			_html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col4 + "' targe='_blank' style='color:#fff;'>바로가기</a></button></td>"
+			_html = _html + "<td style='width:5%'>" + col5 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col6 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col7 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col8 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col9 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col10 + "</td>"
 			_html = _html + "</tr>"
 		}
 		
