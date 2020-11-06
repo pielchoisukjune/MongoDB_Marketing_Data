@@ -936,7 +936,6 @@
 				  <th>댓글수</th>
 				  <th>좋아요</th>
 				  <th>공유</th>
-				  <th>비고</th>
 				</tr>
 			  </thead>
 			  <tbody>
@@ -984,7 +983,7 @@
 			var col7 = io[ "댓글수" ]?io[ "댓글수" ]:"";
 			var col8 = io[ "좋아요" ]?io[ "좋아요" ]:"";
 			var col9 = io[ "공유" ]?io[ "공유" ]:"";
-			var col10 = io[ "비고" ]?io[ "비고" ]:"";
+			//var col10 = io[ "비고" ]?io[ "비고" ]:"";
 
 
 			_html = _html + "<tr>";
@@ -999,7 +998,7 @@
 			_html = _html + "<td style='width:5%'>" + col7 + "</td>"
 			_html = _html + "<td style='width:5%'>" + col8 + "</td>"
 			_html = _html + "<td style='width:5%'>" + col9 + "</td>"
-			_html = _html + "<td style='width:5%'>" + col10 + "</td>"
+			//_html = _html + "<td style='width:5%'>" + col10 + "</td>"
 			_html = _html + "</tr>"
 		}
 		
