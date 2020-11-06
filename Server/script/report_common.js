@@ -496,13 +496,13 @@
 			_html = _html + "<td style='width:10%'>" + col0 + "</td>"
 			_html = _html + "<td style='width:100px'><img src='" + col1 + "' style='width:100px;'></td>"
 			
-			if( io[ "유튜브" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col2 + "' targe='_blank' style='color:#fff;'>유튜브</a></button></td>"
+			if( io[ "유튜브" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col2 + "' target='_blank' style='color:#fff;'>유튜브</a></button></td>"
 			else _html = _html + "<td style='width:10%'></td>"
 			
-			if( io[ "페이스북" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col3 + "' targe='_blank' style='color:#fff;'>페이스북</a></button></td>"
+			if( io[ "페이스북" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col3 + "' target='_blank' style='color:#fff;'>페이스북</a></button></td>"
 			else _html = _html + "<td style='width:10%'></td>"
 
-			if( io[ "인스타그램" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col4 + "' targe='_blank' style='color:#fff;'>인스타그램</a></button></td>"
+			if( io[ "인스타그램" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col4 + "' target='_blank' style='color:#fff;'>인스타그램</a></button></td>"
 			else _html = _html + "<td style='width:10%'></td>"
 
 			_html = _html + "<td style='width:10%'>" + col5 + "</td>"
