@@ -875,11 +875,6 @@
 			  <tbody>
 			  	<!=TABLE_CONTENTS=!>
 			  </tbody>
-			  <tfoot>
-				<tr><th>3 People</th>
-				<th>2 Approved</th>
-				<th></th>
-			  </tr></tfoot>
 			</table>
 		`;
 		
@@ -889,7 +884,7 @@
 
 		for(;i<iLen;i++){
 			io = arr[ i ];
-			_html = "<tr>";
+			_html = _html + "<tr>";
 			_html = _html + "<td>" + io[ "구분" ] + "</td>"
 			_html = _html + "<td>" + io[ "타입" ] + "</td>"
 			_html = _html + "<td>" + io[ "업데이트날짜" ] + "</td>"
