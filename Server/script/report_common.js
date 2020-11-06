@@ -465,6 +465,7 @@
 					<th>성별</th>
 					<th>구분</th>
 					<th>팔로워</th>
+					<th>비고</th>
 				</tr>
 			  </thead>
 			  <tbody>
@@ -507,7 +508,7 @@
 			_html = _html + "<td style='width:10%'>" + col5 + "</td>"
 			_html = _html + "<td style='width:10%'>" + col6 + "</td>"
 			_html = _html + "<td style='width:10%'>" + col7 + "</td>"
-			_html = _html + "<td style='width:20%'>" + col8 + "</td>"
+			_html = _html + "<td style='width:30%'>" + col8 + "</td>"
 			_html = _html + "</tr>"
 		}
 		
