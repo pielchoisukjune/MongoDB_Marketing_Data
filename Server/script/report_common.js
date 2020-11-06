@@ -473,13 +473,13 @@
 			</table>
 		`;
 		
-		var i = 0,iLen = arr.length,io;
+		var i = 0,iLen = data.length,io;
 		var r = "";
 		var _html = "";
 
 		for(;i<iLen;i++){
 			
-			io = arr[ i ];
+			io = data[ i ];
 			
 			var col0 = io[ "이름" ]?io[ "이름" ]:"";
 			var col1 = io[ "이미지" ]?io[ "이미지" ]:"";
