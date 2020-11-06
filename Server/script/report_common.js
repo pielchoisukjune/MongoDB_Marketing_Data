@@ -856,7 +856,7 @@
 	window.PIEL.REPORT.make_marketing_list_html_table = function( arr ){
 		
 		var _tStr = `
-			<table class="ui celled table">
+			<table class="ui very compact celled table" style="width:100%;">
 			  <thead>
 				<tr>
 				  <th>구분</th>
