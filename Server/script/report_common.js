@@ -489,6 +489,7 @@
 			var col5 = io[ "성별" ]?io[ "성별" ]:"";
 			var col6 = io[ "구분" ]?io[ "구분" ]:"";
 			var col7 = io[ "팔로워" ]?io[ "팔로워" ]:"";
+			var col8 = io[ "비고" ]?io[ "비고" ]:"";
 
 			_html = _html + "<tr>";
 			_html = _html + "<td style='width:10%'>" + col0 + "</td>"
@@ -503,9 +504,10 @@
 			if( io[ "인스타그램" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col4 + "' targe='_blank' style='color:#fff;'>인스타그램</a></button></td>"
 			else _html = _html + "<td style='width:10%'></td>"
 
-			_html = _html + "<td style='width:5%'>" + col5 + "</td>"
-			_html = _html + "<td style='width:5%'>" + col6 + "</td>"
-			_html = _html + "<td style='width:5%'>" + col7 + "</td>"
+			_html = _html + "<td style='width:10%'>" + col5 + "</td>"
+			_html = _html + "<td style='width:10%'>" + col6 + "</td>"
+			_html = _html + "<td style='width:10%'>" + col7 + "</td>"
+			_html = _html + "<td style='width:20%'>" + col8 + "</td>"
 			_html = _html + "</tr>"
 		}
 		
