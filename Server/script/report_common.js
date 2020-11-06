@@ -767,9 +767,10 @@
 			if( io[ "공유" ] ) _share_col = share_col.replace( "<!=CNT_SHARE=!>", window.PIEL.REPORT.numberWithCommas( io[ "공유" ] ) )
 
 			var postId = io[ "해당링크" ].split("/").reverse()[ 0 ];
-
+				debugger;
 			if( window.marketing.report.varihope[ "202010" ][ postId ] )
 			{
+				debugger;
 				var thumb_url = thumb.replace( "<!=THUMBNAIL=!>", window.marketing.report.varihope[ "202010" ].attachments.data[ 0 ].media.image.src );
 				console.log( window.marketing.report.varihope[ "202010" ].attachments.data[ 0 ].media.image.src )
 				var iframe_url = "";
