@@ -770,7 +770,8 @@
 
 			if( window.marketing.report.varihope[ "202010" ][ postId ] )
 			{
-				var thumb_url = thumb.replace( "<!=THUMBNAIL=!>", attachments.data[ 0 ].media.image.src );			
+				var thumb_url = thumb.replace( "<!=THUMBNAIL=!>", window.marketing.report.varihope[ "202010" ].attachments.data[ 0 ].media.image.src );
+				console.log()
 				var iframe_url = "";
 			}
 			else
