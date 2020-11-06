@@ -906,7 +906,7 @@
 			}
 			else
 			{
-				_fbImgUrl = io[ "해당링크" ];
+				_fbImgUrl = io[ "이미지" ];
 			}
 
 			_html = _html + "<tr>";
