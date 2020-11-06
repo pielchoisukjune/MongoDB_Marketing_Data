@@ -853,7 +853,7 @@
 	//-------------------------------------------------------;
 	//마케팅리스트 테이블생성;
 	//-------------------------------------------------------;
-	window.PIEL.REPORT.make_marketing_list_html_table = function( arr ){
+	window.PIEL.REPORT.make_marketing_list_html_table = function( arr, dateObj, brandNm ){
 		
 		var _tStr = `
 			<table class="ui very compact celled table" style="width:100%;">
@@ -889,9 +889,9 @@
 			
 			var postId = io[ "해당링크" ].split("/").reverse()[ 0 ];
 			var _fbImgUrl = "https://semantic-ui.com/images/logo.png"
-			if( window.marketing.report.varihope[ "202010" ][ postId ] )
+			if( window.marketing.report[ brandNm ][ dateObj.start ][ postId ] )
 			{
-				_fbImgUrl = window.marketing.report.varihope[ "202010" ][ postId ].attachments.data[ 0 ].media.image.src;
+				_fbImgUrl = window.marketing.report[ brandNm ][ dateObj.start ][ postId ].attachments.data[ 0 ].media.image.src;
 				console.log( _fbImgUrl )
 			}
 
@@ -917,7 +917,7 @@
 	//-------------------------------------------------------;
 	// 광고집행리스트생성;
 	//-------------------------------------------------------;
-	window.PIEL.REPORT.drawTable__make_marketing_list = function( domId, data, target_month ){
+	window.PIEL.REPORT.drawTable__make_marketing_list = function( domId, data, target_month, dateObj, brandNm ){
 
 		var tDom = window.document.getElementById( domId );
 		if( !tDom ) return;
@@ -928,7 +928,7 @@
 			so = data[ s ];
 			var _html = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
 				_html += "<br>"
-				_html += window.PIEL.REPORT.make_marketing_list_html_table( so )
+				_html += window.PIEL.REPORT.make_marketing_list_html_table( so, dateObj, brandNm )
 				_html += "<br>"
 				r += _html;
 		}
