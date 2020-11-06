@@ -884,12 +884,21 @@
 		var _html = "";
 
 		for(;i<iLen;i++){
+			var postId = io[ "해당링크" ].split("/").reverse()[ 0 ];
+			var _fbImgUrl = "https://semantic-ui.com/images/logo.png"
+			if( window.marketing.report.varihope[ "202010" ][ postId ] )
+			{
+				_fbImgUrl = window.marketing.report.varihope[ "202010" ][ postId ].attachments.data[ 0 ].media.image.src;
+				var thumb_url = thumb.replace( "<!=THUMBNAIL=!>", _fbImgUrl );
+				console.log( _fbImgUrl )
+			}
+
 			io = arr[ i ];
 			_html = _html + "<tr>";
 			_html = _html + "<td style='width:15%'>" + io[ "구분" ] + "</td>"
 			_html = _html + "<td style='width:15%'>" + io[ "타입" ] + "</td>"
 			_html = _html + "<td style='width:15%'>" + io[ "업데이트날짜" ] + "</td>"
-			_html = _html + "<td style='width:100px'><img src='" + "https://semantic-ui.com/images/logo.png" + "' style='width:100px;'></td>"
+			_html = _html + "<td style='width:100px'><img src='" + _fbImgUrl + "' style='width:100px;'></td>"
 			_html = _html + "<td style='width:30%'>" + io[ "제목" ] + "</td>"
 			_html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + io[ "해당링크" ] + "' targe='_blank'>바로가기</a></button></td>"
 			_html = _html + "<td style='width:5%'>" + io[ "조회건수" ] + "</td>"
