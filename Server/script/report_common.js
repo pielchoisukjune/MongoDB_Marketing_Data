@@ -904,6 +904,10 @@
 				else _fbImgUrl = window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ].media_url;
 				console.log( _fbImgUrl )
 			}
+			else
+			{
+				_fbImgUrl = io[ "해당링크" ];
+			}
 
 			_html = _html + "<tr>";
 			_html = _html + "<td style='width:10%'>" + io[ "구분" ] + "</td>"
