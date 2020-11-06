@@ -891,7 +891,8 @@
 			var _fbImgUrl = "https://semantic-ui.com/images/logo.png"
 			var typeSns = "facebook";
 			if( io[ "해당링크" ].indexOf( "instagram" ) != -1 ) typeSns = "instagram";
-
+			
+			debugger;
 			if( window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ] )
 			{
 				if( typeSns == "facebook") _fbImgUrl = window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ].attachments.data[ 0 ].media.image.src;
