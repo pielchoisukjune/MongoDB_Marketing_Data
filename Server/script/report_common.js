@@ -766,18 +766,10 @@
 			if( io[ "좋아요" ] ) _like_col = like_col.replace( "<!=CNT_LIKE=!>", window.PIEL.REPORT.numberWithCommas( io[ "좋아요" ] ) )
 			if( io[ "공유" ] ) _share_col = share_col.replace( "<!=CNT_SHARE=!>", window.PIEL.REPORT.numberWithCommas( io[ "공유" ] ) )
 
-			var postId = io[ "해당링크" ].split("/").reverse()[ 0 ];
-				debugger;
-			if( window.marketing.report.varihope[ "202010" ][ postId ] )
-			{
-				debugger;
-				var _fbImgUrl = window.marketing.report.varihope[ "202010" ][ postId ].attachments.data[ 0 ].media.image.src;
-				var thumb_url = thumb.replace( "<!=THUMBNAIL=!>", _fbImgUrl );
-				console.log( _fbImgUrl )
+
+				var thumb_url = thumb.replace( "<!=THUMBNAIL=!>", io[ "이미지" ] );
 				var iframe_url = "";
-			}
-			else
-			{
+
 				if( io[ "구분" ] == "인스타그램" )
 				{
 					thumb_url = thumb.replace( "<!=THUMBNAIL=!>", io[ "해당링크" ] +  "media/?size=l" );
@@ -796,7 +788,6 @@
 					iframe_url = io[ "이미지" ];
 					thumb_url = "";
 				}	
-			}
 
 
 			_html = _tStr.replace( "<!=THUMNAIL_CONTENTS=!>", thumb_url )
