@@ -441,6 +441,80 @@
 		return;
 	};
 
+
+	/*
+	 * KOL카드생성
+	 */
+	window.PIEL.REPORT.drawTable__make_kols_html = function( domId, data, target_month ){
+		var gender_icon = {
+			"남" : "blue mars stroke vertical"
+			, "여" : "red venus"
+		};
+		var tDom = window.document.getElementById( domId );
+	
+		if( !tDom ) return;
+		var _tStr = `
+			<table class="ui very compact celled table" style="width:100%;font-size:12px;">
+			  <thead>
+				<tr>
+					<th>이름</th>
+					<th>이미지</th>
+					<th>유튜브</th>
+					<th>페이스북</th>
+					<th>인스타그램</th>
+					<th>성별</th>
+					<th>구분</th>
+					<th>팔로워</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  	<!=TABLE_CONTENTS=!>
+			  </tbody>
+			</table>
+		`;
+		
+		var i = 0,iLen = arr.length,io;
+		var r = "";
+		var _html = "";
+
+		for(;i<iLen;i++){
+			
+			io = arr[ i ];
+			
+			var col0 = io[ "이름" ]?io[ "이름" ]:"";
+			var col1 = io[ "이미지" ]?io[ "이미지" ]:"";
+//			var col2 = io[ "유튜브" ]?io[ "유튜브" ]:"";
+//			var col3 = io[ "페이스북" ]?io[ "페이스북" ]:"";
+//			var col4 = io[ "인스타그램" ]?io[ "인스타그램" ]:"";
+			var col5 = io[ "성별" ]?io[ "성별" ]:"";
+			var col6 = io[ "구분" ]?io[ "구분" ]:"";
+			var col7 = io[ "팔로워" ]?io[ "팔로워" ]:"";
+
+			_html = _html + "<tr>";
+			_html = _html + "<td style='width:10%'>" + col0 + "</td>"
+			_html = _html + "<td style='width:100px'><img src='" + col1 + "' style='width:100px;'></td>"
+			
+			if( io[ "유튜브" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col2 + "' targe='_blank' style='color:#fff;'>유튜브</a></button></td>"
+			else _html = _html + "<td style='width:10%'></td>"
+			
+			if( io[ "페이스북" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col3 + "' targe='_blank' style='color:#fff;'>페이스북</a></button></td>"
+			else _html = _html + "<td style='width:10%'></td>"
+
+			if( io[ "인스타그램" ] ) _html = _html + "<td style='width:10%'><button class='mini ui green button'><a href='" + col4 + "' targe='_blank' style='color:#fff;'>인스타그램</a></button></td>"
+			else _html = _html + "<td style='width:10%'></td>"
+
+			_html = _html + "<td style='width:5%'>" + col5 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col6 + "</td>"
+			_html = _html + "<td style='width:5%'>" + col7 + "</td>"
+			_html = _html + "</tr>"
+		}
+		
+		_tStr.replace( "<!=TABLE_CONTENTS=!>", _html );
+		tDom.innerHTML = _tStr;
+		return;
+
+	};
+
 	//-------------------------------------------------------;
 	//구글전체통계 생성;
 	//-------------------------------------------------------;
