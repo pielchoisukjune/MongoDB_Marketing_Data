@@ -889,10 +889,10 @@
 
 		for(;i<iLen;i++){
 			io = arr[ i ];
-			_html = _html + "<tr>";
+			_html = "<tr>";
 			_html = _html + "<td>" + io[ "구분" ] + "</td>"
 			_html = _html + "<td>" + io[ "타입" ] + "</td>"
-			_html = _html + "<td>" + io[ "업데이트일자" ] + "</td>"
+			_html = _html + "<td>" + io[ "업데이트날짜" ] + "</td>"
 			_html = _html + "<td>" + io[ "제목" ] + "</td>"
 			_html = _html + "<td>" + io[ "해당링크" ] + "</td>"
 			_html = _html + "<td>" + io[ "조회건수" ] + "</td>"
@@ -920,16 +920,7 @@
 		for( s in data ){
 			so = data[ s ];
 			var _html = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
-				_html += '<div class="ui three column grid">';
-//				_html += '<div class="three column row">'
-//				_html += '<div class="sixteen wide column">';
-//				_html += '<div class="ui four stackable cards">';
-				_html += window.PIEL.REPORT.make_marketing_list_html_table( so )
-//				_html += '</div>';
-//				_html += '</div>';
-//				_html += '</div>';
-				_html += '</div>';
-				r += _html;
+				r += window.PIEL.REPORT.make_marketing_list_html_table( so )
 		}
 
 		tDom.innerHTML = r;
