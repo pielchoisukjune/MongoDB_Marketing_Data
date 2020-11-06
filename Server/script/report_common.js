@@ -884,6 +884,9 @@
 		var _html = "";
 
 		for(;i<iLen;i++){
+			
+			io = arr[ i ];
+			
 			var postId = io[ "해당링크" ].split("/").reverse()[ 0 ];
 			var _fbImgUrl = "https://semantic-ui.com/images/logo.png"
 			if( window.marketing.report.varihope[ "202010" ][ postId ] )
@@ -893,7 +896,6 @@
 				console.log( _fbImgUrl )
 			}
 
-			io = arr[ i ];
 			_html = _html + "<tr>";
 			_html = _html + "<td style='width:15%'>" + io[ "구분" ] + "</td>"
 			_html = _html + "<td style='width:15%'>" + io[ "타입" ] + "</td>"
