@@ -889,6 +889,7 @@
 			
 			var postId = io[ "해당링크" ].split("/").reverse()[ 0 ];
 			var _fbImgUrl = "https://semantic-ui.com/images/logo.png"
+			debugger;
 			if( window.marketing.report[ brandNm ][ dateObj.start ][ postId ] )
 			{
 				_fbImgUrl = window.marketing.report[ brandNm ][ dateObj.start ][ postId ].attachments.data[ 0 ].media.image.src;
