@@ -880,22 +880,22 @@
 		
 		var i = 0,iLen = arr.length,io;
 		var r = "";
-		var _html;
+		var _html = "";
 
 		for(;i<iLen;i++){
 			io = arr[ i ];
 			_html = _html + "<tr>";
-			_html = _html + "<td>" + io[ "구분" ] + "</td>"
-			_html = _html + "<td>" + io[ "타입" ] + "</td>"
-			_html = _html + "<td>" + io[ "업데이트날짜" ] + "</td>"
-			_html = _html + "<td>" + io[ "제목" ] + "</td>"
-			_html = _html + "<td>" + io[ "해당링크" ] + "</td>"
-			_html = _html + "<td>" + io[ "조회건수" ] + "</td>"
-			_html = _html + "<td>" + io[ "클릭률" ] + "</td>"
-			_html = _html + "<td>" + io[ "댓글수" ] + "</td>"
-			_html = _html + "<td>" + io[ "좋아요" ] + "</td>"
-			_html = _html + "<td>" + io[ "공유" ] + "</td>"
-			_html = _html + "<td>" + io[ "비고" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "구분" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "타입" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "업데이트날짜" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "제목" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "해당링크" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "조회건수" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "클릭률" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "댓글수" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "좋아요" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "공유" ] + "</td>"
+			_html = _html + "<td style='width:10%'>" + io[ "비고" ] + "</td>"
 			_html = _html + "</tr>"
 		}
 		
