@@ -896,7 +896,7 @@
 				postId = io[ "해당링크" ].split("/").reverse()[ 1 ];
 			}
 			
-			
+			debugger;
 			
 			if( window.marketing.report[ brandNm ][ typeSns ][ dateObj.start ][ postId ] )
 			{
