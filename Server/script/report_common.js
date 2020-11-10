@@ -286,17 +286,17 @@
 
 					if( _tidx == 0 )
 					{
-						_html0 += "<th style='width:18%;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						_html0 += "<th style='width:18%;font-weight: 400;font-size: 14px;'>" + _item + "</th>\n";
 					}
 					else if( _tidx == 1 ){
-						_html0 += "<th style='width:19%;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						_html0 += "<th style='width:19%;font-weight: 400;font-size: 14px;'>" + _item + "</th>\n";
 					}
 					else
 					{
 						
-						if( _bg_check00 == _tidx ) _html0 += "<th style='width:9%;background-color : red;color:#fff;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
-						else if( _bg_check01 == _tidx ) _html0 += "<th style='width:9%;background-color : yellow;color:red;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
-						else _html0 += "<th style='width:9%;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						if( _bg_check00 == _tidx ) _html0 += "<th style='width:9%;background-color : red;color:#fff;font-weight: 400;font-size: 14px;'>" + _item + "</th>\n";
+						else if( _bg_check01 == _tidx ) _html0 += "<th style='width:9%;background-color : yellow;color:red;font-weight: 400;font-size: 14px;'>" + _item + "</th>\n";
+						else _html0 += "<th style='width:9%;font-weight: 400;font-size: 14px;'>" + _item + "</th>\n";
 					}
 					++_tidx;
 				})
@@ -309,7 +309,7 @@
 				io.forEach(function(item){ 
 					var _item = item.replace( /\n/gi, "<br>" ).replace( /\r/gi, "<br>" ).replace( /\r\n/gi, "<br>" );
 					if( _bg_check00 == _tidx ) _html1 += "<td style='font-size:11px;background-color : red;color:#fff;'>" + _item + "</td>\n";
-					else if( _bg_check01 == _tidx ) _html1 += "<td style='width:8%;background-color : yellow;color:red;font-weight: 400;font-size: 12px;'>" + _item + "</td>\n";
+					else if( _bg_check01 == _tidx ) _html1 += "<td style='width:8%;background-color : yellow;color:red;font-weight: 400;font-size: 14px;'>" + _item + "</td>\n";
 					else _html1 += "<td style='font-size:11px;'>" + _item + "</td>\n"; 
 					++_tidx;
 				})
