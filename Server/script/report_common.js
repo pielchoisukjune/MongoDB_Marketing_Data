@@ -308,7 +308,7 @@
 				var _tidx = 0;
 				io.forEach(function(item){ 
 					var _item = item.replace( /\n/gi, "<br>" ).replace( /\r/gi, "<br>" ).replace( /\r\n/gi, "<br>" );
-					if( _bg_check00 == _tidx ) _html1 += "<td style='font-size:11px;background-color : red;color:#fff;'>" + _item + "</td>\n";
+					if( _bg_check00 == _tidx ) _html1 += "<td style='font-size:14px;background-color : red;color:#fff;'>" + _item + "</td>\n";
 					else if( _bg_check01 == _tidx ) _html1 += "<td style='width:8%;background-color : yellow;color:red;font-weight: 400;font-size: 14px;'>" + _item + "</td>\n";
 					else _html1 += "<td style='font-size:11px;'>" + _item + "</td>\n"; 
 					++_tidx;
