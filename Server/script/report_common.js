@@ -59,6 +59,9 @@
 		series.labels.template.propertyFields.disabled = "disabled";
 		series.ticks.template.propertyFields.disabled = "disabled";
 
+		// Enable export
+		chart.exporting.menu = new am4core.ExportMenu();
+
 		chart.events.on("ready", function(e){
 			//debugger;	
 			var pie_chart_loader = window.document.getElementById( domId + "_loader" );
@@ -128,6 +131,9 @@
 			ev.target.show();
 		  }
 		}
+
+		// Enable export
+		chart.exporting.menu = new am4core.ExportMenu();
 
 		chart.events.on("ready", function(e){
 			//debugger;	
@@ -206,7 +212,10 @@
 		circle.radius = 4;
 		circle.fill = am4core.color("#fff");
 		circle.strokeWidth = 3;
-
+		
+		// Enable export
+		chart.exporting.menu = new am4core.ExportMenu();
+		
 		chart.data = arr;
 
 		chart.events.on("ready", function(e){
