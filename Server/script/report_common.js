@@ -260,7 +260,7 @@
 				map_chart_loader.classList.remove("active");
 				var imgUri = geochart.getImageURI();
 				// do something with the image URI, like:
-				window.open(imgUri);
+				console.log( imgUri )
 				return;
 			});
 			geochart.draw(data, opts);	
