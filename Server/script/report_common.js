@@ -114,7 +114,7 @@
 		pieSeries00.hiddenState.properties.opacity = 1;
 		pieSeries00.hiddenState.properties.endAngle = -90;
 		pieSeries00.hiddenState.properties.startAngle = -90;
-		pieSeries00.labels.template.fontSize = 10;
+		pieSeries00.labels.template.fontSize = 14;
 
 		chart.hiddenState.properties.radius = am4core.percent(70);
 
