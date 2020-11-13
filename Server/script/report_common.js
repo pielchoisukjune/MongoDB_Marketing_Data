@@ -258,6 +258,9 @@
 			google.visualization.events.addListener(geochart, 'ready', function() {
 				var mpa_chart_loader = window.document.getElementById( "map_chart_loader" );
 				map_chart_loader.classList.remove("active");
+				var imgUri = geochart.getImageURI();
+				// do something with the image URI, like:
+				window.open(imgUri);
 				return;
 			});
 			geochart.draw(data, opts);	
