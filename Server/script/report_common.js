@@ -249,8 +249,8 @@
 		var title00 = chart.titles.create();
 		title00.text = title;
 		title00.fontSize = 25;
-		//title00.marginBottom = 30;
-		title00.marginTop = 10;
+		title00.marginBottom = 30;
+		title00.marginTop = 30;
 
 		/* Create axes */
 		var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
