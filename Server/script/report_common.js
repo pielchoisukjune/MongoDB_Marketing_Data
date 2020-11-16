@@ -96,6 +96,7 @@
 		title00.fontSize = 25;
 		//title00.marginBottom = 30;
 		title00.marginTop = 10;
+		chart.exporting.filePrefix = domId;
 		
 		//loading;
 		chart.preloader.disabled = true;
@@ -169,6 +170,8 @@
 			title00.fontSize = 25;
 			title00.marginBottom = 30;
 			title00.marginTop = 30;	
+
+			chart.exporting.filePrefix = domId;
 		}
 		
 		/* Create axes */
