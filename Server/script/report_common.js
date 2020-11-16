@@ -227,6 +227,97 @@
 		return chart;
 	};
 
+
+	/*
+	 *
+	 */
+	window.PIEL.REPORT.barChartTimeWithTitle = function( domId, title ,options, arr ){
+
+	// Create chart instance
+		var chart = am4core.create( domId , am4charts.XYChart);
+	//	var title00 = chart.titles.create();
+	//	title00.text = options.title;
+	//	title00.fontSize = 25;
+	//	title00.marginBottom = 30;
+	//	title00.marginTop = 30;
+
+		chart.legend = new am4charts.Legend();
+		// Export
+		//debugger;
+		chart.exporting.menu = new am4core.ExportMenu();
+
+		var title00 = chart.titles.create();
+		title00.text = title;
+		title00.fontSize = 25;
+		//title00.marginBottom = 30;
+		title00.marginTop = 10;
+
+		/* Create axes */
+		var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+		categoryAxis.dataFields.category = options.label0;
+		categoryAxis.renderer.minGridDistance = 30;
+		categoryAxis.renderer.labels.template.horizontalCenter = "right";
+		categoryAxis.renderer.labels.template.verticalCenter = "middle";
+		categoryAxis.renderer.labels.template.rotation = 300;
+		categoryAxis.renderer.labels.template.fontSize = 11;
+
+		/* Create value axis */
+		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+		/* Create series */
+		var columnSeries = chart.series.push(new am4charts.ColumnSeries());
+		columnSeries.name = options.label1;
+		columnSeries.dataFields.valueY = options.label1;
+		columnSeries.dataFields.categoryX = "time";
+
+		columnSeries.columns.template.tooltipText = "[#fff font-size: 15px]{name} in {categoryX}:\n[/][#fff font-size: 20px]{valueY}[/] [#fff]{additional}[/]"
+		columnSeries.columns.template.propertyFields.fillOpacity = "fillOpacity";
+		columnSeries.columns.template.propertyFields.stroke = "stroke";
+		columnSeries.columns.template.propertyFields.strokeWidth = "strokeWidth";
+		columnSeries.columns.template.propertyFields.strokeDasharray = "columnDash";
+		columnSeries.tooltip.label.textAlign = "middle";
+
+		// second value axis for quantity
+		var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
+		valueAxis2.renderer.opposite = true;
+		valueAxis2.syncWithAxis = valueAxis;
+		valueAxis2.tooltip.disabled = true;
+
+		var lineSeries = chart.series.push(new am4charts.LineSeries());
+		lineSeries.name = options.label2;
+		lineSeries.dataFields.valueY = options.label2;
+		lineSeries.dataFields.categoryX = "time";
+
+		lineSeries.yAxis = valueAxis2;
+
+		lineSeries.stroke = am4core.color("#fdd400");
+		lineSeries.strokeWidth = 3;
+		lineSeries.propertyFields.strokeDasharray = "lineDash";
+		lineSeries.tooltip.label.textAlign = "middle";
+
+		var bullet = lineSeries.bullets.push(new am4charts.Bullet());
+		bullet.fill = am4core.color("#fdd400"); // tooltips grab fill from parent by default
+		bullet.tooltipText = "[#fff font-size: 15px]{name} in {categoryX}:\n[/][#fff font-size: 20px]{valueY}[/] [#fff]{additional}[/]"
+		var circle = bullet.createChild(am4core.Circle);
+		circle.radius = 4;
+		circle.fill = am4core.color("#fff");
+		circle.strokeWidth = 3;
+		
+		// Enable export
+		chart.exporting.menu = new am4core.ExportMenu();
+		
+		chart.data = arr;
+
+		chart.events.on("ready", function(e){
+			//debugger;	
+			var bar_chart_loader = window.document.getElementById( domId + "_loader" );
+			bar_chart_loader.classList.remove("active");
+		});
+
+		return chart;
+	};
+
+
 	/*
 	 *
 	 */
