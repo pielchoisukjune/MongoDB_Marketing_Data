@@ -275,7 +275,7 @@
 				if( !window.charts.map ) window.charts.map = {};
 				
 				window.charts.map.facebook = geochart;
-				
+				window.charts.map.facebook.dataUri = window.charts.map.facebook.getImageURI();
 				return;
 			});
 			geochart.draw(data, opts);	
