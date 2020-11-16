@@ -137,7 +137,7 @@
 		chart.exporting.menu = new am4core.ExportMenu();
 
 		chart.events.on("ready", function(e){
-			//debugger;	
+			debugger;	
 			var pie_chart_loader = window.document.getElementById( domId + "_loader" );
 			pie_chart_loader.classList.remove("active");
 		});
