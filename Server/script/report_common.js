@@ -271,9 +271,11 @@
 				var mpa_chart_loader = window.document.getElementById( "map_chart_loader" );
 				map_chart_loader.classList.remove("active");
 				//var imgUri = geochart.getImageURI();
-				window.charts || window.charts = {}
-				window.charts.map || window.charts.map = {}
-				window.charts.map.facebook || window.charts.map.facebook = geochart
+				if( !window.charts ) window.charts = {}
+				if( !window.charts.map ) window.charts.map || window.charts.map = {}
+				
+				window.charts.map.facebook = geochart;
+				
 				return;
 			});
 			geochart.draw(data, opts);	
