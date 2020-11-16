@@ -165,7 +165,7 @@
 		if( options.title != "" )
 		{
 			var title00 = chart.titles.create();
-			title00.text = title;
+			title00.text = options.title;
 			title00.fontSize = 25;
 			title00.marginBottom = 30;
 			title00.marginTop = 30;	
