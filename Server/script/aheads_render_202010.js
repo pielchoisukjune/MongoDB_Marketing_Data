@@ -1,21 +1,7 @@
 
 (functoin(){
 
-	var s = document.createElement('script');
-	s.type = 'text/javascript';
-	s.async = true;
-	var timsstamp = new Date().getTime();
-	s.src = window.CONST.CONFIG.jsPath.report + "?t=" + timsstamp;
-	var x = document.getElementsByTagName('script')[0];
-	x.parentNode.insertBefore(s, x);
 
-	var s0 = document.createElement('script');
-	s0.type = 'text/javascript';
-	s0.async = true;
-	var timsstamp = new Date().getTime();
-	s0.src = window.CONST.CONFIG.jsPath.render + "?t=" + timsstamp;
-	var x = document.getElementsByTagName('script')[0];
-	x.parentNode.insertBefore(s0, x);
 
 })()
 
