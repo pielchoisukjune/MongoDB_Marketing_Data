@@ -1,7 +1,4 @@
-(function(){
 
-
-  
 window.addEventListener('DOMContentLoaded', function( e ){
 	var xhr = new XMLHttpRequest();
 	xhr.addEventListener("load", function(){
@@ -23,4 +20,3 @@ window.document.getElementById( "downloadPdf" ).addEventListener('click',functio
 		window.PIEL.REPORT.loader.off()
 	},2000)
 })
-})();
