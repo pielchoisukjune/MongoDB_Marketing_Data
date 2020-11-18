@@ -137,7 +137,7 @@
 		chart.exporting.menu = new am4core.ExportMenu();
 
 		chart.events.on("ready", function(e){
-			debugger;	
+			//debugger;	
 			var pie_chart_loader = window.document.getElementById( domId + "_loader" );
 			pie_chart_loader.classList.remove("active");
 		});
@@ -302,7 +302,8 @@
 		for(;i<iLen;i++){
 			io = data[ i ];
 			if( i == 0 ){
-
+				_bg_check00 = io.indexOf( target_month );
+				_bg_check01 = io.indexOf( target_month ) + 1;
 
 				_html0 += "<tr>"
 				var _tidx = 0;
