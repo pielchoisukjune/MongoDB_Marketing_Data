@@ -7,9 +7,9 @@
 	window.COMMON.SERVER.API_SERVER.PORT = 8888;
 
 	window.PAGE_SETTING = {}
-	// window.PAGE_SETTING._BRAND_NM_ = "";
-	// window.PAGE_SETTING._TARGET_YEAR_ = ""
-	// window.PAGE_SETTING._TARGET_MONTH_ = -1;
+	window.PAGE_SETTING._BRAND_NM_ = "";
+	window.PAGE_SETTING._TARGET_YEAR_ = ""
+	window.PAGE_SETTING._TARGET_MONTH_ = -1;
 	window.PAGE_SETTING._USE_REST_APIS_ = {
 		find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
 	};
@@ -50,5 +50,6 @@
 	window.EXTERNAL.API.isntagramAheadsUrl = "https://storage.elfsight.com/api/instagram?q=me/media?fields=caption,media_type,media_url,permalink,thumbnail_url,timestamp,username,children{media_type,media_url,thumbnail_url}&user_id=e2403ac5-a96e-4c38-b1f7-bea95c1634fb"
 	window.EXTERNAL.API.dateObj = { start : "2020-10-01", end : "2020-11-01" };
   
-	
+	window.PAGE_SETTING.insertScript( window.CONST.CONFIG.jsPath.report );
+	window.PAGE_SETTING.insertScript( window.CONST.CONFIG.jsPath.render );
 })();
