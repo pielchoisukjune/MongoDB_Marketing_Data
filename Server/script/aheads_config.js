@@ -18,6 +18,13 @@
 		window.PAGE_SETTING._BRAND_NM_ = brandNm;
 		window.PAGE_SETTING._TARGET_YEAR_ = year;
 		window.PAGE_SETTING._TARGET_MONTH_ = month;
+
+		window.CONST = {};
+		window.CONST.CONFIG = {};
+		window.CONST.CONFIG.jsPath = {
+			report : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/report_common.js"
+			, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/aheads_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ + ".js"
+		};
 	}
 
 	window.PAGE_SETTING.insertScript = function( path ){
@@ -29,13 +36,6 @@
 		var x = document.getElementsByTagName('script')[0];
 		x.parentNode.insertBefore(s, x);
 	}
-
-	window.CONST = {};
-	window.CONST.CONFIG = {};
-	window.CONST.CONFIG.jsPath = {
-		report : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/report_common.js"
-		, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/aheads_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ + ".js"
-	};
 
 	window.charts = {};
 	window.charts.bar = {};
