@@ -1393,7 +1393,7 @@
 	 */
 	window.PIEL.REPORT.adlist_render = function( dateObj, brandNm ){
 		
-		console.log( "adlist_render.cnt : " + adlist_render.cnt );
+		console.log( "adlist_render.cnt : " + window.PIEL.REPORT.adlist_render.cnt );
 	
 		if( window.PIEL.REPORT.makeDataInstagram.isEnd == 0 )
 		{
