@@ -1,12 +1,12 @@
 (function(){
-var logic = function( data ){
+window.PIEL.REPORT.logic = function( data ){
 	if( !window.PIEL || !window.PIEL.REPORT )
 	{
 		console.log( "report_common.js is not loaded" );
 		
-		++logic._isLoadCnt;
-		console.log( "logic._isLoadCnt : " + logic._isLoadCnt );
-		setTimeout(function(){ logic();},2000);
+		++window.PIEL.REPORT.logic._isLoadCnt;
+		console.log( "window.PIEL.REPORT.logic._isLoadCnt : " + window.PIEL.REPORT.logic._isLoadCnt );
+		setTimeout(function(){ window.PIEL.REPORT.logic();},2000);
 		return;
 	}
 	console.log( "window.PIEL.REPORT Loaded." );
@@ -54,13 +54,13 @@ var logic = function( data ){
 	google.setOnLoadCallback( window.PIEL.REPORT.drawVisualization( data.location_data ) );
 
 };
-logic._isLoadCnt = 0;
+window.PIEL.REPORT.logic._isLoadCnt = 0;
   
 window.addEventListener('DOMContentLoaded', function( e ){
 	var xhr = new XMLHttpRequest();
 	xhr.addEventListener("load", function(){
 	  var data = JSON.parse( xhr.responseText );
-	  logic( data );
+	  window.PIEL.REPORT.logic( data );
 	});
 	xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_by_month + "brand=" + window.PAGE_SETTING._BRAND_NM_ + "&month=" + window.PAGE_SETTING._TARGET_MONTH_ );
 	xhr.send();
