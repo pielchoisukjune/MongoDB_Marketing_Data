@@ -1,14 +1,5 @@
 
-window.addEventListener('DOMContentLoaded', function( e ){
-	var xhr = new XMLHttpRequest();
-	xhr.addEventListener("load", function(){
-	  var data = JSON.parse( xhr.responseText );
-	  window.PIEL.REPORT.logic( data );
-	});
-	xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_by_month + "brand=" + window.PAGE_SETTING._BRAND_NM_ + "&month=" + window.PAGE_SETTING._TARGET_MONTH_ );
-	xhr.send();
-});
-
+window.addEventListener('DOMContentLoaded', function( e ){ window.PIEL.REPORT.getData() });
 window.document.getElementById( "downloadPdf" ).addEventListener('click',function(e){
 	window.PIEL.REPORT.loader.on();
 

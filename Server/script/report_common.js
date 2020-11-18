@@ -1494,4 +1494,19 @@
 	
 	};
 	window.PIEL.REPORT.logic._isLoadCnt = 0;
+
+	window.PIEL.REPORT.xhr = new XMLHttpRequest();
+
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.getData = function(){
+		window.PIEL.REPORT.xhr.addEventListener("load", function(){
+		var data = JSON.parse( window.PIEL.REPORT.xhr.responseText );
+		window.PIEL.REPORT.logic( data );
+		});
+		window.PIEL.REPORT.xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_by_month + "brand=" + window.PAGE_SETTING._BRAND_NM_ + "&month=" + window.PAGE_SETTING._TARGET_MONTH_ );
+		window.PIEL.REPORT.xhr.send();
+	}
+	
 })()
