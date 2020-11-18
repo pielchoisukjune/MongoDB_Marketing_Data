@@ -2,6 +2,8 @@
 if( !window.PIEL ) window.PIEL = {};
 if( !window.PIEL.REPORT ) window.PIEL.REPORT = {};
 window.PIEL.REPORT.logic = function( data ){
+
+	debugger;
 	if( !window.PIEL || !window.PIEL.REPORT )
 	{
 		console.log( "report_common.js is not loaded" );
