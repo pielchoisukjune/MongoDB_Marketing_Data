@@ -1412,4 +1412,28 @@
 	}
 	window.PIEL.REPORT.adlist_render.cnt = 1;
 
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.loader = {};
+	window.PIEL.REPORT.loader.el = window.document.getElementById( "loader" )
+
+	/**
+	 * 
+	 * @param {*} str 
+	 */
+	window.PIEL.REPORT.loader.on = function( str ){
+		if( str ) window.PIEL.REPORT.loader.el.children[0].innerText = str;
+		window.PIEL.REPORT.loader.el.style.display = "block";	
+		window.PIEL.REPORT.loader.el.classList.add("active");
+		return;
+	};
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.loader.off = function(){
+		window.PIEL.REPORT.loader.el.style.display = "none";	
+		window.PIEL.REPORT.loader.el.classList.remove("active");;
+		return;
+	};
 })()
