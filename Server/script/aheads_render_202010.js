@@ -1,8 +1,8 @@
 (function(){
 	//window.addEventListener('DOMContentLoaded', function( e ){ window.PIEL.REPORT.getData() });
 	
-	if( !window.PIEL ) window.PIEL = {};
-	if( !window.PIEL.REPORT ) window.PIEL.REPORT = {};
+	// if( !window.PIEL ) window.PIEL = {};
+	// if( !window.PIEL.REPORT ) window.PIEL.REPORT = {};
 	
 	//--------------------------------------------------;
 	// FUNCTION;

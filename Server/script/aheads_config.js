@@ -33,9 +33,12 @@
 		s.async = true;
 		var timsstamp = new Date().getTime();
 		s.src = path + "?t=" + timsstamp;
-		var x = document.getElementsByTagName('script')[0];
+		var x = document.getElementsByTagName('script')[ window.PAGE_SETTING.insertScript.cnt ];
 		x.parentNode.insertBefore(s, x);
+		++window.PAGE_SETTING.insertScript.cnt;
+		return;
 	}
+	window.PAGE_SETTING.insertScript.cnt = 0;
 
 	window.charts = {};
 	window.charts.bar = {};
