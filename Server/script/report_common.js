@@ -1391,7 +1391,7 @@
 	 * @param {*} dateObj 
 	 * @param {*} brandNm 
 	 */
-	window.PIEL.REPORT.adlist_render = function( dateObj, brandNm, data ){
+	window.PIEL.REPORT.adlist_render = function( dateObj, brandNm, d ){
 		
 		console.log( "adlist_render.cnt : " + window.PIEL.REPORT.adlist_render.cnt );
 	
@@ -1407,7 +1407,7 @@
 		}
 	
 		console.log( "snsData Load End!" )
-		return window.PIEL.REPORT.drawTable__make_marketing_list( "marketing_list", data.ads_list, target_month, dateObj, brandNm )
+		return window.PIEL.REPORT.drawTable__make_marketing_list( "marketing_list", d.ads_list, target_month, dateObj, brandNm )
 	}
 	window.PIEL.REPORT.adlist_render.cnt = 1;
 
