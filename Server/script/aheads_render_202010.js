@@ -84,6 +84,4 @@
 	// LOGIC;
 	//--------------------------------------------------;
 	window.PIEL.REPORT.getData( window.PIEL.REPORT.logic );
-
-	
 })()
