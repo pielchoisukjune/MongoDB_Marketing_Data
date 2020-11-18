@@ -7,9 +7,9 @@
 	window.COMMON.SERVER.API_SERVER.PORT = 8888;
 
 	window.PAGE_SETTING = {}
-	window.PAGE_SETTING._BRAND_NM_ = "aheads";
-	window.PAGE_SETTING._TARGET_YEAR_ = "2020"
-	window.PAGE_SETTING._TARGET_MONTH_ = 10;
+	window.PAGE_SETTING._BRAND_NM_ = "";
+	window.PAGE_SETTING._TARGET_YEAR_ = ""
+	window.PAGE_SETTING._TARGET_MONTH_ = -1;
 	window.PAGE_SETTING._USE_REST_APIS_ = {
 		find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
 	};
@@ -22,6 +22,12 @@
 		s.src = path + "?t=" + timsstamp;
 		var x = document.getElementsByTagName('script')[0];
 		x.parentNode.insertBefore(s, x);
+	}
+
+	window.PAGE_SETTING.targetSetting = function( brandNm, year, month ){
+		window.PAGE_SETTING._BRAND_NM_ = brandNm;
+		window.PAGE_SETTING._TARGET_YEAR_ = year;
+		window.PAGE_SETTING._TARGET_MONTH_ = month;
 	}
 
 	window.CONST = {};
