@@ -30,7 +30,7 @@
 	window.PAGE_SETTING.insertScript = function( path ){
 		var s = document.createElement('script');
 		s.type = 'text/javascript';
-		s.async = true;
+		s.async = false;
 		var timsstamp = new Date().getTime();
 		s.src = path + "?t=" + timsstamp;
 		var x = document.getElementsByTagName('script')[ window.PAGE_SETTING.insertScript.cnt ];
