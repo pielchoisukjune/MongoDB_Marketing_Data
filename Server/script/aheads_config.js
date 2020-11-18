@@ -14,6 +14,12 @@
 		find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
 	};
 	
+	window.PAGE_SETTING.targetSetting = function( brandNm, year, month ){
+		window.PAGE_SETTING._BRAND_NM_ = brandNm;
+		window.PAGE_SETTING._TARGET_YEAR_ = year;
+		window.PAGE_SETTING._TARGET_MONTH_ = month;
+	}
+
 	window.PAGE_SETTING.insertScript = function( path ){
 		var s = document.createElement('script');
 		s.type = 'text/javascript';
@@ -22,12 +28,6 @@
 		s.src = path + "?t=" + timsstamp;
 		var x = document.getElementsByTagName('script')[0];
 		x.parentNode.insertBefore(s, x);
-	}
-
-	window.PAGE_SETTING.targetSetting = function( brandNm, year, month ){
-		window.PAGE_SETTING._BRAND_NM_ = brandNm;
-		window.PAGE_SETTING._TARGET_YEAR_ = year;
-		window.PAGE_SETTING._TARGET_MONTH_ = month;
 	}
 
 	window.CONST = {};
