@@ -4,6 +4,10 @@
 	// FUNCTION;
 	//--------------------------------------------------;
 	
+	/**
+	 * 
+	 * @param {*} data 
+	 */
 	window.PIEL.REPORT.logic = function( data ){
 
 		if( !window.PIEL || !window.PIEL.REPORT )

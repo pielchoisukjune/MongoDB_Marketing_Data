@@ -14,6 +14,16 @@
 		find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
 	};
 	
+	window.PAGE_SETTING.insertScript = function( path ){
+		var s = document.createElement('script');
+		s.type = 'text/javascript';
+		s.async = true;
+		var timsstamp = new Date().getTime();
+		s.src = path + "?t=" + timsstamp;
+		var x = document.getElementsByTagName('script')[0];
+		x.parentNode.insertBefore(s, x);
+	}
+
 	window.CONST = {};
 	window.CONST.CONFIG = {};
 	window.CONST.CONFIG.jsPath = {
@@ -34,5 +44,5 @@
 	window.EXTERNAL.API.isntagramAheadsUrl = "https://storage.elfsight.com/api/instagram?q=me/media?fields=caption,media_type,media_url,permalink,thumbnail_url,timestamp,username,children{media_type,media_url,thumbnail_url}&user_id=e2403ac5-a96e-4c38-b1f7-bea95c1634fb"
 	window.EXTERNAL.API.dateObj = { start : "2020-10-01", end : "2020-11-01" };
   
-
+	
 })();
