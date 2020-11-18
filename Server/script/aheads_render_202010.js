@@ -1,6 +1,9 @@
-
 (function(){
 	//window.addEventListener('DOMContentLoaded', function( e ){ window.PIEL.REPORT.getData() });
+	//--------------------------------------------------;
+	// FUNCTION;
+	//--------------------------------------------------;
+	
 	window.PIEL.REPORT.logic = function( data ){
 
 		if( !window.PIEL || !window.PIEL.REPORT )
@@ -59,8 +62,9 @@
 	};
 	window.PIEL.REPORT.logic._isLoadCnt = 0;
 
-	window.PIEL.REPORT.getData();
-
+	//--------------------------------------------------;
+	// EVENT;
+	//--------------------------------------------------;
 	window.document.getElementById( "downloadPdf" ).addEventListener('click',function(e){
 		window.PIEL.REPORT.loader.on();
 	
@@ -72,4 +76,11 @@
 			window.PIEL.REPORT.loader.off()
 		},2000)
 	})
+	
+	//--------------------------------------------------;
+	// LOGIC;
+	//--------------------------------------------------;
+	window.PIEL.REPORT.getData();
+
+	
 })()
