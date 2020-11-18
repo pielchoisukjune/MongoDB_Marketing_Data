@@ -287,7 +287,7 @@
 	/*
 	 * 월간집행통계작성;
 	 */
-	window.PIEL.REPORT.drawTable__monthly_marketing_plan = function( domId, data ){
+	window.PIEL.REPORT.drawTable__monthly_marketing_plan = function( domId, data, target_month ){
 		
 		var tDom = window.document.getElementById( domId );
 
@@ -302,6 +302,7 @@
 		for(;i<iLen;i++){
 			io = data[ i ];
 			if( i == 0 ){
+
 
 				_html0 += "<tr>"
 				var _tidx = 0;
@@ -348,7 +349,7 @@
 	/*
 	 *
 	 */
-	window.PIEL.REPORT.drawCards__monthly_facebook_stastics = function( domId, data ){
+	window.PIEL.REPORT.drawCards__monthly_facebook_stastics = function( domId, data, target_month ){
 		
 		var tDom = window.document.getElementById( domId );
 		var _tStr = `<div class="card"><div class="content"><div class="header" style="font-size : 12px;"><!=LABEL=!></div><div class="description" style="font-size : 20px;color:#000;"><b><!=VALUE=!></b></div></div></div>`;
@@ -392,7 +393,7 @@
 	//-------------------------------------------------------;
 	// 페이스북지역통계카드생성;
 	//-------------------------------------------------------;
-	window.PIEL.REPORT.drawCards__make_facebook_location_html = function( domId, data ){
+	window.PIEL.REPORT.drawCards__make_facebook_location_html = function( domId, data, target_month ){
 
 		var tDom = window.document.getElementById( domId );
 		var _tStr = `<div class="card"><div class="content"><div class="header" style="font-size : 12px;"><!=city=!></div><div class="description" style="font-size : 11px;">도달 : <!=reach=!><br>노출 : <!=view=!></div></div></div>`;
@@ -417,7 +418,7 @@
 	/*
 	 * KOL카드생성
 	 */
-	window.PIEL.REPORT.drawCards__make_kols_html = function( domId, data ){
+	window.PIEL.REPORT.drawCards__make_kols_html = function( domId, data, target_month ){
 		var gender_icon = {
 			"남" : "blue mars stroke vertical"
 			, "여" : "red venus"
@@ -470,7 +471,7 @@
 	/*
 	 * KOL카드생성
 	 */
-	window.PIEL.REPORT.drawTable__make_kols_html = function( domId, data ){
+	window.PIEL.REPORT.drawTable__make_kols_html = function( domId, data, target_month ){
 
 		var gender_icon = {	"남" : "blue mars stroke vertical", "여" : "red venus" };
 		var tDom = window.document.getElementById( domId );
@@ -543,7 +544,7 @@
 	//-------------------------------------------------------;
 	//구글전체통계 생성;
 	//-------------------------------------------------------;
-	window.PIEL.REPORT.drawTable__make_statistic_google_html = function( domId, o0, o1 ){
+	window.PIEL.REPORT.drawTable__make_statistic_google_html = function( domId, o0, o1,  target_month ){
 
 		var tDom = window.document.getElementById( domId );
 
@@ -730,7 +731,7 @@
 	//-------------------------------------------------------;
 	// 구글 SEO 리스트생성;
 	//-------------------------------------------------------;
-	window.PIEL.REPORT.drawCards__google_seo_list = function( domId, data ){
+	window.PIEL.REPORT.drawCards__google_seo_list = function( domId, data, target_month ){
 
 		var tDom = window.document.getElementById( domId );
 		if( !tDom ) return;
@@ -913,7 +914,7 @@
 	//-------------------------------------------------------;
 	// 광고집행리스트생성;
 	//-------------------------------------------------------;
-	window.PIEL.REPORT.drawCards__make_marketing_list = function( domId, data ){
+	window.PIEL.REPORT.drawCards__make_marketing_list = function( domId, data, target_month ){
 
 		var tDom = window.document.getElementById( domId );
 		if( !tDom ) return;
@@ -1032,7 +1033,7 @@
 	//-------------------------------------------------------;
 	// 광고집행리스트생성;
 	//-------------------------------------------------------;
-	window.PIEL.REPORT.drawTable__make_marketing_list = function( domId, data, dateObj, brandNm ){
+	window.PIEL.REPORT.drawTable__make_marketing_list = function( domId, data, target_month, dateObj, brandNm ){
 
 		var tDom = window.document.getElementById( domId );
 		if( !tDom ) return;
@@ -1145,7 +1146,7 @@
 	//-------------------------------------------------------;
 	// 광고집행리스트생성;
 	//-------------------------------------------------------;
-	window.PIEL.REPORT.drawTable__make_marketing_list_none_img = function( domId, data ){
+	window.PIEL.REPORT.drawTable__make_marketing_list_none_img = function( domId, data, target_month ){
 
 		var tDom = window.document.getElementById( domId );
 		if( !tDom ) return;
@@ -1172,7 +1173,7 @@
 	//-------------------------------------------------------;
 	//마케팅집행 통계 생성;
 	//-------------------------------------------------------;
-	window.PIEL.REPORT.drawCards__make_ads_total_statistic = function( domId, data ){
+	window.PIEL.REPORT.drawCards__make_ads_total_statistic = function( domId, data, target_month ){
 		
 		var tDom = window.document.getElementById( domId );
 		var _tStr = `<div class="card"><div class="content"><div class="header" style="font-size : 12px;"><!=LABEL=!></div><div class="description" style="font-size : 20px;color:#000;"><b><!=VALUE=!></b></div></div></div>`;
