@@ -1,14 +1,8 @@
 (function(){
-	//window.addEventListener('DOMContentLoaded', function( e ){ window.PIEL.REPORT.getData() });
-	
-	// if( !window.PIEL ) window.PIEL = {};
-	// if( !window.PIEL.REPORT ) window.PIEL.REPORT = {};
-	
+
 	//--------------------------------------------------;
 	// FUNCTION;
 	//--------------------------------------------------;
-	
-
 	/**
 	 * 
 	 * @param {*} data 
@@ -89,7 +83,7 @@
 	//--------------------------------------------------;
 	// LOGIC;
 	//--------------------------------------------------;
-	window.PIEL.REPORT.getData();
+	window.PIEL.REPORT.getData( window.PIEL.REPORT.logic );
 
 	
 })()
