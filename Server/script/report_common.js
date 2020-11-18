@@ -1408,7 +1408,7 @@
 	
 		console.log( "snsData Load End!" )
 		debugger;
-		return window.PIEL.REPORT.drawTable__make_marketing_list( "marketing_list", d.ads_list, target_month, dateObj, brandNm )
+		return window.PIEL.REPORT.drawTable__make_marketing_list( "marketing_list", d, target_month, dateObj, brandNm )
 	}
 	window.PIEL.REPORT.adlist_render.cnt = 1;
 
