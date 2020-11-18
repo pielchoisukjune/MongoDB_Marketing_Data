@@ -1,10 +1,3 @@
-
-(functoin(){
-
-
-
-})()
-
 (functoin(){
 var logic = function( data ){
 	if( !window.PIEL || !window.PIEL.REPORT )
@@ -84,4 +77,4 @@ window.document.getElementById( "downloadPdf" ).addEventListener('click',functio
 		window.PIEL.REPORT.loader.off()
 	},2000)
 })
-})()
+})();
