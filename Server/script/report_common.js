@@ -63,7 +63,7 @@
 		chart.exporting.menu = new am4core.ExportMenu();
 
 		chart.events.on("ready", function(e){
-			//debugger;	
+			//	
 			var pie_chart_loader = window.document.getElementById( domId + "_loader" );
 			pie_chart_loader.classList.remove("active");
 		});
@@ -137,7 +137,7 @@
 		chart.exporting.menu = new am4core.ExportMenu();
 
 		chart.events.on("ready", function(e){
-			//debugger;	
+			//	
 			var pie_chart_loader = window.document.getElementById( domId + "_loader" );
 			pie_chart_loader.classList.remove("active");
 		});
@@ -160,7 +160,7 @@
 
 		chart.legend = new am4charts.Legend();
 		// Export
-		//debugger;
+		//
 		chart.exporting.menu = new am4core.ExportMenu();
 
 		if( options.title != "" )
@@ -231,7 +231,7 @@
 		chart.data = arr;
 
 		chart.events.on("ready", function(e){
-			//debugger;	
+			//	
 			var bar_chart_loader = window.document.getElementById( domId + "_loader" );
 			bar_chart_loader.classList.remove("active");
 		});
@@ -594,7 +594,7 @@
 
 		for( s in o1 ){
 			so = o1[ s ];
-			//debugger;
+			//
 			var _click_col = "";
 			var _view_col = "";
 			var _keyword = "";
@@ -1333,7 +1333,7 @@
 	 * @param {*} dateObj 
 	 */
 	window.PIEL.REPORT.makeDataFacebook = function( brandNm, resData, dateObj ){
-		debugger;
+		
 		var r = {};
 		var i = 0,iLen = resData.data.length,io,key;
 		for(;i<iLen;++i){
@@ -1398,16 +1398,16 @@
 		if( window.PIEL.REPORT.makeDataInstagram.isEnd == 0 )
 		{
 			++window.PIEL.REPORT.adlist_render.cnt;
-			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( dateObj, brandNm );},2000);
+			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( dateObj, brandNm, d );},2000);
 		}
 		if( window.PIEL.REPORT.makeDataFacebook.isEnd == 0 )
 		{
 			++window.PIEL.REPORT.adlist_render.cnt;
-			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( dateObj, brandNm );},2000);
+			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( dateObj, brandNm, d );},2000);
 		}
 	
 		console.log( "snsData Load End!" )
-		debugger;
+		
 		return window.PIEL.REPORT.drawTable__make_marketing_list( "marketing_list", d, target_month, dateObj, brandNm )
 	}
 	window.PIEL.REPORT.adlist_render.cnt = 1;
