@@ -1,6 +1,9 @@
 
 (function(){
-	window.addEventListener('DOMContentLoaded', function( e ){ window.PIEL.REPORT.getData() });
+	//window.addEventListener('DOMContentLoaded', function( e ){ window.PIEL.REPORT.getData() });
+	
+	window.PIEL.REPORT.getData();
+
 	window.document.getElementById( "downloadPdf" ).addEventListener('click',function(e){
 		window.PIEL.REPORT.loader.on();
 	
