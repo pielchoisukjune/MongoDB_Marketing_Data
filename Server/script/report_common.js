@@ -1391,7 +1391,7 @@
 	 * @param {*} dateObj 
 	 * @param {*} brandNm 
 	 */
-	window.PIEL.REPORT.adlist_render = function( dateObj, brandNm ){
+	window.PIEL.REPORT.adlist_render = function( dateObj, brandNm, data ){
 		
 		console.log( "adlist_render.cnt : " + window.PIEL.REPORT.adlist_render.cnt );
 	
