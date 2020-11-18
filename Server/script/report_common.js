@@ -1221,4 +1221,194 @@
 		console.log( r )
 		return r
 	}
+	/*
+	 *
+	 */
+	window.PIEL.REPORT.chartToPng = function(){
+
+		var _t00 = window.charts.bar;
+		var _t01 = window.charts.pie;
+	
+		var s,so;
+		for( s in _t00 )
+		{
+			so = _t00[ s ];
+			so.exporting.filePrefix = window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + "_" + so.exporting.filePrefix;
+			so.exporting.export("png")
+		}
+	
+		var s,so;
+		for( s in _t01 )
+		{
+			so = _t01[ s ];
+			so.exporting.filePrefix = window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + "_" + so.exporting.filePrefix;
+			so.exporting.export("png")
+		}
+		downloadURI( window.charts.map.facebook.dataUri, window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + "_facebook_location" + ".png" );
+		return;
+	}
+	
+	/**
+	 * 
+	 * @param {String} uri 
+	 * @param {String} name 
+	 */
+	window.PIEL.REPORT.downloadURI = function (uri, name) {
+	
+		var link = document.createElement("a");
+		
+		link.download = name;
+		link.href = uri;
+		
+		document.body.appendChild(link);
+		
+		link.click();
+		
+		document.body.removeChild(link);
+		
+		delete link;
+	
+		return;
+	}
+
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.instaEmbed = function(){
+		if( !window.instgrm.Embeds.process ){ 
+		  console.log( "window.instgrm.Embeds.process is not loaded!" );
+		  window.PIEL.REPORT.instaEmbed();
+		  return;
+		}
+		  console.log( "window.instgrm.Embeds.process is loaded!" );
+		  window.instgrm.Embeds.process();
+		
+		return;
+	}
+
+	/**
+	 * 
+	 * @param {*} brandNm 
+	 * @param {*} Url 
+	 * @param {*} dateObj 
+	 */
+	window.PIEL.REPORT.getFacebookData = function( brandNm, Url, dateObj ){
+		var xhr = new XMLHttpRequest();
+		if( !window.marketing.report[ brandNm ] ) window.marketing.report[ brandNm ] = {};
+		if( !window.marketing.report[ brandNm ][ "facebook" ] ) window.marketing.report[ brandNm ][ "facebook" ] = {};
+		if( !window.marketing.report[ brandNm ][ "facebook" ][ dateObj.start ] ) window.marketing.report[ brandNm ][ "facebook" ][ dateObj.start ] = {};
+	
+		xhr.addEventListener("load", function(){
+			window.PIEL.REPORT.makeDataFacebook( brandNm, JSON.parse( xhr.responseText ), dateObj );
+		});
+		xhr.open("GET", Url );
+		xhr.send();
+	
+	}
+	
+	/**
+	 * 
+	 * @param {*} brandNm 
+	 * @param {*} Url 
+	 * @param {*} dateObj 
+	 */
+	window.PIEL.REPORT.getInstagramData = function( brandNm, Url, dateObj ){
+		var xhr = new XMLHttpRequest();
+		if( !window.marketing.report[ brandNm ] ) window.marketing.report[ brandNm ] = {};
+		if( !window.marketing.report[ brandNm ][ "instagram" ] ) window.marketing.report[ brandNm ][ "instagram" ] = {};
+		if( !window.marketing.report[ brandNm ][ "instagram" ][ dateObj.start ] ) window.marketing.report[ brandNm ][ "instagram" ][ dateObj.start ] = {};
+	
+		xhr.addEventListener("load", function(){
+			window.PIEL.REPORT.makeDataInstagram( brandNm, JSON.parse( xhr.responseText ), dateObj );
+		});
+		xhr.open("GET", Url );
+		xhr.send();
+	
+	}
+	
+	/**
+	 * 
+	 * @param {*} brandNm 
+	 * @param {*} resData 
+	 * @param {*} dateObj 
+	 */
+	window.PIEL.REPORT.makeDataFacebook = function( brandNm, resData, dateObj ){
+		debugger;
+		var r = {};
+		var i = 0,iLen = resData.data.length,io,key;
+		for(;i<iLen;++i){
+			io = resData.data[ i ]
+	
+			if( new Date( dateObj.end ) < new Date( io.created_time ) ) continue;
+			if( new Date( dateObj.start ) > new Date( io.created_time ) ){
+				window.PIEL.REPORT.makeDataFacebook.isEnd =1;
+				return r;
+			}
+	
+			key = io.id.split("_")[1];
+			window.marketing.report[ brandNm ][ "facebook" ][ dateObj.start ][ key ] = io;
+		}
+		if( resData.paging.next ) return window.PIEL.REPORT.getFacebookData( brandNm, resData.paging.next, dateObj );
+		
+		window.PIEL.REPORT.makeDataFacebook.isEnd =1;
+	
+		return r;
+	}
+	window.PIEL.REPORT.makeDataFacebook.isEnd = 0;
+	
+	/**
+	 * 
+	 * @param {*} brandNm 
+	 * @param {*} resData 
+	 * @param {*} dateObj 
+	 */
+	window.PIEL.REPORT.makeDataInstagram = function( brandNm, resData, dateObj ){
+		
+		var r = {};
+		var i = 0,iLen = resData.data.length,io,key;
+		for(;i<iLen;++i){
+			io = resData.data[ i ]
+	
+			if( new Date( dateObj.end ) < new Date( io.timestamp ) ) continue;
+			if( new Date( dateObj.start ) > new Date( io.timestamp ) ){
+				window.PIEL.REPORT.makeDataInstagram.isEnd = 1;
+				return r;
+			}
+	
+			key = io.permalink.split("/").reverse()[1];
+			window.marketing.report[ brandNm ][ "instagram" ][ dateObj.start ][ key ] = io;
+		}
+		if( resData.paging.next ) return window.PIEL.REPORT.getInstagramData( brandNm, resData.paging.next, dateObj )
+		
+		window.PIEL.REPORT.makeDataInstagram.isEnd = 1;
+	
+		return r;
+	}
+	window.PIEL.REPORT.makeDataInstagram.isEnd = 0;
+	
+	/**
+	 * 
+	 * @param {*} dateObj 
+	 * @param {*} brandNm 
+	 */
+	window.PIEL.REPORT.adlist_render = function( dateObj, brandNm ){
+		
+		console.log( "adlist_render.cnt : " + adlist_render.cnt );
+	
+		if( window.PIEL.REPORT.makeDataInstagram.isEnd == 0 )
+		{
+			++window.PIEL.REPORT.adlist_render.cnt;
+			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( dateObj, brandNm );},2000);
+		}
+		if( window.PIEL.REPORT.makeDataFacebook.isEnd == 0 )
+		{
+			++window.PIEL.REPORT.adlist_render.cnt;
+			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( dateObj, brandNm );},2000);
+		}
+	
+		console.log( "snsData Load End!" )
+		return window.PIEL.REPORT.drawTable__make_marketing_list( "marketing_list", data.ads_list, target_month, dateObj, brandNm )
+	}
+	window.PIEL.REPORT.adlist_render.cnt = 1;
+
 })()
