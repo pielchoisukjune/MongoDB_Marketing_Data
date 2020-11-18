@@ -1,6 +1,6 @@
 (function(){
-window.PIEL || window.PIEL = {};
-window.PIEL.REPORT || window.PIEL.REPORT = {};
+if( !window.PIEL ) window.PIEL = {};
+if( !window.PIEL.REPORT ) window.PIEL.REPORT = {};
 window.PIEL.REPORT.logic = function( data ){
 	if( !window.PIEL || !window.PIEL.REPORT )
 	{
