@@ -1,4 +1,4 @@
-(functoin(){
+(function(){
 var logic = function( data ){
 	if( !window.PIEL || !window.PIEL.REPORT )
 	{
