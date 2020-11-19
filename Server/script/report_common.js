@@ -1295,7 +1295,7 @@
 	window.PIEL.REPORT.getFacebookData = function( brandNm, Url ){
 
 		var _t00 = new Date( window.PAGE_SETTING._TARGET_YEAR_, window.PAGE_SETTING._TARGET_MONTH_, 1 );
-		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() +2 ), _t00.getDate() );
+		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() + 1 ), _t00.getDate() );
 
 		var dateObj = {
 			start : _t00.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t00.getMonth() + 1),2) + "-01"
@@ -1325,7 +1325,7 @@
 	window.PIEL.REPORT.getInstagramData = function( brandNm, Url ){
 		
 		var _t00 = new Date( window.PAGE_SETTING._TARGET_YEAR_, window.PAGE_SETTING._TARGET_MONTH_, 1 );
-		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() +2 ), _t00.getDate() );
+		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() + 1 ), _t00.getDate() );
 
 		var dateObj = {
 			start : _t00.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t00.getMonth() + 1),2) + "-01"
@@ -1416,7 +1416,7 @@
 		console.log( "adlist_render.cnt : " + window.PIEL.REPORT.adlist_render.cnt );
 	
 		var _t00 = new Date( window.PAGE_SETTING._TARGET_YEAR_, window.PAGE_SETTING._TARGET_MONTH_, 1 );
-		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() +2 ), _t00.getDate() );
+		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() + 1 ), _t00.getDate() );
 
 		var dateObj = {
 			start : _t00.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t00.getMonth() + 1),2) + "-01"
