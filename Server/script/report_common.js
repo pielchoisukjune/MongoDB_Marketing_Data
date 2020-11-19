@@ -294,12 +294,12 @@
 
 		if( !tDom ) return;
 		
-		var r = "";
+		var _tStr = "";
 		var titleHtml = `
 			<div style='padding:20px 0px;'><h1 class="ui center aligned header">${title}</h1></div>
 		`
-
-		var _tStr = `<table class="ui very compact celled table"><thead><!=TABLE_HEAD=!></thead><tbody><!=TABLE_BODY=!></tbody></table>`;	
+			_tStr += titleHtml;
+			_tStr += `<table class="ui very compact celled table"><thead><!=TABLE_HEAD=!></thead><tbody><!=TABLE_BODY=!></tbody></table>`;	
 		var i = 0,iLen = data.length,io;
 		var _html0 = "";
 		var _html1 = "";
