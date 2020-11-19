@@ -37,8 +37,8 @@
 		//window.PIEL.REPORT.drawTable__make_statistic_google_html( "statistic_google", data.google_ad_info_list, data.google_total, target_month );
 		//window.PIEL.REPORT.drawCards__google_seo_list( "google_seo_list_data", data.google_seo_list, target_month );
 		debugger;
-		window.PIEL.REPORT.getFacebookData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].facebookAheadsUrl );
-		window.PIEL.REPORT.getInstagramData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].isntagramAheadsUrl );
+		window.PIEL.REPORT.getFacebookData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].url.facebook );
+		window.PIEL.REPORT.getInstagramData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].url.isntagram );
 		window.PIEL.REPORT.adlist_render( window.PAGE_SETTING._BRAND_NM_, data.ads_list );
 	
 	

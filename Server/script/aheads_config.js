@@ -11,8 +11,8 @@
 	window.EXTERNAL.APIS.elfsight = {
 		aheads : {
 			url : {
-				facebookAheadsUrl : "https://storage.elfsight.com/api/facebook?q=110304634160721/posts?fields=created_time,permalink_url,from,message,comments.summary(true){from,created_time,message,id},likes.summary(true){name,id},attachments{media,media_type,type,title,description,url,subattachments{media,media_type,type,title,description,url}}&user_id=110304634160721"
-				, isntagramAheadsUrl : "https://storage.elfsight.com/api/instagram?q=me/media?fields=caption,media_type,media_url,permalink,thumbnail_url,timestamp,username,children{media_type,media_url,thumbnail_url}&user_id=e2403ac5-a96e-4c38-b1f7-bea95c1634fb"
+				facebook : "https://storage.elfsight.com/api/facebook?q=110304634160721/posts?fields=created_time,permalink_url,from,message,comments.summary(true){from,created_time,message,id},likes.summary(true){name,id},attachments{media,media_type,type,title,description,url,subattachments{media,media_type,type,title,description,url}}&user_id=110304634160721"
+				, isntagram : "https://storage.elfsight.com/api/instagram?q=me/media?fields=caption,media_type,media_url,permalink,thumbnail_url,timestamp,username,children{media_type,media_url,thumbnail_url}&user_id=e2403ac5-a96e-4c38-b1f7-bea95c1634fb"
 			}
 			, options : {
 				dateObj : {
@@ -23,8 +23,8 @@
 		}
 		, varihope : {
 			url : {
-				facebookAheadsUrl : ""
-				, isntagramAheadsUrl : ""
+				facebook : ""
+				, isntagr : ""
 			}
 			, options : {
 				dateObj : {
@@ -35,8 +35,8 @@
 		}
 		, bxxxy : {
 			url : {
-				facebookAheadsUrl : ""
-				, isntagramAheadsUrl : ""
+				facebook : ""
+				, isntagr : ""
 			}
 			, options : {
 				dateObj : {
@@ -47,8 +47,8 @@
 		}
 		, ashseven : {
 			url : {
-				facebookAheadsUrl : ""
-				, isntagramAheadsUrl : ""
+				facebook : ""
+				, isntagr : ""
 			}
 			, options : {
 				dateObj : {
@@ -59,8 +59,8 @@
 		}
 		, wellderma : {
 			url : {
-				facebookAheadsUrl : ""
-				, isntagramAheadsUrl : ""
+				facebook : ""
+				, isntagr : ""
 			}
 			, options : {
 				dateObj : {
