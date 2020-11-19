@@ -773,6 +773,66 @@
 		tDom.innerHTML = r;
 		return;
 	};
+
+	//-------------------------------------------------------;
+	//구글전체통계 생성;
+	//-------------------------------------------------------;
+	window.PIEL.REPORT.drawTable__make_statistic_google_html__01 = function( domId, data,  target_month ){
+
+		var tDom = window.document.getElementById( domId );
+
+		var title = "구글광고 통계"
+
+		if( !data )
+		{
+			console.log( '    - FN08 - data 가 없음!');
+			console.log( '[E] - FN08 - ' + title );
+			return r;
+		}
+
+		
+
+		var r = "";
+		var titleHtml = `
+		<div class="sixteen wide column">
+			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
+		</div>
+		`
+		r += titleHtml;
+		r += "<div class='sixteen wide column'>\n"
+		r += "<table class='ui very compact celled table'>\n";
+		r += "<thead>\n<tr>\n"	
+		
+		var headers = [ "켐페인", "노출수", "클릭수" ];
+
+		var tdWidth = 100 / headers.length;
+
+		headers.forEach(function(data){
+			r += "<th style='width:" + tdWidth + "%;'>" + data + "</th>\n";	
+		})
+		
+
+		r += "</tr>\n</thead>\n"
+		r += "<tbody>\n"
+
+		var s,so;
+		for( s in data ){
+			so = data[ s ];
+			r += "<tr>\n"
+			
+			r += "<td style='background-color:#fff;color:#000;padding:5px;min-height:40px;'>" + s + "</td>";
+			r += "<td style='background-color:#fff;color:#000;padding:5px;border-top:1px solid #ccc;'>" + so[ "노출수" ] + "</td>";
+			r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + so[ "클릭수" ] + "</td>";
+
+			r += "</tr>\n"	
+		}
+		r += "</tbody>\n</table>\n</div>";
+
+
+		tDom.innerHTML = r;
+		return;
+	};
+
 	//-------------------------------------------------------;
 	//구글 SEO 리스트카드생성;
 	//-------------------------------------------------------;
