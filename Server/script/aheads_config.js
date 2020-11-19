@@ -6,6 +6,72 @@
 	window.COMMON.SERVER.API_SERVER.URL = "http://ec2-15-164-215-214.ap-northeast-2.compute.amazonaws.com";
 	window.COMMON.SERVER.API_SERVER.PORT = 8888;
 
+	window.EXTERNAL = {};
+	window.EXTERNAL.APIS = {};
+	window.EXTERNAL.APIS.elfsight = {
+		aheads : {
+			url : {
+				facebookAheadsUrl : "https://storage.elfsight.com/api/facebook?q=110304634160721/posts?fields=created_time,permalink_url,from,message,comments.summary(true){from,created_time,message,id},likes.summary(true){name,id},attachments{media,media_type,type,title,description,url,subattachments{media,media_type,type,title,description,url}}&user_id=110304634160721"
+				, isntagramAheadsUrl : "https://storage.elfsight.com/api/instagram?q=me/media?fields=caption,media_type,media_url,permalink,thumbnail_url,timestamp,username,children{media_type,media_url,thumbnail_url}&user_id=e2403ac5-a96e-4c38-b1f7-bea95c1634fb"
+			}
+			, options : {
+				dateObj : {
+					start : ""
+					, end : ""
+				}
+			}	
+		}
+		, varihope : {
+			url : {
+				facebookAheadsUrl : ""
+				, isntagramAheadsUrl : ""
+			}
+			, options : {
+				dateObj : {
+					start : ""
+					, end : ""
+				}
+			}	
+		}
+		, bxxxy : {
+			url : {
+				facebookAheadsUrl : ""
+				, isntagramAheadsUrl : ""
+			}
+			, options : {
+				dateObj : {
+					start : ""
+					, end : ""
+				}
+			}	
+		}
+		, ashseven : {
+			url : {
+				facebookAheadsUrl : ""
+				, isntagramAheadsUrl : ""
+			}
+			, options : {
+				dateObj : {
+					start : ""
+					, end : ""
+				}
+			}	
+		}
+		, wellderma : {
+			url : {
+				facebookAheadsUrl : ""
+				, isntagramAheadsUrl : ""
+			}
+			, options : {
+				dateObj : {
+					start : ""
+					, end : ""
+				}
+			}	
+		}
+	};
+	
+
 	window.PAGE_SETTING = {}
 	window.PAGE_SETTING._BRAND_NM_ = "";
 	window.PAGE_SETTING._TARGET_YEAR_ = ""
@@ -23,8 +89,17 @@
 		window.CONST.CONFIG = {};
 		window.CONST.CONFIG.jsPath = {
 			report : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/report_common.js"
-			, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/aheads_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ + ".js"
+			, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/" + window.PAGE_SETTING._BRAND_NM_ + "_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ + ".js"
 		};
+
+		var _t00 = new Date( year, month, 1 );
+		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() +2 ), _t00.getDate() );
+
+		window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].options.dateObj = {
+			start : _t00.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t00.getMonth() + 1),2) + "-01"
+			, end : _t01.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t01.getMonth() + 1),2) + "-01"
+		}
+
 	}
 
 	window.PAGE_SETTING.insertScript = function( path ){
@@ -47,10 +122,4 @@
 	window.marketing = {};
 	window.marketing.report = {};
 	
-	window.EXTERNAL = {};
-	window.EXTERNAL.API = {};
-	window.EXTERNAL.API.facebookAheadsUrl = "https://storage.elfsight.com/api/facebook?q=110304634160721/posts?fields=created_time,permalink_url,from,message,comments.summary(true){from,created_time,message,id},likes.summary(true){name,id},attachments{media,media_type,type,title,description,url,subattachments{media,media_type,type,title,description,url}}&user_id=110304634160721"
-	window.EXTERNAL.API.isntagramAheadsUrl = "https://storage.elfsight.com/api/instagram?q=me/media?fields=caption,media_type,media_url,permalink,thumbnail_url,timestamp,username,children{media_type,media_url,thumbnail_url}&user_id=e2403ac5-a96e-4c38-b1f7-bea95c1634fb"
-	window.EXTERNAL.API.dateObj = { start : "2020-10-01", end : "2020-11-01" };
-  
 })();

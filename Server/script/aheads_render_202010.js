@@ -37,9 +37,9 @@
 		//window.PIEL.REPORT.drawTable__make_statistic_google_html( "statistic_google", data.google_ad_info_list, data.google_total, target_month );
 		//window.PIEL.REPORT.drawCards__google_seo_list( "google_seo_list_data", data.google_seo_list, target_month );
 		
-		window.PIEL.REPORT.getFacebookData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.API.facebookAheadsUrl, window.EXTERNAL.API.dateObj );
-		window.PIEL.REPORT.getInstagramData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.API.isntagramAheadsUrl, window.EXTERNAL.API.dateObj );
-		window.PIEL.REPORT.adlist_render( window.EXTERNAL.API.dateObj, window.PAGE_SETTING._BRAND_NM_, data.ads_list );
+		window.PIEL.REPORT.getFacebookData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].facebookAheadsUrl, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].options );
+		window.PIEL.REPORT.getInstagramData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].isntagramAheadsUrl, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].options );
+		window.PIEL.REPORT.adlist_render( window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].options, window.PAGE_SETTING._BRAND_NM_, data.ads_list );
 	
 	
 		window.PIEL.REPORT.drawCards__make_ads_total_statistic( "ads_total", data.ads_total, target_month );
