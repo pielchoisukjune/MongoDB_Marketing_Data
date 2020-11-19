@@ -516,7 +516,7 @@
 				r += "<tr>\n";
 				
 				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 0 ][ "f" ] + "</td>";
-				r += "<td style='background-color:#fff;color:#000;padding:5px;border-top:1px solid #ccc;'>" + io[ 1 ] + "</td>";
+				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 1 ] + "</td>";
 				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 2 ] + "</td>";
 
 				r += "</tr>\n";
@@ -543,7 +543,7 @@
 			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
 		`
 		r += titleHtml;
-		r += "<table class='ui very compact celled table'><tr>";
+		r += "<table class='ui very compact table'><tr>";
 		r += "<td>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_01( data ) + "</td>";
 		r += "<td>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_02( data ) + "</td>";
 		r += "</tr></table>";
