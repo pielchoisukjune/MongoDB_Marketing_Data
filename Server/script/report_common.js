@@ -390,7 +390,7 @@
 		var tdWidth = 100 / headers.length;
 	
 		headers.forEach(function(item){
-			r += "<th style='width:" + tdWidth + "%;'>" + item + "</th>\n";	
+			r += "<th style='width:" + tdWidth + "%;text-align:center;'>" + item + "</th>\n";	
 		});
 	
 		r += "</tr>\n</thead>\n<tbody>\n";
