@@ -82,6 +82,7 @@
 	
 	window.PAGE_SETTING.targetSetting = function( brandNm, year, month ){
 
+        /*//
         var _q = window.location.search.replace("?","").split( "&" );
         var q = {}    
         var i = 0,iLen = _q.length,io,_t;
@@ -90,11 +91,15 @@
             _t = io.split("=");
             q[ _t[0] ] = _t[ 1 ];
         }
-        debugger;
         window.PAGE_SETTING._BRAND_NM_ = q.brand;
 		window.PAGE_SETTING._TARGET_YEAR_ = q.year;
 		window.PAGE_SETTING._TARGET_MONTH_ = q.month;
-
+        /*/
+        window.PAGE_SETTING._BRAND_NM_ = brandNm;
+		window.PAGE_SETTING._TARGET_YEAR_ = year;
+		window.PAGE_SETTING._TARGET_MONTH_ = month;
+        //*/
+        
 
 
 		window.CONST = {};
