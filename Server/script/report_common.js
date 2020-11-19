@@ -363,19 +363,17 @@
 
 		if( !tDom ) return;
 		
+		var title = "페이스북 광고통계"
+		
 		var r = "";
 		var titleHtml = `
-			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
-		`
-			r += titleHtml;
-		var	_tStr = `<div class="card"><div class="content"><div class="header" style="font-size : 12px;"><!=LABEL=!></div><div class="description" style="font-size : 20px;color:#000;"><b><!=VALUE=!></b></div></div></div>`;
-
-		if( !tDom ) return;
-
-		var i = 0,iLen = data.length,io;
-
-		var _html;
-		var use_label = [
+				<div class="align_center pad_20"><h2>${title}</h2></div>
+			`
+		r += titleHtml;
+		r += "<table id='monthly_facebook_stastics'>\n";
+		r += "<thead>\n<tr>\n";
+		
+		var headers = [
 			"도달 (명)"
 			, "노출 수 (회)"
 			//, "회수 (번)"
@@ -389,20 +387,25 @@
 			//, "동영상 100% 보기"
 			//, "새로운 메시지 연결"
 			//, "새로운 메시지 한번 연결에 금액"
-		]
-		for(;i<iLen;i++){
-			io = data[ i ];
-			var s,so;
-			for( s in io ){
-				so = io[ s ];
-				if( use_label.indexOf( s ) != -1 )
-				{
-					_html = _tStr.replace( "<!=LABEL=!>", s  )
-						.replace( "<!=VALUE=!>", window.PIEL.REPORT.numberWithCommas( so ) );
-					r += _html + "\n"
-				}
-			}
-		}
+		];
+	
+		var tdWidth = 100 / headers.length;
+	
+		headers.forEach(function(d){
+			r += "<th style='width:" + tdWidth + "%;'>" + d + "</th>\n";	
+		});
+	
+		r += "</tr>\n</thead>\n<tbody>\n";
+		r += "<tr>\n";
+	
+		headers.forEach(function(item){
+			r += "<td style='text-align:center;'>" + d[ 0 ][ item ] + " 건</td>\n";	
+		})
+			
+	
+		r += "</tr>\n";
+		r += "</tbody>\n</table>\n";
+
 		tDom.innerHTML = r;
 		return;
 
