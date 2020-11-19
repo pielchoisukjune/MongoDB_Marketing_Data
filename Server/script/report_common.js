@@ -1344,7 +1344,7 @@
 		
 		var title = "광고집행 내역 통계"
 		var tDom = window.document.getElementById( domId );
-debugger;
+
 		if( !tDom ) return;
 		
 		var r = "";
