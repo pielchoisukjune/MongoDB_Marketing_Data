@@ -1462,6 +1462,7 @@
 	* insight
 	*/
 	window.PIEL.REPORT.makeInsight = function( domId, d ){
+		debugger;
 		var title = "insight"
 		var tDom = window.document.getElementById( domId );
 
