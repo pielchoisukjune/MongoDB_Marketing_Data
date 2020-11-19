@@ -448,7 +448,7 @@
 	//			<div class="align_center pad_20"><h2>${title}</h2></div>
 	//		`
 	//	r += titleHtml;
-		r += "<table class='ui very compact celled table'>\n";
+		r += "<table class='ui very compact sortable celled table'>\n";
 		r += "<thead>\n<tr>\n";
 		
 		var headers = [ "도시", "도달", "노출" ];
@@ -493,7 +493,7 @@
 	//			<div class="align_center pad_20"><h2>${title}</h2></div>
 	//		`
 	//	r += titleHtml;
-		r += "<table class='ui very compact celled table'>\n";
+		r += "<table class='ui very compact sortable celled table'>\n";
 		r += "<thead>\n<tr>\n";
 		
 		var headers = [ "도시", "도달", "노출" ];
