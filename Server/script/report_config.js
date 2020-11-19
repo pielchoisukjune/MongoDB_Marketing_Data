@@ -81,9 +81,21 @@
 	};
 	
 	window.PAGE_SETTING.targetSetting = function( brandNm, year, month ){
-		window.PAGE_SETTING._BRAND_NM_ = brandNm;
-		window.PAGE_SETTING._TARGET_YEAR_ = year;
-		window.PAGE_SETTING._TARGET_MONTH_ = month;
+
+        var _q = window.location.search.replace("?","").split( "&" );
+        var q = {}    
+        var i = 0,iLen = _q.length,io,_t;
+        for(;i<iLen;++i){
+            io = _q[ i ];
+            _t = io.split("=");
+            q[ _t[0] ] = _t[ 1 ];
+        }
+        
+        window.PAGE_SETTING._BRAND_NM_ = q.brand;
+		window.PAGE_SETTING._TARGET_YEAR_ = q.year;
+		window.PAGE_SETTING._TARGET_MONTH_ = q.month;
+
+
 
 		window.CONST = {};
 		window.CONST.CONFIG = {};
