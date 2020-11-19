@@ -1469,10 +1469,10 @@
 		if( !tDom ) return;
 		
 		var r = "";
-		var titleHtml = `
-			<div style='padding:20px 0px;'><h1 class="ui center aligned header">${title}</h1></div>
-		`
-		r += titleHtml;
+		// var titleHtml = `
+		// 	<div style='padding:20px 0px;'><h1 class="ui center aligned header">${title}</h1></div>
+		// `
+		// r += titleHtml;
 		
 		var s,so;
 		r += "<table class='ui very compact celled table'>";
