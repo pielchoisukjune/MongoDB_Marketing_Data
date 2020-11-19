@@ -289,9 +289,15 @@
 	 */
 	window.PIEL.REPORT.drawTable__monthly_marketing_plan = function( domId, data, target_month ){
 		
+		var title = "월별 마케팅 진행현황"
 		var tDom = window.document.getElementById( domId );
 
 		if( !tDom ) return;
+		
+		var r = "";
+		var titleHtml = `
+			<div style='padding:20px 0px;'><h1 class="ui center aligned header">${title}</h1></div>
+		`
 
 		var _tStr = `<table class="ui very compact celled table"><thead><!=TABLE_HEAD=!></thead><tbody><!=TABLE_BODY=!></tbody></table>`;	
 		var i = 0,iLen = data.length,io;
