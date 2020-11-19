@@ -1299,15 +1299,17 @@
 		var s,so;
 		for( s in data ){
 			so = data[ s ];
-			var _html = '<h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3>';
-				_html += "<br>"
-				_html += window.PIEL.REPORT.make_marketing_list_html_table_none_img( so )
-				_html += "<br>"
+			var _html = '<div class="sixteen wide column"><div style="padding:20px 0px;"><h3  class="ui left aligned header">' + s + ' ( ' + so.length +  ' 건 )</h3></div></div>';
+				_html += '<div class="sixteen wide column">'
+				_html += window.PIEL.REPORT.make_marketing_list_html_table( so, dateObj, brandNm )
+				_html += '</div>'
 				r += _html;
 		}
 
 		tDom.innerHTML = r;
 		return;
+
+	};
 
 	};
 
