@@ -440,7 +440,7 @@
 	/*
 	* 페이스북 지역별 통계 자료 - 왼쪽
 	*/
-	window.PIEL.REPORT.drawTable__make_facebook_location_html_01 = function( d ){
+	window.PIEL.REPORT.drawTable__make_facebook_location_htm_01 = function( d ){
 		var title = "페이스북 지역별 통계 자료 - 왼쪽";
 		
 		var r = "";
@@ -485,7 +485,7 @@
 	/*
 	* 페이스북 지역별 통계 자료 - 오른쪽
 	*/
-	window.PIEL.REPORT.drawTable__make_facebook_location_html_02 = function( d ){
+	window.PIEL.REPORT.drawTable__make_facebook_location_htm_02 = function( d ){
 		var title = "페이스북 지역별 통계 자료 - 오른쪽";
 		
 		var r = "";
