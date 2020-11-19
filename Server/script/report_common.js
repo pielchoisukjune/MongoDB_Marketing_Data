@@ -363,14 +363,12 @@
 
 		if( !tDom ) return;
 		
-		var title = "페이스북 광고통계"
-		
 		var r = "";
 		var titleHtml = `
-				<div class="align_center pad_20"><h2>${title}</h2></div>
-			`
+			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
+		`
 		r += titleHtml;
-		r += "<table id='monthly_facebook_stastics'>\n";
+		r += "<table class='ui very compact celled table'>\n";
 		r += "<thead>\n<tr>\n";
 		
 		var headers = [
