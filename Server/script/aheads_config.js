@@ -40,6 +40,9 @@
 	}
 	window.PAGE_SETTING.insertScript.cnt = 0;
 
+	window.PAGE_SETTING.insertScript( window.CONST.CONFIG.jsPath.report );
+	window.PAGE_SETTING.insertScript( window.CONST.CONFIG.jsPath.render );
+
 	window.charts = {};
 	window.charts.bar = {};
 	window.charts.pie = {};
