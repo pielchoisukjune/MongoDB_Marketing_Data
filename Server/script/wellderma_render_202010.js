@@ -31,30 +31,36 @@
 	
 		window.PIEL.REPORT.drawTable__monthly_marketing_plan( "monthly_planning", data.statistic_monthly, target_month );
 		window.PIEL.REPORT.drawCards__monthly_facebook_stastics( "monthly_facebook_stastics", data.total, target_month );
-		window.PIEL.REPORT.drawCards__make_facebook_location_html( "facebook_map_cards", data.location_data, target_month );
-		//window.PIEL.REPORT.drawCards__make_kols_html( "kols_cards", data.kols, target_month )
-		//window.PIEL.REPORT.drawTable__make_statistic_google_html( "statistic_google", data.google_ad_info_list, data.google_total, target_month )
-		//window.PIEL.REPORT.drawCards__google_seo_list( "google_seo_list_data", data.google_seo_list, target_month )
-		window.PIEL.REPORT.drawTable__make_marketing_list_none_img( "marketing_list", data.ads_list, target_month )
-		window.PIEL.REPORT.drawCards__make_ads_total_statistic( "ads_total", data.ads_total, target_month )
+		window.PIEL.REPORT.drawTable__make_facebook_location_htm( "facebook_map_cards", data.location_data, target_month );
+		window.PIEL.REPORT.makeInsight( "insight", data.insight[ 0 ], target_month );
+		window.PIEL.REPORT.drawTable__make_kols_html( "kols_cards", data.kols, target_month );
+		//window.PIEL.REPORT.drawTable__make_statistic_google_html( "statistic_google", data.google_ad_info_list, data.google_total, target_month );
+		//window.PIEL.REPORT.drawCards__google_seo_list( "google_seo_list_data", data.google_seo_list, target_month );
 
+		window.PIEL.REPORT.getFacebookData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].url.facebook );
+		window.PIEL.REPORT.getInstagramData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].url.isntagram );
+		window.PIEL.REPORT.adlist_render( window.PAGE_SETTING._BRAND_NM_, data.ads_list );
+	
+	
+		window.PIEL.REPORT.drawTable__make_ads_total_statistic( "ads_total", data.ads_total, target_month );
+	
 		am4core.ready(function() {
-
+	
 			am4core.useTheme(am4themes_animated);
-
+	
 			window.charts.pie[ "연령별 도달" ] = window.PIEL.REPORT.pieChartAge( "chartdiv00", ["연령별 도달"], data.ages.d00 );
 			window.charts.pie[ "연령별 노출" ] = window.PIEL.REPORT.pieChartAge( "chartdiv01", ["연령별 노출"], data.ages.d01 );
 			window.charts.pie[ "연령별 게시물 참여" ] = window.PIEL.REPORT.pieChartAge( "chartdiv02", ["연령별 게시물 참여"], data.ages.d02 );
 			window.charts.pie[ "연령별 페이지 좋아요" ] = window.PIEL.REPORT.pieChartAge( "chartdiv03", ["연령별 페이지 좋아요"], data.ages.d03 );
-
+	
 			window.charts.bar[ "페이스북 시간대별 통계" ] = window.PIEL.REPORT.barChartTime( "chartdiv04", { title : "페이스북 시간대별 통계",label0 : "time",label1 : "view",label2 : "like" }, data.time );
 			//window.PIEL.REPORT.barChartTime( "chartdiv13", { title : "",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_data );
 			//window.PIEL.REPORT.barChartTime( "chartdiv14", { title : "",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_shopping_data );
-
+	
 		});
-
-	google.load('visualization', '1', { 'packages': ['geochart'], 'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY' });
-	google.setOnLoadCallback( window.PIEL.REPORT.drawVisualization( data.location_data ) );
+	
+		google.load('visualization', '1', { 'packages': ['geochart'], 'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY' });
+		google.setOnLoadCallback( window.PIEL.REPORT.drawVisualization( data.location_data ) );
 	
 	};
 	window.PIEL.REPORT.logic._isLoadCnt = 0;
