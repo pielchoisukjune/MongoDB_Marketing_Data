@@ -1470,7 +1470,7 @@
 		
 		var r = "";
 		var titleHtml = `
-			<div><h1 class="ui center aligned header">${title}</h1></div>
+			<div style='padding:20px 0px;'><h1 class="ui center aligned header">${title}</h1></div>
 		`
 		r += titleHtml;
 		
@@ -1483,8 +1483,8 @@
 			if( so != "" && s != "월" ){
 			
 				r += "<tr>";
-				r += "<td style='background-color:#000;color:#fff;text-align:center;'>" + s.replace(/\r/gi,"<br>").replace(/\n/gi,"<br>").replace(/\r\n/gi,"<br>") + "</td>"
-				r += "<td>" + so.replace(/\r/gi,"<br>").replace(/\n/gi,"<br>").replace(/\r\n/gi,"<br>") + "</td>"
+				r += "<td style='background-color:#000;color:#fff;text-align:center;padding:20px;'>" + s.replace(/\r/gi,"<br>").replace(/\n/gi,"<br>").replace(/\r\n/gi,"<br>") + "</td>"
+				r += "<td style='padding:20px;'>" + so.replace(/\r/gi,"<br>").replace(/\n/gi,"<br>").replace(/\r\n/gi,"<br>") + "</td>"
 				r += "</tr>";
 
 			}
