@@ -1376,7 +1376,7 @@ debugger;
 		var s,so;
 		for( s in data ){
 			so = data[ s ];
-			r += "<td style='text-align:center;'>" + so.length + " 건</td>\n";
+			r += "<td style='text-align:center;'>" + so + " 건</td>\n";
 		}
 		r += "</tr>\n"
 		r += "</tbody>\n</table>\n";
