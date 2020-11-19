@@ -1440,6 +1440,61 @@
 	}
 	window.PIEL.REPORT.adlist_render.cnt = 1;
 
+	/*
+	window.PIEL.REPORT.drawTable__monthly_marketing_plan = function( domId, data, target_month ){
+		
+		var tDom = window.document.getElementById( domId );
+
+		if( !tDom ) return;
+
+		var _tStr = `<table class="ui very compact celled table"><thead><!=TABLE_HEAD=!></thead><tbody><!=TABLE_BODY=!></tbody></table>`;	
+		var i = 0,iLen = data.length,io;
+		var _html0 = "";
+		var _html1 = "";
+		var r = "";
+		var _bg_check = -1;
+		for(;i<iLen;i++){
+			io = data[ i ];
+			if( i == 0 ){
+	*/
+
+	/*
+	* insight
+	*/
+	window.PIEL.REPORT.makeInsight = function( domId, d ){
+		var title = "insight"
+		var tDom = window.document.getElementById( domId );
+
+		if( !tDom ) return;
+		
+		var r = "";
+		var titleHtml = `
+			<div class="align_center pad_20"><h2>${title}</h2></div>
+		`
+		r += titleHtml;
+		
+		var s,so;
+		r += "<table>";
+
+		for( s in d ){
+		
+			so = d[ s ];
+			if( so != "" && s != "월" ){
+			
+				r += "<tr>";
+				r += "<td style='background-color:#000;color:#fff;text-align:center;'>" + s.replace(/\r/gi,"<br>").replace(/\n/gi,"<br>").replace(/\r\n/gi,"<br>") + "</td>"
+				r += "<td>" + so.replace(/\r/gi,"<br>").replace(/\n/gi,"<br>").replace(/\r\n/gi,"<br>") + "</td>"
+				r += "</tr>";
+
+			}
+			
+		}
+
+		r += "</table>"
+		
+		tDom.innerHTML = r;
+		return;
+	};
 	/**
 	 * 
 	 */
