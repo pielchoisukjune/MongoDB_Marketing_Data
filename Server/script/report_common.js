@@ -1426,12 +1426,12 @@
 		if( window.PIEL.REPORT.makeDataInstagram.isEnd == 0 )
 		{
 			++window.PIEL.REPORT.adlist_render.cnt;
-			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( dateObj, brandNm, d );},2000);
+			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( brandNm, d );},2000);
 		}
 		if( window.PIEL.REPORT.makeDataFacebook.isEnd == 0 )
 		{
 			++window.PIEL.REPORT.adlist_render.cnt;
-			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( dateObj, brandNm, d );},2000);
+			return setTimeout(function(){ window.PIEL.REPORT.adlist_render( brandNm, d );},2000);
 		}
 	
 		console.log( "snsData Load End!" )
