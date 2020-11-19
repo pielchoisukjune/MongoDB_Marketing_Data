@@ -1356,15 +1356,15 @@
 		r += "<thead>\n<tr>\n";
 		
 		var s,so,cnt=0;
-		for( s in d ){
+		for( s in data ){
 			++cnt;
 		}
 	
 		var tdWidth = 100 / cnt;
 	
 		var s,so,cnt=0;
-		for( s in d ){
-			so = d[ s ]	
+		for( s in data ){
+			so = data[ s ]	
 			r += "<th style='width:" + tdWidth + "%;'>" + s + "</th>\n";
 			++cnt;
 		}
@@ -1374,8 +1374,8 @@
 	
 	
 		var s,so;
-		for( s in d ){
-			so = d[ s ];
+		for( s in data ){
+			so = data[ s ];
 			r += "<td style='text-align:center;'>" + so.length + " 건</td>\n";
 		}
 		r += "</tr>\n"
