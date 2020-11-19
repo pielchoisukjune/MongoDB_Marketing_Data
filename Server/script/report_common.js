@@ -1463,7 +1463,7 @@
 	*/
 	window.PIEL.REPORT.makeInsight = function( domId, d ){
 
-		var title = "insight"
+		var title = "Marketing insight"
 		var tDom = window.document.getElementById( domId );
 
 		if( !tDom ) return;
