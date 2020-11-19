@@ -471,7 +471,7 @@
 				r += "<tr>\n";
 				
 				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 0 ][ "f" ] + "</td>";
-				r += "<td style='background-color:#fff;color:#000;padding:5px;border-top:1px solid #ccc;'>" + io[ 1 ] + "</td>";
+				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 1 ] + "</td>";
 				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 2 ] + "</td>";
 
 				r += "</tr>\n";
@@ -530,6 +530,11 @@
 
 	/*
 	* 페이스북 지역별 통계 자료
+	<div class="ui grid">
+  <div class="sixteen wide column">
+	  <div id="facebook_map_cards" class="ui ten stackable cards"></div>
+  </div>
+</div>
 	*/
 	window.PIEL.REPORT.drawTable__make_facebook_location_htm = function( domId, data, target_month ){
 
@@ -540,13 +545,15 @@
 		
 		var r = "";
 		var titleHtml = `
-			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
+			<div class="ui grid">
+			<div class="sixteen wide column">
+				<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
+				</div>
 		`
 		r += titleHtml;
-		r += "<table class='ui very compact table'><tr>";
-		r += "<td>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_01( data ) + "</td>";
-		r += "<td>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_02( data ) + "</td>";
-		r += "</tr></table>";
+		r += "<div class='eight wide column'>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_01( data ) + "</div>";
+		r += "<div class='eight wide column'>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_02( data ) + "</div>";
+		r += "</div>";
 
 		tDom.innerHTML = r;
 		return;
