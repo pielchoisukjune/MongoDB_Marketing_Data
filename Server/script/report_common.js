@@ -363,17 +363,17 @@
 
 		if( !tDom ) return;
 		
-		var _tStr = "";
+		var r = "";
 		var titleHtml = `
 			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
 		`
-			_tStr += titleHtml;
-			_tStr += `<div class="card"><div class="content"><div class="header" style="font-size : 12px;"><!=LABEL=!></div><div class="description" style="font-size : 20px;color:#000;"><b><!=VALUE=!></b></div></div></div>`;
+			r += titleHtml;
+		var	_tStr = `<div class="card"><div class="content"><div class="header" style="font-size : 12px;"><!=LABEL=!></div><div class="description" style="font-size : 20px;color:#000;"><b><!=VALUE=!></b></div></div></div>`;
 
 		if( !tDom ) return;
 
 		var i = 0,iLen = data.length,io;
-		var r = "";
+
 		var _html;
 		var use_label = [
 			"도달 (명)"
