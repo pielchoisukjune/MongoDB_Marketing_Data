@@ -820,7 +820,7 @@
 			so = data[ s ];
 			r += "<tr>\n"
 			
-			r += "<td style='background-color:#fff;color:#000;padding:5px;" + s + "</td>";
+			r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + s + "</td>";
 			r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + so[ "노출수" ] + "</td>";
 			r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + so[ "클릭수" ] + "</td>";
 
