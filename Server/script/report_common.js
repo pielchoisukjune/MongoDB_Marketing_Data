@@ -358,8 +358,18 @@
 	 */
 	window.PIEL.REPORT.drawCards__monthly_facebook_stastics = function( domId, data, target_month ){
 		
+		var title = "페이스북광고 통계"
 		var tDom = window.document.getElementById( domId );
-		var _tStr = `<div class="card"><div class="content"><div class="header" style="font-size : 12px;"><!=LABEL=!></div><div class="description" style="font-size : 20px;color:#000;"><b><!=VALUE=!></b></div></div></div>`;
+
+		if( !tDom ) return;
+		
+		var _tStr = "";
+		var titleHtml = `
+			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
+		`
+			_tStr += titleHtml;
+			_tStr = `<div class="card"><div class="content"><div class="header" style="font-size : 12px;"><!=LABEL=!></div><div class="description" style="font-size : 20px;color:#000;"><b><!=VALUE=!></b></div></div></div>`;
+
 		if( !tDom ) return;
 
 		var i = 0,iLen = data.length,io;
