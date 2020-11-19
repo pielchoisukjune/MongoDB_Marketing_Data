@@ -90,7 +90,7 @@
             _t = io.split("=");
             q[ _t[0] ] = _t[ 1 ];
         }
-        
+        debugger;
         window.PAGE_SETTING._BRAND_NM_ = q.brand;
 		window.PAGE_SETTING._TARGET_YEAR_ = q.year;
 		window.PAGE_SETTING._TARGET_MONTH_ = q.month;
