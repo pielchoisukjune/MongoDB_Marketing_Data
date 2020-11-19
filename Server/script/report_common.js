@@ -389,15 +389,15 @@
 	
 		var tdWidth = 100 / headers.length;
 	
-		headers.forEach(function(d){
-			r += "<th style='width:" + tdWidth + "%;'>" + d + "</th>\n";	
+		headers.forEach(function(item){
+			r += "<th style='width:" + tdWidth + "%;'>" + item + "</th>\n";	
 		});
 	
 		r += "</tr>\n</thead>\n<tbody>\n";
 		r += "<tr>\n";
 	
 		headers.forEach(function(item){
-			r += "<td style='text-align:center;'>" + d[ 0 ][ item ] + " 건</td>\n";	
+			r += "<td style='text-align:center;'>" + data[ 0 ][ item ] + " 건</td>\n";	
 		})
 			
 	
