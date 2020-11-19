@@ -106,7 +106,7 @@
 		window.CONST.CONFIG = {};
 		window.CONST.CONFIG.jsPath = {
 			report : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/report_common.js"
-			, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/" + window.PAGE_SETTING._BRAND_NM_ + "_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ + ".js"
+			, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/" + window.PAGE_SETTING._BRAND_NM_ + "_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 ) + ".js"
 		};
 	}
 
