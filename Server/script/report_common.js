@@ -1469,10 +1469,10 @@
 		if( !tDom ) return;
 		
 		var r = "";
-		// var titleHtml = `
-		// 	<div style='padding:20px 0px;'><h1 class="ui center aligned header">${title}</h1></div>
-		// `
-		// r += titleHtml;
+		var titleHtml = `
+			<div style='padding:20px 0px;'><h1 class="ui center aligned header">${title}</h1></div>
+		`
+		r += titleHtml;
 		
 		var s,so;
 		r += "<table class='ui very compact celled table'>";
@@ -1483,7 +1483,7 @@
 			if( so != "" && s != "월" ){
 			
 				r += "<tr>";
-				r += "<td style='background-color:#000;color:#fff;text-align:center;padding:20px;'>" + s.replace(/\r/gi,"<br>").replace(/\n/gi,"<br>").replace(/\r\n/gi,"<br>") + "</td>"
+				r += "<td style='background-color:#eee;color:#000;text-align:center;padding:20px;'>" + s.replace(/\r/gi,"<br>").replace(/\n/gi,"<br>").replace(/\r\n/gi,"<br>") + "</td>"
 				r += "<td style='padding:20px;'>" + so.replace(/\r/gi,"<br>").replace(/\n/gi,"<br>").replace(/\r\n/gi,"<br>") + "</td>"
 				r += "</tr>";
 
