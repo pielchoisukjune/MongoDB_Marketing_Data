@@ -1462,7 +1462,7 @@
 	* insight
 	*/
 	window.PIEL.REPORT.makeInsight = function( domId, d ){
-		debugger;
+
 		var title = "insight"
 		var tDom = window.document.getElementById( domId );
 
@@ -1470,7 +1470,7 @@
 		
 		var r = "";
 		var titleHtml = `
-			<div><h3 class="ui center aligned header">${title}</h3></div>
+			<div><h1 class="ui center aligned header">${title}</h1></div>
 		`
 		r += titleHtml;
 		
