@@ -36,7 +36,7 @@
         window.PIEL.REPORT.drawTable__make_statistic_google_html( "statistic_google", data.google_ad_info_list, data.google_total, target_month )
         //window.PIEL.REPORT.drawCards__google_seo_list( "google_seo_list_data", data.google_seo_list, target_month )
         window.PIEL.REPORT.drawTable__make_marketing_list_none_img( "marketing_list", data.ads_list, target_month )
-        window.PIEL.REPORT.drawCards__make_ads_total_statistic( "ads_total", data.ads_total, target_month )
+        window.PIEL.REPORT.drawTable__make_ads_total_statistic( "ads_total", data.ads_total, target_month )
     
         am4core.ready(function() {
     
