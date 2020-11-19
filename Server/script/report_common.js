@@ -620,7 +620,20 @@
 		var gender_icon = {	"남" : "blue mars stroke vertical", "여" : "red venus" };
 		var tDom = window.document.getElementById( domId );
 		if( !tDom ) return;
+
+
+		var title = "KOLs.";
+		
+		var r = "";
+		var titleHtml = `
+				<div class="sixteen wide column">
+					<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
+				</div>
+			`
+		r += titleHtml;
+
 		var _tStr = `
+		<div class="sixteen wide column">
 			<table class="ui very compact celled table" style="width:100%;font-size:12px;">
 			  <thead>
 				<tr>
@@ -639,10 +652,10 @@
 			  	<!=TABLE_CONTENTS=!>
 			  </tbody>
 			</table>
+		</div>
 		`;
 		
 		var i = 0,iLen = data.length,io;
-		var r = "";
 		var _html = "";
 
 		for(;i<iLen;i++){
@@ -679,7 +692,7 @@
 			_html = _html + "</tr>"
 		}
 		
-		r = _tStr.replace( "<!=TABLE_CONTENTS=!>", _html );
+		r += _tStr.replace( "<!=TABLE_CONTENTS=!>", _html );
 		tDom.innerHTML = r;
 		return;
 
