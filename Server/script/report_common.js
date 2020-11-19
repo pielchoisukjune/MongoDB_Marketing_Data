@@ -470,7 +470,7 @@
 			{
 				r += "<tr>\n";
 				
-				r += "<td style='background-color:#fff;color:#000;padding:5px;min-height:40px;'>" + io[ 0 ][ "f" ] + "</td>";
+				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 0 ][ "f" ] + "</td>";
 				r += "<td style='background-color:#fff;color:#000;padding:5px;border-top:1px solid #ccc;'>" + io[ 1 ] + "</td>";
 				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 2 ] + "</td>";
 
@@ -515,7 +515,7 @@
 			{
 				r += "<tr>\n";
 				
-				r += "<td style='background-color:#fff;color:#000;padding:5px;min-height:40px;'>" + io[ 0 ][ "f" ] + "</td>";
+				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 0 ][ "f" ] + "</td>";
 				r += "<td style='background-color:#fff;color:#000;padding:5px;border-top:1px solid #ccc;'>" + io[ 1 ] + "</td>";
 				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 2 ] + "</td>";
 
@@ -542,12 +542,6 @@
 		var titleHtml = `
 			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
 		`
-		r += titleHtml;
-
-		var r = "";
-		var titleHtml = `
-				<div class="align_center pad_20"><h2>${title}</h2></div>
-			`;
 		r += titleHtml;
 		r += "<table class='ui very compact celled table'><tr>";
 		r += "<td>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_01( data ) + "</td>";
