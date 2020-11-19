@@ -79,7 +79,13 @@
 	window.PAGE_SETTING._USE_REST_APIS_ = {
 		find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
 	};
-	
+    
+    window.COMMON.URIL = {};
+    window.COMMON.URIL.pad = function(n, width){
+        n = n + '';
+        return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
+    }
+
 	window.PAGE_SETTING.targetSetting = function( brandNm, year, month ){
 
         /*//
@@ -106,7 +112,7 @@
 		window.CONST.CONFIG = {};
 		window.CONST.CONFIG.jsPath = {
 			report : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/report_common.js"
-			, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/" + window.PAGE_SETTING._BRAND_NM_ + "_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 ) + ".js"
+			, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/" + window.PAGE_SETTING._BRAND_NM_ + "_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.COMMON.URIL.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 ) + ".js"
 		};
 	}
 
