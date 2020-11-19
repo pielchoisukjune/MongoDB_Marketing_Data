@@ -42,7 +42,7 @@
 		window.PIEL.REPORT.adlist_render( window.PAGE_SETTING._BRAND_NM_, data.ads_list );
 	
 	
-		window.PIEL.REPORT.drawCards__make_ads_total_statistic( "ads_total", data.ads_total, target_month );
+		window.PIEL.REPORT.drawTable__make_ads_total_statistic( "ads_total", data.ads_total, target_month );
 	
 		am4core.ready(function() {
 	

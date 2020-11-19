@@ -548,7 +548,7 @@
 			<div class="ui grid">
 			<div class="sixteen wide column">
 				<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
-				</div>
+			</div>
 		`
 		r += titleHtml;
 		r += "<div class='eight wide column'>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_01( data ) + "</div>";
@@ -1336,6 +1336,55 @@
 		tDom.innerHTML = r;
 		return;
 	};
+
+	//-------------------------------------------------------;
+	//마케팅집행 통계 생성;
+	//-------------------------------------------------------;
+	window.PIEL.REPORT.drawTable__make_ads_total_statistic = function( domId, data, target_month ){
+		
+		var title = "광고집행 내역 통계"
+		var tDom = window.document.getElementById( domId );
+
+		if( !tDom ) return;
+		
+		var r = "";
+		var titleHtml = `
+			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
+		`
+		r += titleHtml;
+		r += "<table class='ui very compact celled table'>\n";
+		r += "<thead>\n<tr>\n";
+		
+		var s,so,cnt=0;
+		for( s in d ){
+			++cnt;
+		}
+	
+		var tdWidth = 100 / cnt;
+	
+		var s,so,cnt=0;
+		for( s in d ){
+			so = d[ s ]	
+			r += "<th style='width:" + tdWidth + "%;'>" + s + "</th>\n";
+			++cnt;
+		}
+	
+		r += "</tr>\n</thead>\n<tbody>\n"
+		r += "<tr>\n"
+	
+	
+		var s,so;
+		for( s in d ){
+			so = d[ s ];
+			r += "<td style='text-align:center;'>" + so.length + " 건</td>\n";
+		}
+		r += "</tr>\n"
+		r += "</tbody>\n</table>\n";
+
+		tDom.innerHTML = r;
+		return;
+	}
+
 	/*
 	 * 숫자에3자리마다 콤마를 직어주는 함수;
 	 */
