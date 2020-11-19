@@ -1292,8 +1292,18 @@
 	 * @param {*} Url 
 	 * @param {*} dateObj 
 	 */
-	window.PIEL.REPORT.getFacebookData = function( brandNm, Url, dateObj ){
+	window.PIEL.REPORT.getFacebookData = function( brandNm, Url ){
+
+		var _t00 = new Date( window.PAGE_SETTING._TARGET_YEAR_, window.PAGE_SETTING._TARGET_MONTH_, 1 );
+		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() +2 ), _t00.getDate() );
+
+		var dateObj = {
+			start : _t00.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t00.getMonth() + 1),2) + "-01"
+			, end : _t01.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t01.getMonth() + 1),2) + "-01"
+		}
+
 		var xhr = new XMLHttpRequest();
+
 		if( !window.marketing.report[ brandNm ] ) window.marketing.report[ brandNm ] = {};
 		if( !window.marketing.report[ brandNm ][ "facebook" ] ) window.marketing.report[ brandNm ][ "facebook" ] = {};
 		if( !window.marketing.report[ brandNm ][ "facebook" ][ dateObj.start ] ) window.marketing.report[ brandNm ][ "facebook" ][ dateObj.start ] = {};
@@ -1312,8 +1322,18 @@
 	 * @param {*} Url 
 	 * @param {*} dateObj 
 	 */
-	window.PIEL.REPORT.getInstagramData = function( brandNm, Url, dateObj ){
+	window.PIEL.REPORT.getInstagramData = function( brandNm, Url ){
+		
+		var _t00 = new Date( window.PAGE_SETTING._TARGET_YEAR_, window.PAGE_SETTING._TARGET_MONTH_, 1 );
+		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() +2 ), _t00.getDate() );
+
+		var dateObj = {
+			start : _t00.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t00.getMonth() + 1),2) + "-01"
+			, end : _t01.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t01.getMonth() + 1),2) + "-01"
+		}
+		
 		var xhr = new XMLHttpRequest();
+		
 		if( !window.marketing.report[ brandNm ] ) window.marketing.report[ brandNm ] = {};
 		if( !window.marketing.report[ brandNm ][ "instagram" ] ) window.marketing.report[ brandNm ][ "instagram" ] = {};
 		if( !window.marketing.report[ brandNm ][ "instagram" ][ dateObj.start ] ) window.marketing.report[ brandNm ][ "instagram" ][ dateObj.start ] = {};
@@ -1391,10 +1411,18 @@
 	 * @param {*} dateObj 
 	 * @param {*} brandNm 
 	 */
-	window.PIEL.REPORT.adlist_render = function( dateObj, brandNm, d ){
+	window.PIEL.REPORT.adlist_render = function( brandNm, d ){
 		
 		console.log( "adlist_render.cnt : " + window.PIEL.REPORT.adlist_render.cnt );
 	
+		var _t00 = new Date( window.PAGE_SETTING._TARGET_YEAR_, window.PAGE_SETTING._TARGET_MONTH_, 1 );
+		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() +2 ), _t00.getDate() );
+
+		var dateObj = {
+			start : _t00.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t00.getMonth() + 1),2) + "-01"
+			, end : _t01.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t01.getMonth() + 1),2) + "-01"
+		}
+
 		if( window.PIEL.REPORT.makeDataInstagram.isEnd == 0 )
 		{
 			++window.PIEL.REPORT.adlist_render.cnt;

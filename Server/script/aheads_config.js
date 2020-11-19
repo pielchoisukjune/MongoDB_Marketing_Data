@@ -91,15 +91,6 @@
 			report : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/report_common.js"
 			, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/" + window.PAGE_SETTING._BRAND_NM_ + "_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ + ".js"
 		};
-
-		var _t00 = new Date( year, month, 1 );
-		var _t01 = new Date( _t00.getFullYear(), ( _t00.getMonth() +2 ), _t00.getDate() );
-
-		window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].options.dateObj = {
-			start : _t00.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t00.getMonth() + 1),2) + "-01"
-			, end : _t01.getFullYear() + "-" + window.PIEL.REPORT.pad(( _t01.getMonth() + 1),2) + "-01"
-		}
-
 	}
 
 	window.PAGE_SETTING.insertScript = function( path ){
