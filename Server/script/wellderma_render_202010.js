@@ -42,7 +42,7 @@
 		window.PIEL.REPORT.getInstagramData( window.PAGE_SETTING._BRAND_NM_, window.EXTERNAL.APIS.elfsight[ window.PAGE_SETTING._BRAND_NM_ ].url.isntagram );
 		window.PIEL.REPORT.adlist_render( window.PAGE_SETTING._BRAND_NM_, data.ads_list );
 		//*/
-		window.PIEL.REPORT.drawTable__make_marketing_list_none_img( window.PAGE_SETTING._BRAND_NM_, data.ads_list );
+		window.PIEL.REPORT.drawTable__make_marketing_list_none_img( "marketing_list", data.ads_list, target_month );
 		//*/
 
 		window.PIEL.REPORT.drawTable__make_ads_total_statistic( "ads_total", data.ads_total, target_month );
