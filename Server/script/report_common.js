@@ -433,6 +433,131 @@
 		return;
 	};
 
+	//-------------------------------------------------------;
+	// 페이스북지역통계카드생성 - 테이블;
+	//-------------------------------------------------------;
+	
+	/*
+	* 페이스북 지역별 통계 자료 - 왼쪽
+	*/
+	window.PIEL.REPORT.drawTable__make_facebook_location_html_01 = function( d ){
+		var title = "페이스북 지역별 통계 자료 - 왼쪽";
+		
+		var r = "";
+	//	var titleHtml = `
+	//			<div class="align_center pad_20"><h2>${title}</h2></div>
+	//		`
+	//	r += titleHtml;
+		r += "<table id='facebook_location'>\n";
+		r += "<thead>\n<tr>\n";
+		
+		var headers = [ "도시", "도달", "노출" ];
+
+		var tdWidth = 100 / headers.length;
+
+		headers.forEach(function(d){
+			r += "<th style='width:" + tdWidth + "%;'>" + d + "</th>\n";	
+		});
+		
+
+		r += "</tr>\n</thead>\n";
+		r += "<tbody>\n";
+
+		var i = 1,iLen = d.length,io;
+		for(;i<iLen;++i){
+			io = d[ i ]
+			if( i == 0 ||  ( i + 2 ) % 2 == 0 )
+			{
+				r += "<tr>\n";
+				
+				r += "<td style='background-color:#fff;color:#000;padding:5px;min-height:40px;'>" + io[ 0 ][ "f" ] + "</td>";
+				r += "<td style='background-color:#fff;color:#000;padding:5px;border-top:1px solid #ccc;'>" + io[ 1 ] + "</td>";
+				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 2 ] + "</td>";
+
+				r += "</tr>\n";
+			}
+		}
+		r += "</tbody>\n</table>\n";
+
+		return r;
+	}
+
+	/*
+	* 페이스북 지역별 통계 자료 - 오른쪽
+	*/
+	window.PIEL.REPORT.drawTable__make_facebook_location_html_02 = function( d ){
+		var title = "페이스북 지역별 통계 자료 - 오른쪽";
+		
+		var r = "";
+	//	var titleHtml = `
+	//			<div class="align_center pad_20"><h2>${title}</h2></div>
+	//		`
+	//	r += titleHtml;
+		r += "<table id='facebook_location'>\n";
+		r += "<thead>\n<tr>\n";
+		
+		var headers = [ "도시", "도달", "노출" ];
+
+		var tdWidth = 100 / headers.length;
+
+		headers.forEach(function(d){
+			r += "<th style='width:" + tdWidth + "%;'>" + d + "</th>\n";	
+		});
+		
+
+		r += "</tr>\n</thead>\n";
+		r += "<tbody>\n";
+
+		var i = 1,iLen = d.length,io;
+		for(;i<iLen;++i){
+			io = d[ i ];
+			if( i == 1 ||  ( i + 2 ) % 2 != 0 )
+			{
+				r += "<tr>\n";
+				
+				r += "<td style='background-color:#fff;color:#000;padding:5px;min-height:40px;'>" + io[ 0 ][ "f" ] + "</td>";
+				r += "<td style='background-color:#fff;color:#000;padding:5px;border-top:1px solid #ccc;'>" + io[ 1 ] + "</td>";
+				r += "<td style='background-color:#fff;color:#000;padding:5px;'>" + io[ 2 ] + "</td>";
+
+				r += "</tr>\n";
+			}
+		}
+		r += "</tbody>\n</table>\n";
+
+		return r;
+	}
+
+
+	/*
+	* 페이스북 지역별 통계 자료
+	*/
+	window.PIEL.REPORT.drawTable__make_facebook_location_htm = function( domId, data, target_month ){
+
+		var title = "페이스북 지역별 통계 자료";
+		var tDom = window.document.getElementById( domId );
+
+		if( !tDom ) return;
+		
+		var r = "";
+		var titleHtml = `
+			<div style='padding:20px 0px;'><h1 class="ui left aligned header">${title}</h1></div>
+		`
+		r += titleHtml;
+
+		var r = "";
+		var titleHtml = `
+				<div class="align_center pad_20"><h2>${title}</h2></div>
+			`;
+		r += titleHtml;
+		r += "<table><tr>";
+		r += "<td>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_01( data ) + "</td>";
+		r += "<td>" + window.PIEL.REPORT.drawTable__make_facebook_location_htm_02( data ) + "</td>";
+		r += "</tr></table>";
+
+		tDom.innerHTML = r;
+		return;
+	};
+
 	/*
 	 * KOL카드생성
 	 */
