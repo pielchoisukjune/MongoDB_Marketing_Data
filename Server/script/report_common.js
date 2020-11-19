@@ -1470,12 +1470,12 @@
 		
 		var r = "";
 		var titleHtml = `
-			<div class="align_center pad_20"><h2>${title}</h2></div>
+			<div><h3 class="ui center aligned header">${title}</h3></div>
 		`
 		r += titleHtml;
 		
 		var s,so;
-		r += "<table>";
+		r += "<table class='ui very compact celled table'>";
 
 		for( s in d ){
 		
