@@ -1810,27 +1810,29 @@
 	 * 
 	 */
 	window.PIEL.REPORT.getData = function( cbFunction ){
-		window.PIEL.REPORT.xhr.addEventListener("load", function(){
+		var xhr = window.PIEL.REPORT.xhr;
+		xhr.addEventListener("load", function(){
 			debugger;	
 			var data = JSON.parse( window.PIEL.REPORT.xhr.responseText );
 			cbFunction( data );
 		});
-		window.PIEL.REPORT.xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_by_month + "brand=" + window.PAGE_SETTING._BRAND_NM_ + "&month=" + window.PAGE_SETTING._TARGET_MONTH_ );
-		window.PIEL.REPORT.xhr.send();
+		xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_by_month + "brand=" + window.PAGE_SETTING._BRAND_NM_ + "&month=" + window.PAGE_SETTING._TARGET_MONTH_ );
+		xhr.send();
 	}
 	
 		/**
 	 * 
 	 */
 	window.PIEL.REPORT.getHtml = function( cbFunction ){
-		window.PIEL.REPORT.xhr.addEventListener("load", function(){
+		var xhr = window.PIEL.REPORT.xhr;
+		xhr.addEventListener("load", function(){
 		var data = window.PIEL.REPORT.xhr.responseText;
 		debugger;	
 		cbFunction( data );
 		});
 		var url = window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/getHtml?fileNm=" + "report_" + window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.COMMON.URIL.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 );
-		window.PIEL.REPORT.xhr.open("GET", url );
-		window.PIEL.REPORT.xhr.send();
+		xhr.open("GET", url );
+		xhr.send();
 	}
 
 })()
