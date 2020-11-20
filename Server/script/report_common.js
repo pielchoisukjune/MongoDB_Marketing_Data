@@ -999,7 +999,6 @@
 	//-------------------------------------------------------;
 	window.PIEL.REPORT.drawTable__google_seo_list = function( domId, data, target_month ){
 
-		debugger;
 		var tDom = window.document.getElementById( domId );
 		if( !tDom ) return;
 
