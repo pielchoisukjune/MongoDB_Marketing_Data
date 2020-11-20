@@ -74,9 +74,4 @@
 	
 	};
 	window.PIEL.REPORT.logic._isLoadCnt = 0;
-	
-	//--------------------------------------------------;
-	// LOGIC;
-	//--------------------------------------------------;
-	window.PIEL.REPORT.getData( window.PIEL.REPORT.logic );
 })()

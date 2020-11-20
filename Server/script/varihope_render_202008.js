@@ -77,5 +77,4 @@
         })
 	};
 	window.PIEL.REPORT.logic._isLoadCnt = 0;
-	
 })()
