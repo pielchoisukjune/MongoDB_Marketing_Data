@@ -122,6 +122,14 @@
 
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
+<!--TOP SEO LIST-->
+<!--div class="ui grid">
+	<div id="google_seo_list_data" class="sixteen wide column"></div>
+</div-->
+<!--TOP SEO LIST-->
+
+<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+
 <!--KOLs-->
 <div class="ui grid">
 	<div id="kols_cards" class="sixteen wide column"></div>
