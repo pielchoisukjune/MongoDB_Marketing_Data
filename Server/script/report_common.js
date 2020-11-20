@@ -1840,6 +1840,8 @@
 		var tDom = window.document.getElementById( "contents" );
 			tDom.innerHTML = "";
 			
+			window.PAGE_SETTING.targetSetting( o.brNm, o.year, o.month );
+
 			window.charts = {};
 			window.charts.bar = {};
 			window.charts.pie = {};
@@ -1849,7 +1851,7 @@
 			window.PIEL.REPORT.getHtml(function(strHtml){
 				var tDom = window.document.getElementById( "contents" );
 				tDom.innerHTML = strHtml;
-				window.PAGE_SETTING.targetSetting( o.brNm, o.year, o.month );
+				window.PIEL.REPORT.getData( window.PIEL.REPORT.logic )
 			})
 	}
 
