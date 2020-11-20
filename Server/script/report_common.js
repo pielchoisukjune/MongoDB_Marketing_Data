@@ -273,7 +273,7 @@
 				var title = "페이스북 지역별 통계";		
 				var r = "";
 					r += `
-					<div style='padding:20px 0px;'><h2 class="ui left aligned header">${title}</h1></div>
+					<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 				`;
 		
 				mpa_chart_loader_title.innerHTML = r;
@@ -305,7 +305,7 @@
 		
 		var _tStr = "";
 		var titleHtml = `
-			<div style='padding:20px 0px;'><h2 class="ui left aligned header">${title}</h1></div>
+			<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 		`
 			_tStr += titleHtml;
 			_tStr += `<table class="ui very compact celled table"><thead><!=TABLE_HEAD=!></thead><tbody><!=TABLE_BODY=!></tbody></table>`;	
@@ -374,7 +374,7 @@
 		
 		var r = "";
 		var titleHtml = `
-			<div style='padding:20px 0px;'><h2 class="ui left aligned header">${title}</h1></div>
+			<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 		`
 		r += titleHtml;
 		r += "<table class='ui very compact celled table'>\n";
@@ -556,7 +556,7 @@
 		var titleHtml = `
 			<div class="ui grid">
 			<div class="sixteen wide column">
-				<div style='padding:20px 0px;'><h2 class="ui left aligned header">${title}</h1></div>
+				<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 			</div>
 		`
 		r += titleHtml;
@@ -636,7 +636,7 @@
 		var r = "";
 		var titleHtml = `
 				<div class="sixteen wide column">
-					<div style='padding:20px 0px;'><h2 class="ui left aligned header">${title}</h1></div>
+					<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 				</div>
 			`
 		r += titleHtml;
@@ -804,7 +804,7 @@
 		var r = "";
 		var titleHtml = `
 		<div class="sixteen wide column">
-			<div style='padding:20px 0px;'><h2 class="ui left aligned header">${title}</h1></div>
+			<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 		</div>
 		`
 		r += titleHtml;
@@ -1428,7 +1428,7 @@
 		
 		var r = "";
 		var titleHtml = `
-			<div style='padding:20px 0px;'><h2 class="ui left aligned header">${title}</h1></div>
+			<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 		`
 		r += titleHtml;
 		r += "<table class='ui very compact celled table'>\n";
@@ -1741,7 +1741,7 @@
 		
 		var r = "";
 		var titleHtml = `
-			<div style='padding:20px 0px;'><h2 class="ui left aligned header">${title}</h1></div>
+			<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 		`
 		r += titleHtml;
 		
