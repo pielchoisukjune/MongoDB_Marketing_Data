@@ -20,6 +20,7 @@ var CP_COMMAND = {};
 
 var DBJS_DIRECTORY_PATH = ROOT_PATH + "/../dbjs/";
 var _tDbjs_PATH = ROOT_PATH + "/../tdbjs/";
+var _thtml_PATH = ROOT_PATH + "/resource/";
 //-------------------------------------------------------;
 // FUNCTION;
 //-------------------------------------------------------;
@@ -166,6 +167,52 @@ var paramToObject = function( url ){
 		fs.writeFileSync( DBJS_DIRECTORY_PATH + dbjs_nm , query, { flag : "w" } );
 		var r = exec_query_DB( dbjs_nm )
 		res.end( r )	
+
+	});
+
+	/**
+	 * 쿼리파일을 실행하는 라우터
+	 * @function
+	 * @param {http.ClientRequest} req
+	 * <code>
+		{
+
+		}
+	* </code>
+	*
+	* @param {http.ClientResponse} res
+	* <code>
+		{
+
+		}
+	* </code>
+	*
+	* @example
+	* <code>
+		http://localhost:8888/getHtml?fileNm=report_varihope_202008
+	* </code>
+	*/
+	global.server.addRouter("/getHtml",function( req, res ){
+		
+		var routerNm = req.url.split("?")[0];
+		var paramsO = paramToObject( req.url );
+				
+		res.statusCode = 200;
+		res.setHeader( "Access-Control-Allow-Headers", "Content-Type" );
+		res.setHeader( "Access-Control-Allow-Origin", "*" );
+		res.setHeader( "Access-Control-Allow-Methods", "OPTIONS,POST,GET" );
+		
+		try
+		{
+			var _tHtml = fs.readFileSync( _thtml_PATH + "/" + paramsO.fileNm + ".thtml" ).toString();
+		}
+		catch( err )
+		{
+			console.log( routerNm + " - thtml File Not Found! - " + err );
+			res.end("{ sucess : 0, data : null }");
+		}
+
+		res.end( _tHtml )	
 
 	});
 })();
