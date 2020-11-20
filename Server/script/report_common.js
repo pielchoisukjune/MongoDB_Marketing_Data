@@ -21,7 +21,6 @@
 		, "Google" : "red google outline"
 	};
 
-
 	/*
 	 *
 	 */
