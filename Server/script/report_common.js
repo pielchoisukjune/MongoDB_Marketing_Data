@@ -1804,16 +1804,14 @@
 		return;
 	};
 
-	window.PIEL.REPORT.xhr = new XMLHttpRequest();
-
 	/**
 	 * 
 	 */
 	window.PIEL.REPORT.getData = function( cbFunction ){
-		var xhr = window.PIEL.REPORT.xhr;
+		var xhr = new XMLHttpRequest();;
 		xhr.addEventListener("load", function(){
 			debugger;	
-			var data = JSON.parse( window.PIEL.REPORT.xhr.responseText );
+			var data = JSON.parse( xhr.responseText );
 			cbFunction( data );
 		});
 		xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_by_month + "brand=" + window.PAGE_SETTING._BRAND_NM_ + "&month=" + window.PAGE_SETTING._TARGET_MONTH_ );
@@ -1824,9 +1822,9 @@
 	 * 
 	 */
 	window.PIEL.REPORT.getHtml = function( cbFunction ){
-		var xhr = window.PIEL.REPORT.xhr;
+		var xhr = new XMLHttpRequest();;
 		xhr.addEventListener("load", function(){
-		var data = window.PIEL.REPORT.xhr.responseText;
+		var data = xhr.responseText;
 		debugger;	
 		cbFunction( data );
 		});
