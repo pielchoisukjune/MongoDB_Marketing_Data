@@ -1836,11 +1836,12 @@
 	/**
 	 * 
 	 */
-	window.PIEL.REPORT.initContents = function(){
+	window.PIEL.REPORT.initContents = function(cbFunction){
 		var tDom = window.document.getElementById( "contents" );
 			tDom.innerHTML = "";
 			window.PIEL.REPORT.getHtml(function(strHtml){
 				tDom.innerHTML = strHtml;
+				cbFunction();
 			})
 	}
 

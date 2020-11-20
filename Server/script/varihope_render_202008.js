@@ -20,8 +20,6 @@
 		}
 		console.log( "window.PIEL.REPORT Loaded." );
         
-        window.PIEL.REPORT.initContents();
-        
 		var target_month = window.PAGE_SETTING._TARGET_MONTH_ +"월";
         
         window.PIEL.REPORT.insertLogo();
@@ -82,5 +80,5 @@
 	//--------------------------------------------------;
 	// LOGIC;
 	//--------------------------------------------------;
-	window.PIEL.REPORT.getData( window.PIEL.REPORT.logic );
+    window.PIEL.REPORT.initContents(window.PIEL.REPORT.getData( window.PIEL.REPORT.logic ));
 })()
