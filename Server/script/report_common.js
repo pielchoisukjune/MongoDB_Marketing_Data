@@ -1001,7 +1001,7 @@
 
 		var tDom = window.document.getElementById( domId );
 		if( !tDom ) return;
-
+debugger;
 		var title = "Goolge Top SEO ADS"
 		
 		var d = data[ "Google Top SEO" ];
