@@ -103,6 +103,8 @@
 	<div class="eight wide column"><div id="chartdiv08_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv08"></div></div>
 	<div class="eight wide column"><div id="chartdiv09_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv09"></div></div>
 	<div class="eight wide column"><div id="chartdiv10_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv10"></div></div>
+    <div class="eight wide column"><div id="chartdiv11_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv11"></div></div>
+	<div class="eight wide column"><div id="chartdiv12_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv12"></div></div>
 </div>
 <!--구글연령 Pie CHart-->
 
