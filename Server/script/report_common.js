@@ -268,7 +268,7 @@
 			};
 			var geochart = new google.visualization.GeoChart( document.getElementById('visualization'));
 			google.visualization.events.addListener(geochart, 'ready', function() {
-				var mpa_chart_loader_title = window.document.getElementById( "map_chart_loader" );
+				var mpa_chart_loader_title = window.document.getElementById( "map_chart_loader_title" );
 
 				var title = "페이스북 지역별 통계";		
 				var r = "";
