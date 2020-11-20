@@ -1818,7 +1818,7 @@
 		xhr.send();
 	}
 	
-		/**
+	/**
 	 * 
 	 */
 	window.PIEL.REPORT.getHtml = function( cbFunction ){
@@ -1831,6 +1831,17 @@
 		var url = window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/getHtml?fileNm=" + "report_" + window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.COMMON.URIL.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 );
 		xhr.open("GET", url );
 		xhr.send();
+	}
+
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.initContents = function(){
+		var tDom = window.document.getElementById( "contents" );
+			tDom.innerHTML = "";
+			window.PIEL.REPORT.getHtml(function(strHtml){
+				tDom.innerHTML = strHtml;
+			})
 	}
 
 })()

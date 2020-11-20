@@ -19,7 +19,9 @@
 			return;
 		}
 		console.log( "window.PIEL.REPORT Loaded." );
-		
+        
+        window.PIEL.REPORT.initContents();
+        
 		var target_month = window.PAGE_SETTING._TARGET_MONTH_ +"월";
         
         window.PIEL.REPORT.insertLogo();
