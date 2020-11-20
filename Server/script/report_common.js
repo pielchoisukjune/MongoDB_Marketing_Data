@@ -1823,7 +1823,7 @@
 	 */
 	window.PIEL.REPORT.getHtml = function( cbFunction ){
 		window.PIEL.REPORT.xhr.addEventListener("load", function(){
-		var data = JSON.parse( window.PIEL.REPORT.xhr.responseText );
+		var data = window.PIEL.REPORT.xhr.responseText;
 		debugger;	
 		cbFunction( data );
 		});
