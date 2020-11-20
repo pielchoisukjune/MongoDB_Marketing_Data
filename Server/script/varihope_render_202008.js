@@ -58,24 +58,25 @@
     
         google.load('visualization', '1', { 'packages': ['geochart'], 'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY' });
         google.setOnLoadCallback( window.PIEL.REPORT.drawVisualization( data.location_data ) );
-	
+    
+        
+        
+        //--------------------------------------------------;
+        // EVENT;
+        //--------------------------------------------------;
+        window.document.getElementById( "downloadPdf" ).addEventListener('click',function(e){
+            window.PIEL.REPORT.loader.on();
+        
+            var downloadFileNm = "report_" + window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + ".pdf";
+            var uri = "https://github.com/pielchoisukjune/reportToHTMLToPDF/raw/main/report/" + window.PAGE_SETTING._BRAND_NM_ + "/" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + "/" + downloadFileNm;
+            
+            setTimeout(function(){
+                window.PIEL.REPORT.downloadURI( uri, downloadFileNm );
+                window.PIEL.REPORT.loader.off()
+            },2000)
+        })
 	};
 	window.PIEL.REPORT.logic._isLoadCnt = 0;
-
-	//--------------------------------------------------;
-	// EVENT;
-	//--------------------------------------------------;
-	window.document.getElementById( "downloadPdf" ).addEventListener('click',function(e){
-		window.PIEL.REPORT.loader.on();
-	
-		var downloadFileNm = "report_" + window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + ".pdf";
-		var uri = "https://github.com/pielchoisukjune/reportToHTMLToPDF/raw/main/report/" + window.PAGE_SETTING._BRAND_NM_ + "/" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + "/" + downloadFileNm;
-		
-		setTimeout(function(){
-			window.PIEL.REPORT.downloadURI( uri, downloadFileNm );
-			window.PIEL.REPORT.loader.off()
-		},2000)
-	})
 	
 	//--------------------------------------------------;
 	// LOGIC;
