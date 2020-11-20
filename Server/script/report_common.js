@@ -1851,7 +1851,9 @@
 			window.PIEL.REPORT.getHtml(function(strHtml){
 				var tDom = window.document.getElementById( "contents" );
 				tDom.innerHTML = strHtml;
-				window.PIEL.REPORT.getData( window.PIEL.REPORT.logic )
+				window.PIEL.REPORT.getData( function( data ){
+					window.PIEL.REPORT.logic( data );
+				})
 			})
 	}
 
