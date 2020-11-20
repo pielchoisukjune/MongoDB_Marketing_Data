@@ -418,7 +418,8 @@
 		r += "<tr>\n";
 	
 		headers.forEach(function(item){
-			r += "<td style='text-align:center;'>" + data[ 0 ][ item ] + " 건</td>\n";	
+			if( data[ 0 ][ item ] ) r += "<td style='text-align:center;'>" + data[ 0 ][ item ] + " 건</td>\n";	
+			else r += "<td style='text-align:center;'> - 건</td>\n";	
 		})
 			
 	
