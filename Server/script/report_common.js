@@ -993,6 +993,60 @@
 		return;
 
 	};
+
+		//-------------------------------------------------------;
+	// 구글 SEO 리스트생성;
+	//-------------------------------------------------------;
+	window.PIEL.REPORT.drawTable__google_seo_list = function( domId, data, target_month ){
+
+		var tDom = window.document.getElementById( domId );
+		if( !tDom ) return;
+
+		var title = "Goolge Top SEO ADS"
+		
+		var d = data[ "Google Top SEO" ];
+		var r = "";
+		var titleHtml = `
+			<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
+		`
+		r += titleHtml;
+		r += "<table class='ui very compact celled table'>\n";
+		r += "<thead>\n<tr>\n";
+		
+		var headers = [ "구분", "타입", "이미지","업데이트날짜", "제목", "조회건수" ];
+			headers.forEach(function( item ){ r += "<th>" + item + "</th>\n"; });
+		
+		r += "</tr>\n</thead>\n<tbody>\n"
+		
+		var i = 0,iLen = d.length,io;
+		for(;i<iLen;++i){
+			io = d[ i ];
+	
+			r += "<tr>\n"
+			headers.forEach(function( item ){
+				if( item == "이미지" ) return r += "<td><img src='" + io[ item ] + "' width='200'></td>\n";
+				if( io[ item ] && io[ item ] != "0"  ) return r += "<td>" + io[ item ] + "</td>\n";
+				return r += "<td></td>\n";
+			});
+			r += "</tr>\n"
+	
+			r += "<tr style='border-bottom: 2px solid #000;'>\n"
+			r += "<td colspan='2'>\n"
+			r += "해당링크"
+			r += "</td>\n"
+			r += "<td colspan='7' style='word-break: break-all;'>\n"
+			r += io[ "해당링크" ]
+			r += "</td>\n"
+			r += "</tr>\n"
+				
+		}
+		r += "</tbody>\n</table>\n";
+	
+		tDom.innerHTML = r;
+		return;
+
+	};
+
 	//-------------------------------------------------------;
 	//마케팅리스트카드생성;
 	//-------------------------------------------------------;
