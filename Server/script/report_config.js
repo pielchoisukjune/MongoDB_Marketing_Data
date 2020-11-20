@@ -141,5 +141,7 @@
 	window.charts.map = {};
 	window.marketing = {};
 	window.marketing.report = {};
-	
+    
+    window.PAGE_SETTING.insertScript( window.CONST.CONFIG.jsPath.render );
+
 })();
