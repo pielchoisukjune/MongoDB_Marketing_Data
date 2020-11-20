@@ -1818,4 +1818,18 @@
 		window.PIEL.REPORT.xhr.send();
 	}
 	
+		/**
+	 * 
+	 */
+	window.PIEL.REPORT.getHtml = function( cbFunction ){
+		window.PIEL.REPORT.xhr.addEventListener("load", function(){
+		var data = JSON.parse( window.PIEL.REPORT.xhr.responseText );
+		debugger;	
+		cbFunction( data );
+		});
+		var url = window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/resource/" + "report_" + window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.COMMON.URIL.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 ) + ".html"
+		window.PIEL.REPORT.xhr.open("GET", url );
+		window.PIEL.REPORT.xhr.send();
+	}
+
 })()
