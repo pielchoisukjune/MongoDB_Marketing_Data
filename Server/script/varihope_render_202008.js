@@ -82,7 +82,9 @@
 	// LOGIC;
 	//--------------------------------------------------;
     window.PIEL.REPORT.initContents(function(){
-        debugger;
-        window.PIEL.REPORT.getData( window.PIEL.REPORT.logic );
+        window.PIEL.REPORT.getHtml(function(strHtml){
+            tDom.innerHTML = strHtml;
+            window.PIEL.REPORT.getData( window.PIEL.REPORT.logic )
+        })
     });
 })()

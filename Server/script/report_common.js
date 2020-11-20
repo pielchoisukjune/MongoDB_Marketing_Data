@@ -1838,12 +1838,8 @@
 	 */
 	window.PIEL.REPORT.initContents = function(cbFunction){
 		var tDom = window.document.getElementById( "contents" );
-		debugger;
 			tDom.innerHTML = "";
-			window.PIEL.REPORT.getHtml(function(strHtml){
-				tDom.innerHTML = strHtml;
-				cbFunction();
-			})
+			cbFunction();
 	}
 
 })()
