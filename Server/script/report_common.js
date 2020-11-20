@@ -268,7 +268,16 @@
 			};
 			var geochart = new google.visualization.GeoChart( document.getElementById('visualization'));
 			google.visualization.events.addListener(geochart, 'ready', function() {
-				var mpa_chart_loader = window.document.getElementById( "map_chart_loader" );
+				var mpa_chart_loader_title = window.document.getElementById( "map_chart_loader" );
+
+				var title = "페이스북 지역별 통계";		
+				var r = "";
+					r += `
+					<div style='padding:20px 0px;'><h2 class="ui left aligned header">${title}</h1></div>
+				`;
+		
+				mpa_chart_loader_title.innerHTML = r;
+
 				map_chart_loader.classList.remove("active");
 				//var imgUri = geochart.getImageURI();
 				if( !window.charts ) window.charts = {};
