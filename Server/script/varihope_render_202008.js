@@ -81,5 +81,8 @@
 	//--------------------------------------------------;
 	// LOGIC;
 	//--------------------------------------------------;
-    window.PIEL.REPORT.initContents(window.PIEL.REPORT.getData( window.PIEL.REPORT.logic ));
+    window.PIEL.REPORT.initContents(function(){
+        debugger;
+        window.PIEL.REPORT.getData( window.PIEL.REPORT.logic );
+    });
 })()
