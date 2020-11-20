@@ -33,12 +33,13 @@
 	
         window.PIEL.REPORT.drawTable__monthly_marketing_plan( "monthly_planning", data.statistic_monthly, target_month );
         window.PIEL.REPORT.drawCards__monthly_facebook_stastics( "monthly_facebook_stastics", data.total, target_month );
-        window.PIEL.REPORT.drawCards__make_facebook_location_html( "facebook_map_cards", data.location_data, target_month );
+        window.PIEL.REPORT.drawTable__make_facebook_location_htm( "facebook_map_cards", data.location_data, target_month );
+        window.PIEL.REPORT.makeInsight( "insight", data.insight[ 0 ], target_month );
         window.PIEL.REPORT.drawTable__make_kols_html( "kols_cards", data.kols, target_month )
         window.PIEL.REPORT.drawTable__make_statistic_google_html( "statistic_google", data.google_ad_info_list, data.google_total, target_month )
         window.PIEL.REPORT.drawTable__google_seo_list( "google_seo_list_data", data.google_seo_list, target_month )
         window.PIEL.REPORT.drawTable__make_marketing_list_none_img( "marketing_list", data.ads_list, target_month )
-        window.PIEL.REPORT.drawCards__make_ads_total_statistic( "ads_total", data.ads_total, target_month )
+        window.PIEL.REPORT.drawTable__make_ads_total_statistic( "ads_total", data.ads_total, target_month )
     
         am4core.ready(function() {
     
