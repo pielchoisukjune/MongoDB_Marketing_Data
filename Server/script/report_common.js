@@ -21,6 +21,19 @@
 		, "Google" : "red google outline"
 	};
 
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.insertLogo = function(){
+		var _el = window.document.getElementById( "logo_top" );
+		var imgUrl = window.PAGE_SETTING.LOGO[ window.PAGE_SETTING._BRAND_NM_ ];
+		var r = `
+			<img src="${imgUrl}">
+		`
+		_el.innerHTML = r;
+		return;
+	}
+
 	/*
 	 *
 	 */

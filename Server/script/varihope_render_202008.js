@@ -21,7 +21,9 @@
 		console.log( "window.PIEL.REPORT Loaded." );
 		
 		var target_month = window.PAGE_SETTING._TARGET_MONTH_ +"월";
-		
+        
+        window.PIEL.REPORT.insertLogo();
+        
 		if( window.document.getElementById("target_month") )
 		{
 			var title_month = window.document.getElementById("target_month");

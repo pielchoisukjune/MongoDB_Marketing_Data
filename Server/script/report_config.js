@@ -80,6 +80,12 @@
 		find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
 	};
     
+    window.PAGE_SETTING.LOGO = {
+        varihope : "https://cdn.imweb.me/thumbnail/20200709/8a8f7e32ec0fe.png"
+        , aheads : "https://cdn.imweb.me/thumbnail/20201106/e4b5c23727da2.png"
+        , wellderma : "https://cdn.imweb.me/thumbnail/20201008/e963a5bd37134.png"
+    }
+
     window.COMMON.URIL = {};
     window.COMMON.URIL.pad = function(n, width){
         n = n + '';
