@@ -119,7 +119,8 @@
 		window.CONST.CONFIG.jsPath = {
 			report : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/report_common.js"
 			, render : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/script/" + window.PAGE_SETTING._BRAND_NM_ + "_render_" + window.PAGE_SETTING._TARGET_YEAR_ + window.COMMON.URIL.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 ) + ".js"
-		};
+        };
+        window.PAGE_SETTING.insertScript( window.CONST.CONFIG.jsPath.render );
 	}
 
 	window.PAGE_SETTING.insertScript = function( path ){
@@ -142,6 +143,4 @@
 	window.marketing = {};
 	window.marketing.report = {};
     
-    window.PAGE_SETTING.insertScript( window.CONST.CONFIG.jsPath.render );
-
 })();
