@@ -1810,7 +1810,7 @@
 	window.PIEL.REPORT.getData = function( cbFunction ){
 		var xhr = new XMLHttpRequest();;
 		xhr.addEventListener("load", function(){
-			debugger;	
+				
 			var data = JSON.parse( xhr.responseText );
 			cbFunction( data );
 		});
@@ -1825,7 +1825,7 @@
 		var xhr = new XMLHttpRequest();;
 		xhr.addEventListener("load", function(){
 		var data = xhr.responseText;
-		debugger;	
+			
 		cbFunction( data );
 		});
 		var url = window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/getHtml?fileNm=" + "report_" + window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.COMMON.URIL.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 );
