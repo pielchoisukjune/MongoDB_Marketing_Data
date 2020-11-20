@@ -81,11 +81,11 @@
 	//--------------------------------------------------;
 	// LOGIC;
 	//--------------------------------------------------;
-    window.PIEL.REPORT.initContents(function(){
+    // window.PIEL.REPORT.initContents(function(){
         window.PIEL.REPORT.getHtml(function(strHtml){
             var tDom = window.document.getElementById( "contents" );
             tDom.innerHTML = strHtml;
             window.PIEL.REPORT.getData( window.PIEL.REPORT.logic )
         })
-    });
+    // });
 })()

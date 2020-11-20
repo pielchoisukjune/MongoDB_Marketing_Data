@@ -1836,9 +1836,19 @@
 	/**
 	 * 
 	 */
-	window.PIEL.REPORT.initContents = function( cbFunction ){
+	window.PIEL.REPORT.initContents = function( o, cbFunction ){
 		var tDom = window.document.getElementById( "contents" );
 			tDom.innerHTML = "";
+			
+			window.PAGE_SETTING.targetSetting( o.brNm, o.year, o.month );
+
+			window.charts = {};
+			window.charts.bar = {};
+			window.charts.pie = {};
+			window.charts.map = {};
+			window.marketing = {};
+			window.marketing.report = {};
+
 			if( cbFunction ) return cbFunction();
 			return;
 	}
