@@ -2013,18 +2013,36 @@
 	 */
 	window.PIEL.REPORT.makeContents = function( o ){
 			
-		window.PAGE_SETTING.targetSetting( o.brNm, o.year, o.month );
-
-		window.PIEL.REPORT.getHtml(function(strHtml){
-			var tDom = window.document.getElementById( "contents" );
-			tDom.innerHTML = strHtml;
-
-			window.PIEL.REPORT.fixedDom( window.document.getElementById( "latest_report" ).parentElement );
-			
-			window.PIEL.REPORT.getData( function( data ){
-				window.PIEL.REPORT.logic( data );
+		if( !o )
+		{
+			window.PIEL.REPORT.getDataLatestReport( function( a ){
+				window.PAGE_SETTING.targetSetting( window.PAGE_SETTING._BRAND_NM_ , a[0].year, a[0].month );
+				window.PIEL.REPORT.getHtml(function(strHtml){
+					var tDom = window.document.getElementById( "contents" );
+					tDom.innerHTML = strHtml;
+		
+					window.PIEL.REPORT.fixedDom( window.document.getElementById( "latest_report" ).parentElement );
+					
+					window.PIEL.REPORT.getData( function( data ){
+						window.PIEL.REPORT.logic( data );
+					})
+				})
 			})
-		})
+		}
+		else
+		{
+			window.PAGE_SETTING.targetSetting( o.brNm, o.year, o.month );
+			window.PIEL.REPORT.getHtml(function(strHtml){
+				var tDom = window.document.getElementById( "contents" );
+				tDom.innerHTML = strHtml;
+	
+				window.PIEL.REPORT.fixedDom( window.document.getElementById( "latest_report" ).parentElement );
+				
+				window.PIEL.REPORT.getData( function( data ){
+					window.PIEL.REPORT.logic( data );
+				})
+			})
+		}
 	}
 	/**
 	 * 
