@@ -18,17 +18,7 @@
 
 <!--지난보고서보기-->
 <div class="ui grid">
-	<div class="sixteen wide column">
-		<div class="fluid ui buttons">
-			<button class="ui button">One</button>
-			<button class="ui button">Two</button>
-			<button class="ui button">Three</button>
-			<button class="ui button">Three</button>
-			<button class="ui button">Three</button>
-			<button class="ui button">Three</button>
-			<button class="ui button">Three</button>
-		</div>
-	</div>
+	<div id="latest_report" class="sixteen wide column"></div>
 </div>
 <!--지난보고서보기-->
 

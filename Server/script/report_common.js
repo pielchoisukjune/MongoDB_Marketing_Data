@@ -1891,6 +1891,63 @@
 	/**
 	 * 
 	 */
+	window.PIEL.REPORT.getDataLatestReport = function( cbFunction ){
+		var xhr = new XMLHttpRequest();;
+		xhr.addEventListener("load", function(){
+			var data = JSON.parse( xhr.responseText );
+			cbFunction( data );
+		});
+		xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_All_by_brand + "brand=" + window.PAGE_SETTING._BRAND_NM_ );
+		xhr.send();
+	}
+
+/*
+		<div class="fluid ui buttons">
+			<button class="ui button">One</button>
+			<button class="ui button">Two</button>
+			<button class="ui button">Three</button>
+			<button class="ui button">Three</button>
+			<button class="ui button">Three</button>
+			<button class="ui button">Three</button>
+			<button class="ui button">Three</button>
+		</div>
+
+			window.PAGE_SETTING._USE_REST_APIS_ = {
+        find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
+        , find_report_All_by_brand : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_All_by_brand?"
+	};
+*/
+
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.makeLatestReport = function( domId, data ){
+		var title = "지난보고서"
+		var tDom = window.document.getElementById( domId );
+
+		if( !tDom ) return;
+		
+		var r = "";
+		var titleHtml = `
+			<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
+		`
+		r += titleHtml;
+		r += "<div class='fluid ui buttons'>\n";
+		
+		var i = 0,iLen = data.length,io;
+		for(;i<iLen;++i){
+			io = data[ i ];
+			r += "<button class='ui button'>" + io[ _id ] + "</button>"
+		}
+		
+		r += "</div>\n";
+		tDom.innerHTML = r;
+		return;
+	}
+
+	/**
+	 * 
+	 */
 	window.PIEL.REPORT.initContents = function( o ){
 		var tDom = window.document.getElementById( "contents" );
 			tDom.innerHTML = "";
