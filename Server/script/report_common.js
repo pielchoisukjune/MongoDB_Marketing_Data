@@ -1937,7 +1937,7 @@
 		var i = 0,iLen = data.length,io;
 		for(;i<iLen;++i){
 			io = data[ i ];
-			if( ( io.year + io.month ) == window.PAGE_SETTING._BRAND_NM_ + window.PAGE_SETTING._TARGET_YEAR_ )
+			if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
 			{
 				r += "<button id='" + io.year + io.month + "' class='ui red button'>" + io.year + "년" + io.month + "월</button>";
 			}
