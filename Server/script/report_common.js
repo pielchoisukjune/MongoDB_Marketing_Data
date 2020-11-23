@@ -330,7 +330,7 @@
 			io = data[ i ];
 			if( i == 0 ){
 				_bg_check00 = io.indexOf( target_month );
-				_bg_check01 = io.indexOf( target_month ) + 1;
+				//_bg_check01 = io.indexOf( target_month ) + 1;
 
 				_html0 += "<tr>"
 				var _tidx = 0;
@@ -348,8 +348,8 @@
 					else
 					{
 						
-						if( _bg_check00 == _tidx ) _html0 += "<th style='width:9%;background-color : red;color:#fff;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
-						else if( _bg_check01 == _tidx ) _html0 += "<th style='width:9%;background-color : yellow;color:red;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						if( _bg_check00 == _tidx ) _html0 += "<th style='width:9%;background-color : yellow;color:#fff;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						//else if( _bg_check01 == _tidx ) _html0 += "<th style='width:9%;background-color : yellow;color:red;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
 						else _html0 += "<th style='width:9%;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
 					}
 					++_tidx;
