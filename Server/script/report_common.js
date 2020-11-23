@@ -1937,7 +1937,12 @@
 		var i = 0,iLen = data.length,io;
 		for(;i<iLen;++i){
 			io = data[ i ];
-			r += "<button id='" + io.year + io.month + "' class='ui button' style='border:1px solid #ccc;'>" + io.year + "년" + io.month + "월</button>"
+			r += "<button id='" + io.year + io.month + "' class='ui button' style='border:1px solid #ccc;'>" + io.year + "년" + io.month + "월</button>";
+			window.PIEL.REPORT.makeLatestReport.data[ io.year + io.month ] = {
+				brNm : window.PAGE_SETTING._BRAND_NM_
+				  , year : data[ i ].year
+				  , month : Number( data[ i ].month )
+			};
 		}
 		
 		r += "</div>\n";
@@ -1945,17 +1950,12 @@
 
 		var _btn_els = window.document.getElementById( domId ).children[1].children;
 		
-		var i = 0,iLen = _btn_els.length,io,_to;
+		var i = 0,iLen = _btn_els.length,io;
 		for(;i<iLen;++i){
 			io = _btn_els[ i ];
 			io.addEventListener( "click",function(e){
 				debugger;
-				_to = {
-					brNm : window.PAGE_SETTING._BRAND_NM_
-					  , year : data[ i ].year
-					  , month : Number( data[ i ].month )
-				}
-				window.PIEL.REPORT.initContents( _to, function( o ){
+				window.PIEL.REPORT.initContents( window.PIEL.REPORT.makeLatestReport.data[ e.target.id ], function( o ){
 					return window.PIEL.REPORT.makeContents( o );
 				})
 			})
@@ -1963,6 +1963,7 @@
 
 		return;
 	}
+	window.PIEL.REPORT.makeLatestReport.data = {};
 
 	/**
 	 * 
