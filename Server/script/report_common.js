@@ -1961,7 +1961,7 @@
 		var i = 0,iLen = _btn_els.length,io;
 		for(;i<iLen;++i){
 			io = _btn_els[ i ];
-			if( ( window.PIEL.REPORT.makeLatestReport.data[ e.target.id ].year + window.PIEL.REPORT.makeLatestReport.data[ e.target.id ].month ) != window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
+			if( ( data[ i ].year + data[ i ].month ) != window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
 			{
 				io.addEventListener( "click",function(e){
 					window.PIEL.REPORT.initContents( window.PIEL.REPORT.makeLatestReport.data[ e.target.id ], function( o ){
