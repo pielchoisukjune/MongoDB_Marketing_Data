@@ -17,7 +17,7 @@
 </div>
 
 <!--지난보고서보기-->
-<div id="latest_report_box" class="ui grid" style="left:0px!important;">
+<div id="latest_report_box" class="ui grid">
 	<div id="latest_report" class="sixteen wide column"></div>
 </div>
 <!--지난보고서보기-->
