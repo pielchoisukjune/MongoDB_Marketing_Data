@@ -164,6 +164,7 @@
 			so = window.charts.pie[ s ]
 			so.dispose();
 		}
+		window.charts.pie = {};
 		return;
 	};
 
@@ -1976,7 +1977,7 @@
 			
 			window.charts = {};
 			window.charts.bar = {};
-			//window.charts.pie = {};
+			
 			window.PIEL.REPORT.pieChartAge.dispose();
 			window.charts.map = {};
 			window.marketing = {};
