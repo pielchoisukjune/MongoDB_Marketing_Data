@@ -40,7 +40,8 @@
         //window.PIEL.REPORT.drawCards__google_seo_list( "google_seo_list_data", data.google_seo_list, target_month )
         window.PIEL.REPORT.drawTable__make_marketing_list_none_img( "marketing_list", data.ads_list, target_month )
         window.PIEL.REPORT.drawTable__make_ads_total_statistic( "ads_total", data.ads_total, target_month )
-    
+		window.PIEL.REPORT.getDataLatestReport(function(data){ return window.PIEL.REPORT.makeLatestReport( "latest_report", data );	})
+		
         am4core.ready(function() {
     
             am4core.useTheme(am4themes_animated);
