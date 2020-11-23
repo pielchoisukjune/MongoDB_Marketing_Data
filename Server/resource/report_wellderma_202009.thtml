@@ -20,7 +20,7 @@
 <div class="ui grid">
 	<div class="sixteen wide column">
 		<div class="fluid ui buttons">
-			<button class="fluid ui button">One</button>
+			<button class="ui basic button">One</button>
 			<button class="ui basic button">Two</button>
 			<button class="ui basic button">Three</button>
 			<button class="ui basic button">Three</button>
