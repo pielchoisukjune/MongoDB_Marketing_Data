@@ -1875,6 +1875,15 @@
 	 * @param {*} str 
 	 */
 	window.PIEL.REPORT.loader.on = function( str ){
+		
+		var el = window.document.getElementById( "loader" );
+		if( !el )
+		{
+			var body = window.document.body
+			var _html = `<div id="loader" class="ui dimmer" style="display:none;z-index:99999;"><div class="ui large text loader">리포트 생성중 입니다.</div>`;
+			body.innerHTML += _html;
+		}
+		
 		window.PIEL.REPORT.loader.el = window.document.getElementById( "loader" )
 		if( str ) window.PIEL.REPORT.loader.el.children[0].innerText = str;
 		window.PIEL.REPORT.loader.el.style.display = "block";	
