@@ -1948,25 +1948,34 @@
 	/**
 	 * 
 	 */
-	window.PIEL.REPORT.initContents = function( o ){
+	window.PIEL.REPORT.initContents = function( o, cbFunction ){
 		var tDom = window.document.getElementById( "contents" );
 			tDom.innerHTML = "";
 			
-			window.PAGE_SETTING.targetSetting( o.brNm, o.year, o.month );
-
 			window.charts = {};
 			window.charts.bar = {};
 			window.charts.pie = {};
 			window.charts.map = {};
 			window.marketing = {};
 			window.marketing.report = {};
-			window.PIEL.REPORT.getHtml(function(strHtml){
-				var tDom = window.document.getElementById( "contents" );
-				tDom.innerHTML = strHtml;
-				window.PIEL.REPORT.getData( function( data ){
-					window.PIEL.REPORT.logic( data );
-				})
+			if( cbFunction ) cbFunction( o );
+
+	}
+
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.makeContents = function( o ){
+			
+		window.PAGE_SETTING.targetSetting( o.brNm, o.year, o.month );
+
+		window.PIEL.REPORT.getHtml(function(strHtml){
+			var tDom = window.document.getElementById( "contents" );
+			tDom.innerHTML = strHtml;
+			window.PIEL.REPORT.getData( function( data ){
+				window.PIEL.REPORT.logic( data );
 			})
+		})
 	}
 
 })()
