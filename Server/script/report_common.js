@@ -1924,7 +1924,8 @@
 	 * 
 	 */
 	window.PIEL.REPORT.getDataLatestReport = function( cbFunction ){
-		var xhr = new XMLHttpRequest();;
+		var xhr = new XMLHttpRequest();
+		window.PIEL.REPORT.urlFromGetBrandNm();
 		xhr.addEventListener("load", function(){
 			var data = JSON.parse( xhr.responseText );
 			cbFunction( data );
@@ -2015,6 +2016,7 @@
 		var _t = window.location.pathname;
 		//var r = _t.replace( "/","" ).split( "_" )[ 0 ];
 		var r = _t.replace( "/","" ).split( "_" )[ 1 ];
+		window.PAGE_SETTING._BRAND_NM_ = r;
 		return r;
 	}
 
@@ -2028,7 +2030,7 @@
 		if( !Object.keys( o ).length )
 		{
 			window.PIEL.REPORT.getDataLatestReport( function( a ){
-				window.PAGE_SETTING.targetSetting( window.PIEL.REPORT.urlFromGetBrandNm() , a[0].year, a[0].month );
+				window.PAGE_SETTING.targetSetting( window.PAGE_SETTING._BRAND_NM_  , a[0].year, a[0].month );
 				window.PIEL.REPORT.getHtml(function(strHtml){
 					var tDom = window.document.getElementById( "contents" );
 					tDom.innerHTML = strHtml;
