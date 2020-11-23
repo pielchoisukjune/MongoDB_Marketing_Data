@@ -1875,7 +1875,7 @@
 	 * @param {*} str 
 	 */
 	window.PIEL.REPORT.loader.on = function( str ){
-		debugger;
+		
 		var el = window.document.getElementById( "loader" );
 		if( !el )
 		{
@@ -2047,7 +2047,11 @@
 					window.PIEL.REPORT.fixedDom( window.document.getElementById( "latest_report" ).parentElement );
 					
 					window.PIEL.REPORT.getData( function( data ){
+						window.PIEL.REPORT.loader.on( "데이터를 로딩중입니다." )
 						window.PIEL.REPORT.logic( data );
+						setTimeout(function(){
+							window.PIEL.REPORT.loader.off();
+						},1000)
 					})
 				})
 			})
@@ -2062,7 +2066,11 @@
 				window.PIEL.REPORT.fixedDom( window.document.getElementById( "latest_report" ).parentElement );
 				
 				window.PIEL.REPORT.getData( function( data ){
+					window.PIEL.REPORT.loader.on( "데이터를 로딩중입니다." )
 					window.PIEL.REPORT.logic( data );
+					setTimeout(function(){
+						window.PIEL.REPORT.loader.off();
+					},1000)
 				})
 			})
 		}
