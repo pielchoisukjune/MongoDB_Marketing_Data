@@ -2018,9 +2018,8 @@
 		window.PIEL.REPORT.getHtml(function(strHtml){
 			var tDom = window.document.getElementById( "contents" );
 			tDom.innerHTML = strHtml;
-
-			$('#latest_report_box').sticky();
 			
+			// $('#latest_report_box').sticky();
 			window.PIEL.REPORT.getData( function( data ){
 				window.PIEL.REPORT.logic( data );
 			})
