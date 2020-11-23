@@ -1921,7 +1921,7 @@
 			io = data[ i ];
 			if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
 			{
-				r += "<button id='" + io.year + io.month + "' class='ui red button'>" + io.year + "년" + io.month + "월</button>";
+				r += "<button id='" + io.year + io.month + "' class='ui green button'>" + io.year + "년" + io.month + "월</button>";
 			}
 			else
 			{
