@@ -1880,7 +1880,7 @@
 		if( !el )
 		{
 			var body = window.document.body
-			var _html = `<div id="loader" class="ui dimmer" style="display:none;z-index:99999;"><div class="ui large text loader">리포트 생성중 입니다.</div>`;
+			var _html = `<div id="loader" class="ui inverted dimmer"" style="display:none;z-index:99999;"><div class="ui large text loader">리포트 생성중 입니다.</div>`;
 			body.innerHTML += _html;
 		}
 		
