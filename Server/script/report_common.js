@@ -161,7 +161,6 @@
 		var s,so;
 		for( s in window.charts.pie )
 		{
-			debugger;
 			so = window.charts.pie[ s ]
 			so.dispose();
 		}
@@ -267,7 +266,6 @@
 		var s,so;
 		for( s in window.charts.bar )
 		{
-			debugger;
 			so = window.charts.bar[ s ]
 			so.dispose();
 		}
@@ -327,7 +325,18 @@
 		}
 	};
 	window.PIEL.REPORT.drawVisualization.load_cnt = 0;
-
+	window.PIEL.REPORT.drawVisualization.dispose = function(){
+		chart
+		var s,so;
+		for( s in window.charts.map )
+		{
+			so = window.charts.map[ s ]
+			so.visualization.clearChart();
+		}
+		window.charts.map = {};
+		return;
+	}
+	
 	/*
 	 * 월간집행통계작성;
 	 */
@@ -1987,11 +1996,10 @@
 		
 			window.PIEL.REPORT.pieChartAge.dispose();
 			window.PIEL.REPORT.barChartTime.dispose();
-
+			window.PIEL.REPORT.drawVisualization.dispose();
 			
-			window.charts.map = {};
-			window.marketing = {};
 			window.marketing.report = {};
+			window.marketing = {};
 			
 			var tDom = window.document.getElementById( "contents" );
 			tDom.innerHTML = "";
