@@ -1,18 +1,3 @@
- <div class="ui sidebar inverted vertical menu">
-    <a class="item">
-      1
-    </a>
-    <a class="item">
-      2
-    </a>
-    <a class="item">
-      3
-    </a>
- </div>
- <div id="contents" class="pusher">
- 
-
-
 <div id="logo_top" style="text-align:center;"></div>
 <div style="text-align: center;"><span style="font-size: 22px;font-weight: bolder;">Marketing Reoprt By PIEL.</span></div>
 <div style="text-align: center;padding:20px 0px;"><span id="target_month" style="font-size: 22px;font-weight: bolder;"></span></div>
@@ -31,7 +16,20 @@
 	<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
 </div>
 
+<div class="ui grid">
+	<div class="sixteen wide column">
+	<div class="ui buttons">
+  <button class="ui button">One</button>
+  <button class="ui button">Two</button>
+  <button class="ui button">Three</button>
+	</div>
+
+	</div>
+</div>
+
+
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+
 <!--월간진행현황-->
 <div class="ui grid">
 	<div class="sixteen wide column" id="monthly_planning"></div>
@@ -124,4 +122,3 @@
 	<div id="marketing_list" class="sixteen wide column"></div>
 </div>
 <!--광고집행리스트-->
- </div>
