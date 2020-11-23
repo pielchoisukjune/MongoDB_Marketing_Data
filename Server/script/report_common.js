@@ -1952,8 +1952,8 @@
 				debugger;
 				_to = {
 					brNm : window.PAGE_SETTING._BRAND_NM_
-					  , year : io.year
-					  , month : Number( io.month )
+					  , year : data[ i ].year
+					  , month : Number( data[ i ].month )
 				}
 				window.PIEL.REPORT.initContents( _to, function( o ){
 					return window.PIEL.REPORT.makeContents( o );
