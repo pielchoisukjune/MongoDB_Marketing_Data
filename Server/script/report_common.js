@@ -2032,10 +2032,10 @@
 	window.PIEL.REPORT.fixedDom = function( el ){
 		
 		if( !el ) return;
-		tDom.style.position = "sticky"
-		tDom.style.top = "0px"
-		tDom.style.zIndex = 9999
-		tDom.style.backgroundColor = "#fff"
+		el.style.position = "sticky"
+		el.style.top = "0px"
+		el.style.zIndex = 9999
+		el.style.backgroundColor = "#fff"
 		return;
 	}
 })()
