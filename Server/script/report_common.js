@@ -2035,7 +2035,7 @@
 	 * 
 	 */
 	window.PIEL.REPORT.makeContents = function( o ){
-			
+		window.PIEL.REPORT.loader.on( "데이터를 로딩중입니다." )
 		if( !Object.keys( o ).length )
 		{
 			window.PIEL.REPORT.getDataLatestReport( function( a ){
@@ -2066,7 +2066,6 @@
 				window.PIEL.REPORT.fixedDom( window.document.getElementById( "latest_report" ).parentElement );
 				
 				window.PIEL.REPORT.getData( function( data ){
-					window.PIEL.REPORT.loader.on( "데이터를 로딩중입니다." )
 					window.PIEL.REPORT.logic( data );
 					setTimeout(function(){
 						window.PIEL.REPORT.loader.off();
