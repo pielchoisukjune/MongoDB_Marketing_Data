@@ -2013,7 +2013,7 @@
 	 */
 	window.PIEL.REPORT.makeContents = function( o ){
 			
-		if( !o )
+		if( !Object.keys( o ).length )
 		{
 			window.PIEL.REPORT.getDataLatestReport( function( a ){
 				window.PAGE_SETTING.targetSetting( window.PAGE_SETTING._BRAND_NM_ , a[0].year, a[0].month );
