@@ -161,6 +161,7 @@
 		var s,so;
 		for( s in window.charts.pie )
 		{
+			debugger;
 			so = window.charts.pie[ s ]
 			so.dispose();
 		}
