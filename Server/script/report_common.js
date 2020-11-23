@@ -1838,13 +1838,12 @@
 	 * 
 	 */
 	window.PIEL.REPORT.loader = {};
-	window.PIEL.REPORT.loader.el = window.document.getElementById( "loader" )
-
 	/**
 	 * 
 	 * @param {*} str 
 	 */
 	window.PIEL.REPORT.loader.on = function( str ){
+		window.PIEL.REPORT.loader.el = window.document.getElementById( "loader" )
 		if( str ) window.PIEL.REPORT.loader.el.children[0].innerText = str;
 		window.PIEL.REPORT.loader.el.style.display = "block";	
 		window.PIEL.REPORT.loader.el.classList.add("active");
@@ -1854,6 +1853,7 @@
 	 * 
 	 */
 	window.PIEL.REPORT.loader.off = function(){
+		window.PIEL.REPORT.loader.el = window.document.getElementById( "loader" )
 		window.PIEL.REPORT.loader.el.style.display = "none";	
 		window.PIEL.REPORT.loader.el.classList.remove("active");;
 		return;
@@ -1900,24 +1900,6 @@
 		xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_All_by_brand + "brand=" + window.PAGE_SETTING._BRAND_NM_ );
 		xhr.send();
 	}
-
-/*
-		<div class="fluid ui buttons">
-			<button class="ui button">One</button>
-			<button class="ui button">Two</button>
-			<button class="ui button">Three</button>
-			<button class="ui button">Three</button>
-			<button class="ui button">Three</button>
-			<button class="ui button">Three</button>
-			<button class="ui button">Three</button>
-		</div>
-
-			window.PAGE_SETTING._USE_REST_APIS_ = {
-        find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
-        , find_report_All_by_brand : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_All_by_brand?"
-	};
-*/
-
 	/**
 	 * 
 	 */
