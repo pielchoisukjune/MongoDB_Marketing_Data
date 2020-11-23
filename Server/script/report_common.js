@@ -1943,7 +1943,7 @@
 		r += "</div>\n";
 		tDom.innerHTML = r;
 
-		var _btn_els = window.document.getElementById( domId ).children[1];
+		var _btn_els = window.document.getElementById( domId ).children[1].children;
 		
 		var i = 0,iLen = _btn_els.length,io,_to;
 		for(;i<iLen;++i){
