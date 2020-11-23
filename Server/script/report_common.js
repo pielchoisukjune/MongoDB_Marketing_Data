@@ -1949,6 +1949,7 @@
 		for(;i<iLen;++i){
 			io = _btn_els[ i ];
 			io.addEventListener( "click",function(e){
+				debugger;
 				_to = {
 					brNm : window.PAGE_SETTING._BRAND_NM_
 					  , year : io.year
