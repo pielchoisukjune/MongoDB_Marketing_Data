@@ -1875,7 +1875,7 @@
 	 * @param {*} str 
 	 */
 	window.PIEL.REPORT.loader.on = function( str ){
-		
+		debugger;
 		var el = window.document.getElementById( "loader" );
 		if( !el )
 		{
