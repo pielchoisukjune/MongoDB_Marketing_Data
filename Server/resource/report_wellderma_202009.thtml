@@ -17,7 +17,7 @@
 </div>
 
 <!--지난보고서보기-->
-<div class="ui sticky grid">
+<div id="test" class="ui sticky grid">
 	<div id="latest_report" class="sixteen wide column"></div>
 </div>
 <!--지난보고서보기-->
@@ -25,7 +25,7 @@
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 <!--월간진행현황-->
-<div class="ui sticky grid">
+<div class="ui grid">
 	<div class="sixteen wide column" id="monthly_planning"></div>
 </div>
 <!--월간진행현황-->
