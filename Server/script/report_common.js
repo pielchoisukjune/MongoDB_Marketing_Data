@@ -326,7 +326,7 @@
 	};
 	window.PIEL.REPORT.drawVisualization.load_cnt = 0;
 	window.PIEL.REPORT.drawVisualization.dispose = function(){
-		chart
+
 		var s,so;
 		for( s in window.charts.map )
 		{
@@ -2000,7 +2000,7 @@
 			
 			window.marketing.report = {};
 			window.marketing = {};
-			
+
 			var tDom = window.document.getElementById( "contents" );
 			tDom.innerHTML = "";
 			
