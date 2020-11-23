@@ -77,7 +77,8 @@
 	window.PAGE_SETTING._TARGET_YEAR_ = ""
 	window.PAGE_SETTING._TARGET_MONTH_ = -1;
 	window.PAGE_SETTING._USE_REST_APIS_ = {
-		find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
+        find_report_by_month : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_by_month?"
+        , find_report_All_by_brand : window.COMMON.SERVER.API_SERVER.URL + ":" + window.COMMON.SERVER.API_SERVER.PORT + "/find_report_All_by_brand?"
 	};
     
     window.PAGE_SETTING.LOGO = {

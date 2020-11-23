@@ -189,6 +189,64 @@ var paramToObject = function( url ){
 	*
 	* @example
 	* <code>
+		http://localhost:8888/find_report_All_by_brand?brand=varihope
+	* </code>
+	*/
+	global.server.addRouter("/find_report_All_by_brand",function( req, res ){
+		
+		var routerNm = req.url.split("?")[0];
+		var paramsO = paramToObject( req.url );
+		var _tdbjs_nm = "find_report_All_by_brand";
+				
+
+		res.statusCode = 200;
+		res.setHeader( "Access-Control-Allow-Headers", "Content-Type" );
+		res.setHeader( "Access-Control-Allow-Origin", "*" );
+		res.setHeader( "Access-Control-Allow-Methods", "OPTIONS,POST,GET" );
+		console.log( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ); 
+		
+		try
+		{
+			var _tQuery = fs.readFileSync( _tDbjs_PATH + "/" + _tdbjs_nm + ".tdbjs" ).toString();
+		}
+		catch( err )
+		{
+			console.log( routerNm + " - DBJS File Not Found! - " + err );
+			res.end("{ sucess : 0, data : null }");
+		}
+		
+		var query = _tQuery.replace( "<!=BRAND_NM=!>", paramsO.brand );
+		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.month + ".dbjs";
+
+		var FILE_PATH = DBJS_DIRECTORY_PATH + dbjs_nm;
+		
+		console.log( FILE_PATH )
+
+		fs.writeFileSync( DBJS_DIRECTORY_PATH + dbjs_nm , query, { flag : "w" } );
+		var r = exec_query_DB( dbjs_nm )
+		res.end( r )	
+
+	});
+
+	/**
+	 * 쿼리파일을 실행하는 라우터
+	 * @function
+	 * @param {http.ClientRequest} req
+	 * <code>
+		{
+
+		}
+	* </code>
+	*
+	* @param {http.ClientResponse} res
+	* <code>
+		{
+
+		}
+	* </code>
+	*
+	* @example
+	* <code>
 		http://localhost:8888/getHtml?fileNm=report_varihope_202008
 	* </code>
 	*/

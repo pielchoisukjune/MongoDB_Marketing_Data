@@ -1904,7 +1904,7 @@
 			window.marketing = {};
 			window.marketing.report = {};
 			window.PIEL.REPORT.getHtml(function(strHtml){
-				var tDom = window.document.getElementById( "contents" );
+				var tDom = window.document.body;
 				tDom.innerHTML = strHtml;
 				window.PIEL.REPORT.getData( function( data ){
 					window.PIEL.REPORT.logic( data );

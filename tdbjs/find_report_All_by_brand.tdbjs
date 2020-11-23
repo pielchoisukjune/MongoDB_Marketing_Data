@@ -1,0 +1,11 @@
+var brand_nm = "<!=BRAND_NM=!>";
+
+var db0 = db.getSiblingDB("Report");
+var col0 = db0.getCollection( brand_nm );
+
+var r = [];
+col0.find().sort({_id:-1}).forEach(function(doc){
+    r.push( NumberInt( doc._id ) );
+});
+
+printjson( r )
