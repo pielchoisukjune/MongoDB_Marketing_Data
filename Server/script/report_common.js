@@ -1869,7 +1869,7 @@
 			var data = JSON.parse( xhr.responseText );
 			cbFunction( data );
 		});
-		xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_by_month + "brand=" + window.PAGE_SETTING._BRAND_NM_ + "&month=" + window.PAGE_SETTING._TARGET_MONTH_ );
+		xhr.open("GET", window.PAGE_SETTING._USE_REST_APIS_.find_report_by_month + "brand=" + window.PAGE_SETTING._BRAND_NM_ + "&targetDate=" + window.PAGE_SETTING._TARGET_YEAR_ +  window.COMMON.URIL.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 ) );
 		xhr.send();
 	}
 	

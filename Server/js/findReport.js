@@ -131,14 +131,14 @@ var paramToObject = function( url ){
 	*
 	* @example
 	* <code>
-		http://localhost:8888/find_report_by_month?brand=varihope&month=6
+		http://localhost:8888/find_report_by_month?brand=varihope&targetDate=202006
 	* </code>
 	*/
-	global.server.addRouter("/find_report_by_month",function( req, res ){
+	global.server.addRouter("/find_report_by_targetDate",function( req, res ){
 		
 		var routerNm = req.url.split("?")[0];
 		var paramsO = paramToObject( req.url );
-		var _tdbjs_nm = "find_report_by_month";
+		var _tdbjs_nm = "find_report_by_targetDate";
 				
 
 		res.statusCode = 200;
@@ -157,8 +157,8 @@ var paramToObject = function( url ){
 			res.end("{ sucess : 0, data : null }");
 		}
 		
-		var query = _tQuery.replace( "<!=BRAND_NM=!>", paramsO.brand ).replace( "<!=TARGET_MONTH=!>", paramsO.month )
-		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.month + ".dbjs";
+		var query = _tQuery.replace( "<!=BRAND_NM=!>", paramsO.brand ).replace( "<!=TARGET_DATE=!>", paramsO.targetDate )
+		var dbjs_nm = "find_report_by_month_" + paramsO.brand + "_" + paramsO.targetDate + ".dbjs";
 
 		var FILE_PATH = DBJS_DIRECTORY_PATH + dbjs_nm;
 		
