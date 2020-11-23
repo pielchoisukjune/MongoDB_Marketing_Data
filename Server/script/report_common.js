@@ -263,6 +263,17 @@
 		return chart;
 	};
 
+	window.PIEL.REPORT.barChartTime.dispose = function(){
+		var s,so;
+		for( s in window.charts.bar )
+		{
+			debugger;
+			so = window.charts.bar[ s ]
+			so.dispose();
+		}
+		window.charts.bar = {};
+		return;
+	};
 	/*
 	 *
 	 */
@@ -1973,16 +1984,18 @@
 	 * 
 	 */
 	window.PIEL.REPORT.initContents = function( o, cbFunction ){
-		var tDom = window.document.getElementById( "contents" );
-			tDom.innerHTML = "";
-			
-			window.charts = {};
-			window.charts.bar = {};
-			
+		
 			window.PIEL.REPORT.pieChartAge.dispose();
+			window.PIEL.REPORT.barChartTime.dispose();
+
+			
 			window.charts.map = {};
 			window.marketing = {};
 			window.marketing.report = {};
+			
+			var tDom = window.document.getElementById( "contents" );
+			tDom.innerHTML = "";
+			
 			if( cbFunction ) cbFunction( o );
 
 	}
