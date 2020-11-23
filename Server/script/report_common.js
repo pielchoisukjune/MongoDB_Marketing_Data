@@ -1904,7 +1904,7 @@
 	 * 
 	 */
 	window.PIEL.REPORT.makeLatestReport = function( domId, data ){
-		var title = "지난보고서"
+		var title = "마케팅 보고서 리스트"
 		var tDom = window.document.getElementById( domId );
 
 		if( !tDom ) return;
