@@ -16,17 +16,21 @@
 	<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
 </div>
 
+<!--지난보고서보기-->
 <div class="ui grid">
 	<div class="sixteen wide column">
-	<div class="fluid ui buttons">
-  <button class="ui button">One</button>
-  <button class="ui button">Two</button>
-  <button class="ui button">Three</button>
-	</div>
-
+		<div class="fluid ui buttons">
+			<button class="ui button">One</button>
+			<button class="ui button">Two</button>
+			<button class="ui button">Three</button>
+			<button class="ui button">Three</button>
+			<button class="ui button">Three</button>
+			<button class="ui button">Three</button>
+			<button class="ui button">Three</button>
+		</div>
 	</div>
 </div>
-
+<!--지난보고서보기-->
 
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
