@@ -1937,7 +1937,7 @@
 		var i = 0,iLen = data.length,io;
 		for(;i<iLen;++i){
 			io = data[ i ];
-			r += "<button class='ui button'>" + io[ _id ] + "</button>"
+			r += "<button class='ui button'>" + io[ month ] + "</button>"
 		}
 		
 		r += "</div>\n";
