@@ -142,6 +142,7 @@
 	window.charts.pie = {};
 	window.charts.map = {};
 	window.marketing = {};
-	window.marketing.report = {};
+    window.marketing.report = {};
+    
     
 })();

@@ -157,6 +157,16 @@
 		return chart;
 	}
 
+	window.PIEL.REPORT.pieChartAge.dispose = function(){
+		var s,so;
+		for( s in window.charts.pie )
+		{
+			so = window.charts.pie[ s ]
+			so.dispose();
+		}
+		return;
+	};
+
 	/*
 	 *
 	 */
@@ -1966,7 +1976,8 @@
 			
 			window.charts = {};
 			window.charts.bar = {};
-			window.charts.pie = {};
+			//window.charts.pie = {};
+			window.PIEL.REPORT.pieChartAge.dispose();
 			window.charts.map = {};
 			window.marketing = {};
 			window.marketing.report = {};
