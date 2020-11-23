@@ -1961,12 +1961,14 @@
 		var i = 0,iLen = _btn_els.length,io;
 		for(;i<iLen;++i){
 			io = _btn_els[ i ];
-			io.addEventListener( "click",function(e){
-				debugger;
-				window.PIEL.REPORT.initContents( window.PIEL.REPORT.makeLatestReport.data[ e.target.id ], function( o ){
-					return window.PIEL.REPORT.makeContents( o );
+			if( ( io.year + io.month ) != window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
+			{
+				io.addEventListener( "click",function(e){
+					window.PIEL.REPORT.initContents( window.PIEL.REPORT.makeLatestReport.data[ e.target.id ], function( o ){
+						return window.PIEL.REPORT.makeContents( o );
+					})
 				})
-			})
+			}
 		}
 
 		return;
