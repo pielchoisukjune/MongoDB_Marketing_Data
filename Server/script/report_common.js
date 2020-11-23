@@ -1937,7 +1937,15 @@
 		var i = 0,iLen = data.length,io;
 		for(;i<iLen;++i){
 			io = data[ i ];
-			r += "<button id='" + io.year + io.month + "' class='ui button' style='border:1px solid #ccc;'>" + io.year + "년" + io.month + "월</button>";
+			if( ( io.year + io.month ) == window.PAGE_SETTING._BRAND_NM_ + window.PAGE_SETTING._TARGET_YEAR_ )
+			{
+				r += "<button id='" + io.year + io.month + "' class='ui red button'>" + io.year + "년" + io.month + "월</button>";
+			}
+			else
+			{
+				r += "<button id='" + io.year + io.month + "' class='ui button' style='border:1px solid #ccc;'>" + io.year + "년" + io.month + "월</button>";
+			}
+			
 			window.PIEL.REPORT.makeLatestReport.data[ io.year + io.month ] = {
 				brNm : window.PAGE_SETTING._BRAND_NM_
 				  , year : data[ i ].year
