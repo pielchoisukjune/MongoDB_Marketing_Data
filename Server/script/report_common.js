@@ -2018,12 +2018,24 @@
 		window.PIEL.REPORT.getHtml(function(strHtml){
 			var tDom = window.document.getElementById( "contents" );
 			tDom.innerHTML = strHtml;
+
+			window.PIEL.REPORT.fixedDom( window.document.getElementById( "latest_report" ).parentElement );
 			
-			// $('#latest_report_box').sticky();
 			window.PIEL.REPORT.getData( function( data ){
 				window.PIEL.REPORT.logic( data );
 			})
 		})
 	}
-
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.fixedDom = function( el ){
+		
+		if( !el ) return;
+		tDom.style.position = "sticky"
+		tDom.style.top = "0px"
+		tDom.style.zIndex = 9999
+		tDom.style.backgroundColor = "#fff"
+		return;
+	}
 })()
