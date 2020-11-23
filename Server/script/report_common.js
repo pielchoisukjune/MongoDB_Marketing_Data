@@ -1942,10 +1942,23 @@
 		
 		r += "</div>\n";
 		tDom.innerHTML = r;
-		debugger;
 
-		var _els = window.document.getElementById( domId );
+		var _btn_els = window.document.getElementById( domId ).children[1];
 		
+		var i = 0,iLen = _btn_els.length,io,_to;
+		for(;i<iLen;++i){
+			io = _btn_els[ i ];
+			io.addEventListener( "click",function(e){
+				_to = {
+					brNm : window.PAGE_SETTING._BRAND_NM_
+					  , year : io.year
+					  , month : Number( io.month )
+				}
+				window.PIEL.REPORT.initContents( _to, function( o ){
+					return window.PIEL.REPORT.makeContents( o );
+				})
+			})
+		}
 
 		return;
 	}
