@@ -331,7 +331,7 @@
 		for( s in window.charts.map )
 		{
 			so = window.charts.map[ s ]
-			so.visualization.clearChart();
+			so.clearChart();
 		}
 		window.charts.map = {};
 		return;
