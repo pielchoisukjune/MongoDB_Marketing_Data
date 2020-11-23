@@ -1937,7 +1937,7 @@
 		var i = 0,iLen = data.length,io;
 		for(;i<iLen;++i){
 			io = data[ i ];
-			r += "<button class='ui button'>" + io.year + "년" + io.month + "월</button>"
+			r += "<button class='ui basic button'>" + io.year + "년" + io.month + "월</button>"
 		}
 		
 		r += "</div>\n";
