@@ -19,14 +19,15 @@
 <!--지난보고서보기-->
 <div class="ui grid">
 	<div class="sixteen wide column">
-
-		<button class="flui dui button">One</button>
-		<button class="flui dui button">One</button>
-		<button class="flui dui button">One</button>
-		<button class="flui dui button">One</button>
-		<button class="flui dui button">One</button>
-		<button class="flui dui button">One</button>
-		
+		<div class="fluid ui buttons">
+			<button class="fluid ui button">One</button>
+			<button class="ui basic button">Two</button>
+			<button class="ui basic button">Three</button>
+			<button class="ui basic button">Three</button>
+			<button class="ui basic button">Three</button>
+			<button class="ui basic button">Three</button>
+			<button class="ui basic button">Three</button>
+		</div>
 	</div>
 </div>
 <!--지난보고서보기-->
