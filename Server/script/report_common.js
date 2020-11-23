@@ -1946,7 +1946,7 @@
 			<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 		`
 		r += titleHtml;
-		r += "<div class='fluid ui buttons'>\n";
+		r += "<div id='lastest_btns' class='fluid ui sticky buttons'>\n";
 		
 		var i = 0,iLen = data.length,io;
 		for(;i<iLen;++i){

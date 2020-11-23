@@ -17,7 +17,7 @@
 </div>
 
 <!--지난보고서보기-->
-<div class="ui grid sticky">
+<div class="ui grid">
 	<div id="latest_report" class="sixteen wide column"></div>
 </div>
 <!--지난보고서보기-->
