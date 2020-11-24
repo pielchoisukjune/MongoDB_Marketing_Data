@@ -1,7 +1,7 @@
 <div class="ui grid">
 	<div class="two wide column" style="background-color:red">ssss</div>
 	<div class="twelve wide column" style="background-color:yellow">
-				<div id="logo_top" style="text-align:center;"></div>
+		<div id="logo_top" style="text-align:center;"></div>
 		<div style="text-align: center;"><span style="font-size: 22px;font-weight: bolder;">Marketing Reoprt By PIEL.</span></div>
 		<div style="text-align: center;padding:20px 0px;"><span id="target_month" style="font-size: 22px;font-weight: bolder;"></span></div>
 		<div class="widget padding" data-height="30" style="margin-top:px; margin-bottom:px;">
@@ -15,13 +15,13 @@
 		</div>
 
 		<!--지난보고서보기-->
-		<div id="latest_report" class="sixteen wide column"></div>
+		<div id="latest_report" ></div>
 		<!--지난보고서보기-->
 
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--월간진행현황-->
-		<div class="sixteen wide column" id="monthly_planning"></div>
+		<div id="monthly_planning"></div>
 		<!--월간진행현황-->
 
 		<div class="widget padding" data-height="30" style="margin-top:px; margin-bottom:px;">
@@ -29,13 +29,13 @@
 		</div>
 
 		<!--마케팅인사이트-->
-		<div id="insight" class="sixteen wide column"></div>
+		<div id="insight" ></div>
 		<!--마케팅인사이트-->
 
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--페이스북광고-->
-		<div class="sixteen wide column"><div id="monthly_facebook_stastics"></div></div>
+		<div ><div id="monthly_facebook_stastics"></div></div>
 		<!--페이스북광고-->
 
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
@@ -51,7 +51,7 @@
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--페이스북시간대 Bar Chart-->
-		<div class="sixteen wide column">
+		<div >
 			<div id="chartdiv04_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div>
 			<div id="chartdiv04"></div>
 		</div>
@@ -61,8 +61,8 @@
 
 				
 		<!--페이스북 지역별통계 Map Chart-->	
-		<div id="map_chart_loader_title" class="sixteen wide column"></div>
-		<div class="sixteen wide column">
+		<div id="map_chart_loader_title" ></div>
+		<div >
 			<div id="map_chart_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div>
 			<div id="visualization" style="height: 100%;"></div>
 		</div>
@@ -71,44 +71,44 @@
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--페이스북 지역별통계 Table-->	
-		<div id="facebook_map_cards" class="sixteen wide column"></div>
+		<div id="facebook_map_cards" ></div>
 		<!--페이스북 지역별통계 Table-->	
 
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--구글 광고통계 Table-->	
-		<div id="statistic_google" class="sixteen wide column"></div>
+		<div id="statistic_google" ></div>
 		<!--구글 광고통계 Table-->
 
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--구글 광고 Bar Chart 01-->
-		<div class="sixteen wide column"><div id="chartdiv13_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv13"></div></div>
+		<div ><div id="chartdiv13_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv13"></div></div>
 		<!--구글 광고 Bar Chart 01-->
 
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--구글 광고 Bar Chart 01-->
-		<div class="sixteen wide column"><div id="chartdiv14_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv14"></div></div>
+		<div ><div id="chartdiv14_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv14"></div></div>
 		<!--구글 광고 Bar Chart 01-->
 
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--KOLs-->
-		<div id="kols_cards" class="sixteen wide column"></div>
+		<div id="kols_cards" ></div>
 		<!--KOLs-->
 
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--광고집행통계-->	
-		<div id="ads_total" class="sixteen wide column"></div>
+		<div id="ads_total" ></div>
 		<!--광고집행통계-->	
 
 
 		<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 		<!--광고집행리스트-->
-		<div id="marketing_list" class="sixteen wide column"></div>
+		<div id="marketing_list" ></div>
 		<!--광고집행리스트-->	
 	
 	
