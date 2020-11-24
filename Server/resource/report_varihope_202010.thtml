@@ -1,8 +1,15 @@
 <div class="ui grid">
-	<div class="two wide column">ssss</div>
-	<div class="twelve wide column">
+	<div class="two wide column" style="background-color:red">ssss</div>
+	<div class="twelve wide column" style="background-color:yellow">
 	
-		<div id="logo_top" style="text-align:center;"></div>
+		dddd
+	</div>
+	<div class="two wide column" style="background-color:red">sss</div>
+</div>
+
+
+
+<div id="logo_top" style="text-align:center;"></div>
 		<div style="text-align: center;"><span style="font-size: 22px;font-weight: bolder;">Marketing Reoprt By PIEL.</span></div>
 		<div style="text-align: center;padding:20px 0px;"><span id="target_month" style="font-size: 22px;font-weight: bolder;"></span></div>
 		<div class="widget padding" data-height="30" style="margin-top:px; margin-bottom:px;">
@@ -139,6 +146,3 @@
 			<div id="marketing_list" class="sixteen wide column"></div>
 		</div>
 		<!--광고집행리스트-->
-	</div>
-	<div class="two wide column">sss</div>
-</div>
