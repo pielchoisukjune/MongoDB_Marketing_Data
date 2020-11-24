@@ -1,5 +1,5 @@
 <div style="background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);background-repeat: no-repeat;">
-	<div style="background-color:rgba(0, 0, 0, 0.3);padding: 100px">
+	<div style="background-color:rgba(0, 0, 0, 0.3);padding: 50px">
 		
 		<div id="logo_top" style="text-align:center;"></div>
 
@@ -16,7 +16,7 @@
 		</div>
 	</div>
 </div>
-<div style="padding: 200px 200px;">
+<div style="padding: 50px 200px;">
 
 <!--지난보고서보기-->
 <div>
