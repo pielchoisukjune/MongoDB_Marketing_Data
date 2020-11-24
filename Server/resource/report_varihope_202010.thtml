@@ -1,5 +1,5 @@
 <div class="ui grid">
-	<div class="two wide column"></div>
+	<div class="two wide column">ssss</div>
 	<div class="twelve wide column">
 	
 		<div id="logo_top" style="text-align:center;"></div>
@@ -140,5 +140,5 @@
 		</div>
 		<!--광고집행리스트-->
 	</div>
-	<div class="two wide column"></div>
+	<div class="two wide column">sss</div>
 </div>
