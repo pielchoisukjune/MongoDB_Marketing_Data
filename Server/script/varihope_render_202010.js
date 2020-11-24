@@ -28,7 +28,7 @@
 		{
 			var title_month = window.document.getElementById("target_month");
 			title_month.innerText = window.PAGE_SETTING._TARGET_YEAR_ + "." + window.COMMON.URIL.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 );
-			title_month.style.color = "rgba(0, 0, 0,10)";
+			//title_month.style.color = "rgba(255, 255, 255,10)";
 		}
 	
         window.PIEL.REPORT.drawTable__monthly_marketing_plan( "monthly_planning", data.statistic_monthly, target_month );
