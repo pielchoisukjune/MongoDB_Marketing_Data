@@ -6,12 +6,12 @@
 		<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
 	</div>
 	<div style="text-align:center;">
-		<button id="downloadPdf" class="ui green button"><i class="cloud download icon"></i>보고서다운로드</button></div>
+		<button id="downloadPdf" class="ui green button"><i class="cloud download icon"></i>보고서다운로드</button>
 	</div>
 	<!--지난보고서보기-->
-
+	<div>
 		<div id="latest_report"></div>
-
+	</div>
 	<!--지난보고서보기-->
 </div>
 <div style="padding: 0px 200px;">
