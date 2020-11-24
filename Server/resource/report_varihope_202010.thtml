@@ -21,10 +21,6 @@
 		</div>
 		<!--월간진행현황-->
 
-		<div class="widget padding" data-height="30" style="margin-top:px; margin-bottom:px;">
-			<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
-		</div>
-
 		<!--마케팅인사이트-->
 		<div class="ui grid">
 			<div id="insight" class="sixteen wide column"></div>
