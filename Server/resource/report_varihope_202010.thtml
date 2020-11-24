@@ -1,17 +1,19 @@
 <div style="background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);background-repeat: no-repeat;>
 	<div style="background-color:rgba(0, 0, 0, 0.3);padding: 100px">
-	<div id="logo_top" style="text-align:center;"></div>
-	<div style="text-align: center;"><span style="font-size: 22px;font-weight: bolder;">Marketing Reoprt By PIEL.</span></div>
-	<div style="text-align: center;padding:20px 0px;"><span id="target_month" style="font-size: 22px;font-weight: bolder;"></span></div>
-	<div class="widget padding" data-height="30" style="margin-top:px; margin-bottom:px;">
-		<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
-	</div>
-	<div style="text-align:center;">
-		<button id="downloadPdf" class="ui green button"><i class="cloud download icon"></i>보고서다운로드</button>
-	</div>
-	<div class="widget padding" data-height="30" style="margin-top:px; margin-bottom:px;">
-		<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
-	</div>
+		
+		<div id="logo_top" style="text-align:center;"></div>
+
+		<div style="text-align: center;"><span style="font-size: 22px;font-weight: bolder;">Marketing Reoprt By PIEL.</span></div>
+		
+		<div style="text-align: center;padding:20px 0px;"><span id="target_month" style="font-size: 22px;font-weight: bolder;"></span></div>
+		
+		<div class="widget padding" data-height="30" style="margin-top:px; margin-bottom:px;">
+			<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
+		</div>
+		
+		<div style="text-align:center;">
+			<button id="downloadPdf" class="ui green button"><i class="cloud download icon"></i>보고서다운로드</button>
+		</div>
 	</div>
 </div>
 <div style="padding: 200px 200px;">
