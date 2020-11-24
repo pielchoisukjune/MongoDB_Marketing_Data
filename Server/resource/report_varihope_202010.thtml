@@ -1,6 +1,6 @@
 	<!--지난보고서보기-->
 	<div>
-		<div id="latest_report"></div>
+		
 	</div>
 	<!--지난보고서보기-->
 
@@ -14,6 +14,7 @@
 	<div style="text-align:center;">
 		<button id="downloadPdf" class="ui green button"><i class="cloud download icon"></i>보고서다운로드</button>
 	</div>
+	<div id="latest_report"></div>
 </div>
 <div style="padding: 0px 200px;">
 
