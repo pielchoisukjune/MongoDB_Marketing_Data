@@ -1,8 +1,8 @@
-	<!--지난보고서보기-->
-	<div>
-		
-	</div>
-	<!--지난보고서보기-->
+<!--지난보고서보기-->
+<div>
+	<div id="latest_report"></div>		
+</div>
+<!--지난보고서보기-->
 
 <div style="background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);background-repeat: no-repeat;    padding: 100px">
 	<div id="logo_top" style="text-align:center;"></div>
@@ -14,7 +14,6 @@
 	<div style="text-align:center;">
 		<button id="downloadPdf" class="ui green button"><i class="cloud download icon"></i>보고서다운로드</button>
 	</div>
-	<div id="latest_report"></div>
 </div>
 <div style="padding: 0px 200px;">
 
