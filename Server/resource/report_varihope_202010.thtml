@@ -8,9 +8,6 @@
 	<div style="text-align:center;">
 		<button id="downloadPdf" class="ui green button"><i class="cloud download icon"></i>보고서다운로드</button></div>
 	</div>
-	<div class="widget padding" data-height="30" style="margin-top:px; margin-bottom:px;">
-		<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
-	</div>
 	<div id="latest_report"></div>
 </div>
 <div style="padding: 0px 200px;">
