@@ -136,6 +136,7 @@
 </div>
 <!--광고집행리스트-->
 <!--모달테스트-->
+<div class="ui grid">
 <div class="ui modal">
   <i class="close icon"></i>
   <div class="header">
@@ -160,5 +161,6 @@
       <i class="checkmark icon"></i>
     </div>
   </div>
+</div>
 </div>
 <!--모달테스트-->
