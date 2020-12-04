@@ -2080,7 +2080,7 @@
 		if( !el ) return;
 		el.style.position = "sticky"
 		el.style.top = "0px"
-		el.style.zIndex = 9999
+		el.style.zIndex = 999;
 		el.style.backgroundColor = "#fff"
 		return;
 	}
