@@ -2029,8 +2029,6 @@
 		return r;
 	}
 
-
-
 	/**
 	 * 
 	 */
@@ -2086,4 +2084,5 @@
 		el.style.backgroundColor = "#fff"
 		return;
 	}
+
 })()
