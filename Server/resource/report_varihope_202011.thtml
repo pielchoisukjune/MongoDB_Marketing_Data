@@ -136,11 +136,9 @@
 </div>
 <!--광고집행리스트-->
 <!--모달테스트-->
-<div class="ui grid">
-<div id="modal_cont1" class="ui inverted dimmer"" style="display:none;z-index:99999;background-color: rgba(255,255,255,100);">
-	 <div class="fb-post" data-href="https://www.facebook.com/Varihopevietnam/posts/1657862011059472" style="background-color: #fff;" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/Varihopevietnam/posts/1657862011059472" class="fb-xfbml-parse-ignore"><p>Điểm qua #GLUTATHIONE có trong tinh chất VITAMIN C AMPOULE nhà VARI:HOPE
+<div class="ui basic modal" style="width: fit-content;">
+  <div class="fb-post" data-href="https://www.facebook.com/Varihopevietnam/posts/1657862011059472" style="background-color: #fff;" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/Varihopevietnam/posts/1657862011059472" class="fb-xfbml-parse-ignore"><p>Điểm qua #GLUTATHIONE có trong tinh chất VITAMIN C AMPOULE nhà VARI:HOPE
 
-	🔸 Một trong những công dụng tuyệt vời của...</p>Người đăng: <a href="https://www.facebook.com/Varihopevietnam/">Varihope 베리홉 Vietnam</a> vào&nbsp;<a href="https://www.facebook.com/Varihopevietnam/posts/1657862011059472">Chủ nhật, 29 tháng 11, 2020</a></blockquote></div>
-</div>
+🔸 Một trong những công dụng tuyệt vời của...</p>Người đăng: <a href="https://www.facebook.com/Varihopevietnam/">Varihope 베리홉 Vietnam</a> vào&nbsp;<a href="https://www.facebook.com/Varihopevietnam/posts/1657862011059472">Chủ nhật, 29 tháng 11, 2020</a></blockquote></div>
 </div>
 <!--모달테스트-->
