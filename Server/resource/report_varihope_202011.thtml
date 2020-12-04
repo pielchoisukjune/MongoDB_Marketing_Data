@@ -137,7 +137,7 @@
 <!--광고집행리스트-->
 <!--모달테스트-->
 <div class="ui grid">
-<div class="ui modal">
+<div class="ui modal" style="margin: 20rem auto!important;">
   <i class="close icon"></i>
   <div class="header">
     Profile Picture
