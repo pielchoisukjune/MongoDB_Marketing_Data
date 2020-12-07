@@ -2085,4 +2085,18 @@
 		return;
 	}
 
+	/**
+	 * 
+	 */
+	window.PIEL.REPORT.modalTest = function(){
+		
+		var a = window.document.getElementById( "modal_out_box" );
+
+		a.stlye.top = (( window.innerHeight - a.offsetHeight ) / 2 ) + "px";
+
+		$('.ui.modal').modal('show');
+
+	}
+
+
 })()
