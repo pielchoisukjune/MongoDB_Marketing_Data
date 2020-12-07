@@ -85,6 +85,8 @@
         varihope : "https://cdn.imweb.me/thumbnail/20200709/8a8f7e32ec0fe.png"
         , aheads : "https://cdn.imweb.me/thumbnail/20201106/e4b5c23727da2.png"
         , wellderma : "https://cdn.imweb.me/thumbnail/20201008/e963a5bd37134.png"
+        , ashseven : "https://cdn.imweb.me/thumbnail/20201103/a39576bf72e6c.jpg"
+        , bxxxy : "https://cdn.imweb.me/thumbnail/20201103/28686b8c52c16.jpg"
     }
 
     window.COMMON.URIL = {};
