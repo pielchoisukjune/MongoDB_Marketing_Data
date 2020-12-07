@@ -2090,11 +2090,12 @@
 	 */
 	window.PIEL.REPORT.modalTest = function(){
 		
+		$('.ui.modal').modal({
+    onVisible    : function(){
 		var a = window.document.getElementById( "modal_out_box" );
-
 		a.style.top = (( window.innerHeight - a.offsetHeight ) / 2 ) + "px";
-
-		$('.ui.modal').modal('show');
+    },
+  }).modal('show');
 
 	}
 
