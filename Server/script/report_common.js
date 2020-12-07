@@ -2092,7 +2092,7 @@
 		
 		var a = window.document.getElementById( "modal_out_box" );
 
-		a.stlye.top = (( window.innerHeight - a.offsetHeight ) / 2 ) + "px";
+		a.style.top = (( window.innerHeight - a.offsetHeight ) / 2 ) + "px";
 
 		$('.ui.modal').modal('show');
 
