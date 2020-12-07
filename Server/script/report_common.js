@@ -1614,7 +1614,7 @@
 			so.exporting.filePrefix = window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + "_" + so.exporting.filePrefix;
 			so.exporting.export("png")
 		}
-		downloadURI( window.charts.map.facebook.dataUri, window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + "_facebook_location" + ".png" );
+		window.PIEL.REPORT.downloadURI( window.charts.map.facebook.dataUri, window.PAGE_SETTING._BRAND_NM_ + "_" + window.PAGE_SETTING._TARGET_YEAR_ + window.PIEL.REPORT.pad( window.PAGE_SETTING._TARGET_MONTH_,2) + "_facebook_location" + ".png" );
 		return;
 	}
 	
