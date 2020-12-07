@@ -1627,8 +1627,9 @@
 	
 		var link = document.createElement("a");
 		
+		var nowTimestamp = Date.now();
 		link.download = name;
-		link.href = uri;
+		link.href = uri + "?t=" + nowTimestamp;
 		
 		document.body.appendChild(link);
 		
