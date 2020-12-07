@@ -2088,16 +2088,14 @@
 	/**
 	 * 
 	 */
-	window.PIEL.REPORT.modalTest = function(){
-		
+	window.PIEL.REPORT.modalContentsToMiddle = function(){
+
 		$('.ui.modal').modal({
-    onVisible    : function(){
-		var a = window.document.getElementById( "modal_out_box" );
-		a.style.top = (( window.innerHeight - a.offsetHeight ) / 2 ) + "px";
-    },
-  }).modal('show');
-
-	}
-
-
+			onVisible    : function(){
+				var a = window.document.getElementById( "modal_out_box" );
+				a.style.top = (( window.innerHeight - a.offsetHeight ) / 2 ) + "px";
+			}
+		}).modal('show');
+		return;
+	};
 })()
