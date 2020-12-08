@@ -763,7 +763,80 @@
 		var tDom = window.document.getElementById( domId );
 		if( !tDom ) return;
 		
-		var r = "";
+		var r = `
+		<style>
+	@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+	h1,h2,h3,h4,table{ font-family: 'Noto Sans KR'; }
+	.align_center{ text-align:center;}
+	.pad_20{ padding : 20px;}
+	table, td, th { border: 1px solid #ccc; }
+	table { width: 100%; border-collapse: collapse; }
+	td,th{ padding :5px; color : #000; }
+	th{ background-color:#000; color:#fff; }
+	td{ font-size : 11px;}
+
+
+	#monthly_stastic thead tr{ font-size :12px;}
+
+
+	#monthly_stastic td:nth-child(1) { width :22%; }
+	#monthly_stastic td:nth-child(2) { width :22%; }
+/*	#monthly_stastic td:nth-child(3) { width :8%; }*/
+/*	#monthly_stastic td:nth-child(4) { width :8%; }*/
+/*	#monthly_stastic td:nth-child(5) { width :8%; }*/
+/*	#monthly_stastic td:nth-child(6) { width :8%; }*/
+/*	#monthly_stastic td:nth-child(7) { width :8%; }*/
+/*	#monthly_stastic td:nth-child(8) { width :8%; }*/
+
+	#marketing_list thead tr{ font-size :12px;}
+
+	#marketing_list td:nth-child(1) { width :10%; }
+	#marketing_list td:nth-child(2) { width :10%; }
+	#marketing_list td:nth-child(3) { width :10%; }
+	#marketing_list td:nth-child(4) { width :30%; }
+	#marketing_list td:nth-child(5) { width :8%; }
+	#marketing_list td:nth-child(6) { width :8%; }
+	#marketing_list td:nth-child(7) { width :8%; }
+	#marketing_list td:nth-child(8) { width :8%; }
+	#marketing_list td:nth-child(9) { width :8%; }
+
+	#marketing_list .link { width :50%; }
+	
+	#marketing_list_total thead tr{ font-size :12px;}
+/*	#marketing_list_total tr{ max-width: 100px;}*/
+/*	#marketing_list_total table{ table-layout:fixed; }*/
+
+	#monthly_facebook_stastics thead tr{ font-size :12px;}
+	
+	#facebook_location thead tr{ font-size :12px;}
+/*	#facebook_location table{ border: 0px solid #ccc; }*/
+
+	#kols thead tr{ font-size :12px;}
+
+	#kols td:nth-child(1) { width :100px; }
+	#kols td:nth-child(2) { width :100px; }
+	#kols td:nth-child(3) { width :100px; }
+	#kols td:nth-child(4) { width :100px; }
+	#kols td:nth-child(5) { width :100px; }
+	#kols td:nth-child(6) { width :400px; }
+
+	#google_total thead tr{ font-size :12px;}
+
+	#facebook_age table { border : 0px solid #fff!Important;}
+
+	#googe_top_seo thead tr{ font-size :12px;}
+
+	#googe_top_seo td:nth-child(1) { width :100px; }
+	#googe_top_seo td:nth-child(2) { width :100px; }
+	#googe_top_seo td:nth-child(3) { width :200px; }
+	#googe_top_seo td:nth-child(4) { width :100px; }
+	#googe_top_seo td:nth-child(5) { width :400px; }
+	#googe_top_seo td:nth-child(6) { width :50px; }
+
+	
+
+</style>
+		`;
 		if( !d ) 
 		{
 			console.log( '    - FN05 - d 가 없음!' );
