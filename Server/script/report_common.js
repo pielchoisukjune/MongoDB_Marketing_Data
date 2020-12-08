@@ -771,10 +771,10 @@
 			return r;
 		}
 
-		var titleHtml = `
-			<div class="align_center pad_20"><h2>${title}</h2></div>
-		`;
-		r += titleHtml;
+//		var titleHtml = `
+//			<div class="align_center pad_20"><h2>${title}</h2></div>
+//		`;
+//		r += titleHtml;
 		r += "<table id='kols'>\n";
 		r += "<thead>\n<tr>\n";
 		
