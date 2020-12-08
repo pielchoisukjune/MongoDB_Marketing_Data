@@ -1,10 +1,8 @@
 (function(){
 	
-	console.log( " Start - window.PIEL" )
-	console.log( " Start - window.PIEL" )
-	console.log( " Start - window.PIEL" )
-	console.log( " Start - window.PIEL" )
-	console.log( " Start - window.PIEL" )
+	console.log( "Start - window.PIEL" );
+	console.log( "Start - window.PIEL" );
+	console.log( "Start - window.PIEL" );
 
 	window.PIEL = {};
 	window.PIEL.REPORT= {};
@@ -1632,10 +1630,16 @@
 	
 		var link = document.createElement("a");
 		
+		//*/
+		
+		link.download = name;
+		link.href = uri;
+
+		/*/
 		var nowTimestamp = Date.now();
 		link.download = name;
 		link.href = uri + "?t=" + nowTimestamp;
-		
+		//*/
 		document.body.appendChild(link);
 		
 		link.click();
@@ -2104,4 +2108,9 @@
 		}).modal('show');
 		return;
 	};
+
+	console.log( "End - window.PIEL" );
+	console.log( "End - window.PIEL" );
+	console.log( "End - window.PIEL" );
+
 })()
