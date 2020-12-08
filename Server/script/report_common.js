@@ -747,7 +747,7 @@
 			_html = _html + "</tr>"
 			_html = _html + "<tr style='border-bottom:3px solid #000;'>"
 			_html = _html + "<td colspan='2'>게시물링크</td>"
-			_html = _html + "<td>" + col8 + "</td>"
+			_html = _html + "<td colspan='7'>" + col8 + "</td>"
 			_html = _html + "</tr>"
 		}
 		
