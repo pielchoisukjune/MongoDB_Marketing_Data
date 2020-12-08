@@ -725,6 +725,7 @@
 			var col6 = io[ "구분" ]?io[ "구분" ]:"";
 			var col7 = io[ "팔로워" ]?io[ "팔로워" ]:"";
 			var col8 = io[ "비고" ]?io[ "비고" ]:"";
+			var col9 = io[ "비고" ]?io[ "비고" ]:"";
 
 			_html = _html + "<tr>";
 			_html = _html + "<td style='width:10%'>" + col0 + "</td>"
@@ -743,6 +744,10 @@
 			_html = _html + "<td style='width:10%'>" + col6 + "</td>"
 			_html = _html + "<td style='width:10%'>" + col7 + "</td>"
 			_html = _html + "<td style='width:30%'>" + col8 + "</td>"
+			_html = _html + "</tr>"
+			_html = _html + "<tr style='border-bottom:3px solid #000;'>"
+			_html = _html + "<td colspan='2'>게시물링크</td>"
+			_html = _html + "<td>" + col8 + "</td>"
 			_html = _html + "</tr>"
 		}
 		
