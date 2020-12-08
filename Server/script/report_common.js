@@ -744,11 +744,11 @@
 			_html = _html + "<td style='width:10%'>" + col6 + "</td>"
 			_html = _html + "<td style='width:10%'>" + col7 + "</td>"
 			_html = _html + "<td style='width:30%'>" + col8 + "</td>"
-			_html = _html + "</tr>"
-			_html = _html + "<tr style='border-bottom:3px solid #000;'>"
-			_html = _html + "<td colspan='2'>게시물링크</td>"
-			_html = _html + "<td colspan='7'>" + col8 + "</td>"
-			_html = _html + "</tr>"
+//			_html = _html + "</tr>"
+//			_html = _html + "<tr style='border-bottom:3px solid #000;'>"
+//			_html = _html + "<td colspan='2'>게시물링크</td>"
+//			_html = _html + "<td colspan='7'>" + col8 + "</td>"
+//			_html = _html + "</tr>"
 		}
 		
 		r += _tStr.replace( "<!=TABLE_CONTENTS=!>", _html );
