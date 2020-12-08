@@ -757,6 +757,90 @@
 
 	};
 
+	window.PIEL.REPORT.drawTable__make_kols_html_no_semantic = function( domId, d, target_month ){
+
+		var gender_icon = {	"남" : "blue mars stroke vertical", "여" : "red venus" };
+		var tDom = window.document.getElementById( domId );
+		if( !tDom ) return;
+		
+		var r = "";
+		if( !d ) 
+		{
+			console.log( '    - FN05 - d 가 없음!' );
+			console.log( '[S] - FN05 - ' + title );
+			return r;
+		}
+
+		var titleHtml = `
+			<div class="align_center pad_20"><h2>${title}</h2></div>
+		`;
+		r += titleHtml;
+		r += "<table id='kols'>\n";
+		r += "<thead>\n<tr>\n";
+		
+		var headers = [ "이름", "이미지", "성별", "구분", "팔로워", "비고" ];
+			headers.forEach(function(d){ r += "<th>" + d + "</th>\n"; });
+		
+		r += "</tr>\n</thead>\n<tbody>\n";
+		
+		var i = 0,iLen = d.length,io;
+		for(;i<iLen;++i){
+			io = d[ i ];
+
+			r += "<tr>\n"
+
+			if( io[ "이름" ] != ""  ) r += "<td>" + io[ "이름" ] + "</td>\n";
+			else r += "<td></td>\n";
+
+			if( io[ "이미지" ] != ""  )  r += "<td><img src='" + io[ "이미지" ] + "' width='100'></td>\n";
+			else r += "<td></td>\n";
+
+			if( io[ "성별" ] != ""  )  r += "<td>" + io[ "성별" ] + "</td>\n";
+			else r += "<td></td>\n";
+
+			if( io[ "구분" ] != ""  )  r += "<td>" + io[ "구분" ] + "</td>\n";
+			else r += "<td></td>\n";
+
+			if( io[ "팔로워" ] != ""  )  r += "<td>" + io[ "팔로워" ] + "</td>\n";
+			else r += "<td></td>\n";
+
+			if( io[ "비고" ] != ""  )  r += "<td>" + io[ "비고" ] + "</td>\n";
+			else r += "<td></td>\n";
+
+			r += "</tr>\n";
+
+			r += "<tr>\n";
+			r += "<td>\n";
+			r += "유튜브";
+			r += "</td>\n";
+			r += "<td colspan='8'>\n";
+			r += io[ "유튜브" ];
+			r += "</td>\n";
+			r += "</tr>\n";
+
+			r += "<tr>\n";
+			r += "<td>\n";
+			r += "페이스북";
+			r += "</td>\n";
+			r += "<td colspan='8'>\n";
+			r += io[ "페이스북" ];
+			r += "</td>\n";
+			r += "</tr>\n";
+
+			r += "<tr style='border-bottom: 2px solid #000;'>\n";
+			r += "<td>\n";
+			r += "인스타그램";
+			r += "</td>\n";
+			r += "<td colspan='8'>\n";
+			r += io[ "인스타그램" ];
+			r += "</td>\n";
+			r += "</tr>\n";
+				
+		}
+		r += "</tbody>\n</table>\n";
+		tDom.innerHTML = r;
+	};
+
 	//-------------------------------------------------------;
 	//구글전체통계 생성;
 	//-------------------------------------------------------;
