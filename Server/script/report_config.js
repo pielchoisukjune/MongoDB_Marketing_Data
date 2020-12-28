@@ -82,11 +82,21 @@
 	};
     
     window.PAGE_SETTING.LOGO = {
-        varihope : "https://cdn.imweb.me/thumbnail/20200709/8a8f7e32ec0fe.png"
+        /*
+		varihope : "https://cdn.imweb.me/thumbnail/20200709/8a8f7e32ec0fe.png"
         , aheads : "https://cdn.imweb.me/thumbnail/20201106/e4b5c23727da2.png"
         , wellderma : "https://cdn.imweb.me/thumbnail/20201008/e963a5bd37134.png"
         , ashseven : "https://cdn.imweb.me/thumbnail/20201103/a39576bf72e6c.jpg"
         , bxxxy : "https://cdn.imweb.me/thumbnail/20201103/28686b8c52c16.jpg"
+		*/
+		varihope : "https://pielkorea.imweb.me/post_file_download.cm?c=YTo0OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMDA2MjM4YTk1MzZjMjdhM2Q2IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjAxMjI4OTI1ZjFmMTgxZWRiZSI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDIwMTIyODE2YjgyNGVkMWI2MTgiO3M6MTE6Im1lbWJlcl9jb2RlIjtzOjIyOiJtMjAyMDA2MjIzMmE2Y2VkMjM0NTk0Ijt9"
+        , aheads : "https://pielkorea.imweb.me/post_file_download.cm?c=YTo0OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMDA2MjM4YTk1MzZjMjdhM2Q2IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjAxMjI4OTI1ZjFmMTgxZWRiZSI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDIwMTIyODE2YjgyNGVkMWI2MTgiO3M6MTE6Im1lbWJlcl9jb2RlIjtzOjIyOiJtMjAyMDA2MjIzMmE2Y2VkMjM0NTk0Ijt9"
+        , wellderma : "https://cdn.imweb.me/thumbnail/20201008/e963a5bd37134.png"
+        , ashseven : "https://cdn.imweb.me/thumbnail/20201103/a39576bf72e6c.jpg"
+        , bxxxy : "https://cdn.imweb.me/thumbnail/20201103/28686b8c52c16.jpg"
+		
+		
+		//https://pielkorea.imweb.me/post_file_download.cm?c=YTo0OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMDA2MjM4YTk1MzZjMjdhM2Q2IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjAxMjI4OTI1ZjFmMTgxZWRiZSI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDIwMTIyODE2YjgyNGVkMWI2MTgiO3M6MTE6Im1lbWJlcl9jb2RlIjtzOjIyOiJtMjAyMDA2MjIzMmE2Y2VkMjM0NTk0Ijt9
     }
 
     window.COMMON.URIL = {};
