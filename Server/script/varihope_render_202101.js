@@ -57,8 +57,8 @@
     
         });
     
-        google.load('visualization', '1', { 'packages': ['geochart'], 'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY' });
-		google.setOnLoadCallback( window.PIEL.REPORT.drawVisualization( data.location_data ) );
+        //google.load('visualization', '1', { 'packages': ['geochart'], 'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY' });
+		//google.setOnLoadCallback( window.PIEL.REPORT.drawVisualization( data.location_data ) );
 		
 		//--------------------------------------------------;
 		// EVENT;
