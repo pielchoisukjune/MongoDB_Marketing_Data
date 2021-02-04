@@ -370,15 +370,15 @@
 
 					if( _tidx == 0 )
 					{
-						_html0 += "<th style='width:auto;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						_html0 += "<th style='width:18%;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
 					}
 					else if( _tidx == 1 ){
-						_html0 += "<th style='width:auto;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						_html0 += "<th style='width:19%;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
 					}
 					else
 					{
 						
-						if( _bg_check00 == _tidx ) _html0 += "<th style='width:9%;background-color : yellow;color:red;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						if( _bg_check00 == _tidx ) _html0 += "<th style='width:auto;background-color : yellow;color:red;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
 						//else if( _bg_check01 == _tidx ) _html0 += "<th style='width:9%;background-color : yellow;color:red;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
 						else _html0 += "<th style='width:9%;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
 					}
