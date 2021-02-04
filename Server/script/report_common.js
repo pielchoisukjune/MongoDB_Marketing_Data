@@ -370,10 +370,10 @@
 
 					if( _tidx == 0 )
 					{
-						_html0 += "<th style='width:18%;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						_html0 += "<th style='width:auto;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
 					}
 					else if( _tidx == 1 ){
-						_html0 += "<th style='width:19%;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
+						_html0 += "<th style='width:auto;font-weight: 400;font-size: 12px;'>" + _item + "</th>\n";
 					}
 					else
 					{
