@@ -37,7 +37,7 @@
         window.PIEL.REPORT.makeInsight( "insight", data.insight[ 0 ], target_month );
         window.PIEL.REPORT.drawTable__make_kols_html( "kols_cards", data.kols, target_month )
         window.PIEL.REPORT.drawTable__make_statistic_google_html__01( "statistic_google", data.google_total, target_month );
-        window.PIEL.REPORT.drawCards__google_seo_list( "google_seo_list_data", data.google_seo_list, target_month )
+        //window.PIEL.REPORT.drawCards__google_seo_list( "google_seo_list_data", data.google_seo_list, target_month )
         window.PIEL.REPORT.drawTable__make_marketing_list_none_img( "marketing_list", data.ads_list, target_month )
         window.PIEL.REPORT.drawTable__make_ads_total_statistic( "ads_total", data.ads_total, target_month )
         window.PIEL.REPORT.getDataLatestReport(function(data){ return window.PIEL.REPORT.makeLatestReport( "latest_report", data );	})
@@ -52,8 +52,8 @@
             window.charts.pie[ "연령별 페이지 좋아요" ] = window.PIEL.REPORT.pieChartAge( "chartdiv03", ["연령별 페이지 좋아요"], data.ages.d03 );
     
             window.charts.bar[ "페이스북 시간대별 통계" ] = window.PIEL.REPORT.barChartTime( "chartdiv04", { title : "페이스북 시간대별 통계",label0 : "time",label1 : "view",label2 : "like" }, data.time );
-            window.charts.bar[ "구글 광고 시간별별 통계_00" ] = window.PIEL.REPORT.barChartTime( "chartdiv13", { title : "구글 광고 시간별별 통계\n( Google Search + Youtube ads. )",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_data );
-            window.charts.bar[ "구글 광고 시간별별 통계_01" ] = window.PIEL.REPORT.barChartTime( "chartdiv14", { title : "구글 광고 시간별별 통계\n( GDN + Google Shopping  )",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_shopping_data );
+            //window.charts.bar[ "구글 광고 시간별별 통계_00" ] = window.PIEL.REPORT.barChartTime( "chartdiv13", { title : "구글 광고 시간별별 통계\n( Google Search + Youtube ads. )",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_data );
+            //window.charts.bar[ "구글 광고 시간별별 통계_01" ] = window.PIEL.REPORT.barChartTime( "chartdiv14", { title : "구글 광고 시간별별 통계\n( GDN + Google Shopping  )",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_shopping_data );
     
         });
     
