@@ -5,7 +5,7 @@
 	<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
 </div>
 <div style="text-align:center;">
-	<button id="downloadPdf" class="ui green button"><i class="cloud download icon"></i>보고서다운로드</button></div>
+	<button id="downloadPdf" class="ui green button"><i class="cloud download icon"></i>보고서다운로드</button>
 </div>
 <div class="widget padding" data-height="30" style="margin-top:px; margin-bottom:px;">
 	<div id="padding_w20201105b46cddd1803d1" style="width:100%; min-height:1px; height:30px; "></div>
@@ -46,46 +46,70 @@
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 <!--페이스북연령 Pie CHart-->
-<div class="ui grid">
+<!--div class="ui grid">
 	<div class="eight wide column"><div id="chartdiv00_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv00"></div></div>
 	<div class="eight wide column"><div id="chartdiv01_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv01"></div></div>
 	<div class="eight wide column"><div id="chartdiv02_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv02"></div></div>
 	<div class="eight wide column"><div id="chartdiv03_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv03"></div></div>
-</div>
+</div-->
 <!--페이스북연령 Pie CHart-->
 
 
-<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+<!--div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div-->
 
 <!--페이스북시간대 Bar Chart-->
-<div class="ui grid">
+<!--div class="ui grid">
 	<div class="sixteen wide column">
 		<div id="chartdiv04_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div>
 		<div id="chartdiv04"></div>
 	</div>
-</div>
+</div-->
 <!--페이스북시간대 Bar Chart-->
 
-<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+<!--div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div-->
 
 		
 <!--페이스북 지역별통계 Map Chart-->	
-<div class="ui grid">
+<!--div class="ui grid">
 	<div id="map_chart_loader_title" class="sixteen wide column"></div>
 	<div class="sixteen wide column">
 		<div id="map_chart_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div>
 		<div id="visualization" style="height: 100%;"></div>
 	</div>
-</div>
+</div-->
 <!--페이스북 지역별통계 Map Chart-->	
+
+<!--div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div-->
+
+<!--페이스북 지역별통계 Table-->	
+<!--div class="ui grid">
+	<div id="facebook_map_cards" class="sixteen wide column"></div>
+</div-->
+<!--페이스북 지역별통계 Table-->	
 
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
-<!--페이스북 지역별통계 Table-->	
+<!--구글 광고통계 Table-->	
 <div class="ui grid">
-	<div id="facebook_map_cards" class="sixteen wide column"></div>
+	<div id="statistic_google" class="sixteen wide column"></div>
 </div>
-<!--페이스북 지역별통계 Table-->	
+<!--구글 광고통계 Table-->
+
+<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+
+<!--구글 광고 Bar Chart 01-->
+<div class="ui grid">
+	<div class="sixteen wide column"><div id="chartdiv13_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv13"></div></div>
+</div>
+<!--구글 광고 Bar Chart 01-->
+
+<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+
+<!--구글 광고 Bar Chart 01-->
+<div class="ui grid">
+	<div class="sixteen wide column"><div id="chartdiv14_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv14"></div></div>
+</div>
+<!--구글 광고 Bar Chart 01-->
 
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
@@ -111,3 +135,10 @@
 	<div id="marketing_list" class="sixteen wide column"></div>
 </div>
 <!--광고집행리스트-->
+<!--모달테스트-->
+<div class="ui basic modal" style="width: fit-content;">
+  <div id="modal_out_box" class="fb-post" data-href="https://www.facebook.com/Varihopevietnam/posts/1657862011059472" style="background-color: #fff;" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/Varihopevietnam/posts/1657862011059472" class="fb-xfbml-parse-ignore"><p>Điểm qua #GLUTATHIONE có trong tinh chất VITAMIN C AMPOULE nhà VARI:HOPE
+
+🔸 Một trong những công dụng tuyệt vời của...</p>Người đăng: <a href="https://www.facebook.com/Varihopevietnam/">Varihope 베리홉 Vietnam</a> vào&nbsp;<a href="https://www.facebook.com/Varihopevietnam/posts/1657862011059472">Chủ nhật, 29 tháng 11, 2020</a></blockquote></div>
+</div>
+<!--모달테스트-->
