@@ -53,7 +53,7 @@
     
             //window.charts.bar[ "페이스북 시간대별 통계" ] = window.PIEL.REPORT.barChartTime( "chartdiv04", { title : "페이스북 시간대별 통계",label0 : "time",label1 : "view",label2 : "like" }, data.time );
             window.charts.bar[ "구글 광고 시간별별 통계_00" ] = window.PIEL.REPORT.barChartTime( "chartdiv13", { title : "구글 광고 시간별별 통계\n( Google Search + Youtube ads. )",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_data );
-            window.charts.bar[ "구글 광고 시간별별 통계_01" ] = window.PIEL.REPORT.barChartTime( "chartdiv14", { title : "구글 광고 시간별별 통계\n( GDN + Google Shopping  )",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_shopping_data );
+            //window.charts.bar[ "구글 광고 시간별별 통계_01" ] = window.PIEL.REPORT.barChartTime( "chartdiv14", { title : "구글 광고 시간별별 통계\n( GDN + Google Shopping  )",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_shopping_data );
     
         });
     

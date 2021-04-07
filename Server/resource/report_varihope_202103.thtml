@@ -106,9 +106,9 @@
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 <!--구글 광고 Bar Chart 01-->
-<div class="ui grid">
-	<div class="sixteen wide column"><div id="chartdiv14_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv14"></div></div>
-</div>
+<!--div class="ui grid"-->
+	<!--div class="sixteen wide column"><div id="chartdiv14_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv14"></div></div-->
+<!--/div-->
 <!--구글 광고 Bar Chart 01-->
 
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
