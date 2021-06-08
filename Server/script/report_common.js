@@ -1966,11 +1966,14 @@
 		// 	<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 		// `
 		// r += titleHtml;
-		r += "<div class='fluid ui buttons'>\n";
-		
+	
+		var idx = 0;
 		var i = 0,iLen = data.length,io;
 		for(;i<iLen;++i){
 			io = data[ i ];
+			
+			if( idx == 0 ){ r += "<div class='fluid six ui buttons'>\n"; }
+
 			if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
 			{
 				r += "<button id='" + io.year + io.month + "' class='ui green button'>" + io.year + "년" + io.month + "월</button>";
@@ -1985,9 +1988,20 @@
 				  , year : data[ i ].year
 				  , month : Number( data[ i ].month )
 			};
+			
+			if( idx == 6 || iLen - 1 == i )
+			{
+				r += "</div>\n";
+				idx == 0
+			}
+			else
+			{
+				++idx;
+			}
+			
 		}
 		
-		r += "</div>\n";
+
 		tDom.innerHTML = r;
 
 		var _btn_els = window.document.getElementById( domId ).children[0].children;
