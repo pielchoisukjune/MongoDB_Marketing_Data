@@ -1972,7 +1972,7 @@
 		for(;i<iLen;++i){
 			io = data[ i ];
 			
-			if( idx == 0 ){ r += "<div class='fluid six ui buttons'>\n"; }
+			if( idx == 0 ){ r += "<div class='fluid ui buttons'>\n"; }
 
 			if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
 			{
