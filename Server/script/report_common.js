@@ -1985,6 +1985,8 @@
 		{
 			dataLen = rowCnt * cellCnt;
 		}
+		
+		var _td_width = 100 & cellCnt;
 
 		var idx = 1;
 		var i = 0,iLen = dataLen,io;
@@ -1997,11 +1999,11 @@
 			{
 				if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
 				{
-					r += "<td id='" + io.year + io.month + "' class='month_btn' style='background-color:#16ab39;color:#fff;cursor: pointer;'>" + io.year + "년" + io.month + "월</td>";
+					r += "<td id='" + io.year + io.month + "' class='month_btn' style='width:" + _td_width + "%;background-color:#16ab39;color:#fff;cursor: pointer;'>" + io.year + "년" + io.month + "월</td>";
 				}
 				else
 				{
-					r += "<td id='" + io.year + io.month + "' class='month_btn' style='cursor: pointer;'>" + io.year + "년" + io.month + "월</td>";
+					r += "<td id='" + io.year + io.month + "' class='month_btn' style='width:" + _td_width + "%;cursor: pointer;'>" + io.year + "년" + io.month + "월</td>";
 				}
 				
 				window.PIEL.REPORT.makeLatestReport.data[ io.year + io.month ] = {
@@ -2012,7 +2014,7 @@
 			}
 			else
 			{
-				r += "<td></td>";
+				r += "<td style='width:" + _td_width + "%;cursor: pointer;'></td>";
 			}
 			
 			
