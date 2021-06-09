@@ -2018,7 +2018,7 @@
 			if( idx == 6 || iLen - 1 == i )
 			{
 				r += "</tr>\n";
-				idx = 0
+				idx = 1
 			}
 			else
 			{
