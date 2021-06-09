@@ -1966,28 +1966,54 @@
 		// 	<div style='padding:20px 0px;'><h3 class="ui left aligned header">${title}</h1></div>
 		// `
 		// r += titleHtml;
-	
-		var idx = 0;
-		var i = 0,iLen = data.length,io;
+		
+		var cellCnt = 6;
+		
+		var rowCnt = 1;
+		var dataLen = data.length;
+		if( dataLen > ( cellCnt * rowCnt ) && ( dataLen % cellCnt ) == 0 )
+		{
+			rowCnt = dataLen / cellCnt;
+			dataLen = rowCnt * cellCnt
+		}
+		else if( dataLen > ( cellCnt * rowCnt ) && ( dataLen % cellCnt ) > 0 )
+		{
+			rowCnt = ( dataLen / cellCnt ) + 1;
+			dataLen = rowCnt * cellCnt
+		}
+
+		var dataLen = 6 * ( data.length / cellCnt )
+
+
+		var idx = 1;
+		var i = 0,iLen = dataLen,io;
 		for(;i<iLen;++i){
 			io = data[ i ];
 			
-			if( idx == 0 ){ r += "<tr>\n"; }
+			if( idx == 1 ){ r += "<tr>\n"; }
 
-			if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
+			if( io )
 			{
-				r += "<td id='" + io.year + io.month + "' class=''>" + io.year + "년" + io.month + "월</td>";
+				if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
+				{
+					r += "<td id='" + io.year + io.month + "' class=''>" + io.year + "년" + io.month + "월</td>";
+				}
+				else
+				{
+					r += "<td id='" + io.year + io.month + "' class=' style='border:1px solid #ccc;'>" + io.year + "년" + io.month + "월</td>";
+				}
+				
+				window.PIEL.REPORT.makeLatestReport.data[ io.year + io.month ] = {
+					brNm : window.PAGE_SETTING._BRAND_NM_
+					  , year : data[ i ].year
+					  , month : Number( data[ i ].month )
+				};	
 			}
 			else
 			{
-				r += "<td id='" + io.year + io.month + "' class=' style='border:1px solid #ccc;'>" + io.year + "년" + io.month + "월</td>";
+				r += "<td></td>";
 			}
 			
-			window.PIEL.REPORT.makeLatestReport.data[ io.year + io.month ] = {
-				brNm : window.PAGE_SETTING._BRAND_NM_
-				  , year : data[ i ].year
-				  , month : Number( data[ i ].month )
-			};
 			
 			if( idx == 6 || iLen - 1 == i )
 			{
