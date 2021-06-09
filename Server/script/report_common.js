@@ -1996,11 +1996,11 @@
 			{
 				if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
 				{
-					r += "<td id='" + io.year + io.month + "' class=''>" + io.year + "년" + io.month + "월</td>";
+					r += "<td id='" + io.year + io.month + "' class='month_btn'>" + io.year + "년" + io.month + "월</td>";
 				}
 				else
 				{
-					r += "<td id='" + io.year + io.month + "' class=' style='border:1px solid #ccc;'>" + io.year + "년" + io.month + "월</td>";
+					r += "<td id='" + io.year + io.month + "' class='month_btn' style='border:1px solid #ccc;'>" + io.year + "년" + io.month + "월</td>";
 				}
 				
 				window.PIEL.REPORT.makeLatestReport.data[ io.year + io.month ] = {
@@ -2029,8 +2029,8 @@
 		r += `</table>`
 
 		tDom.innerHTML = r;
-
-		var _btn_els = window.document.getElementById( domId ).children[0].children;
+		
+		var _btn_els = window.document.getElementsByClassName("month_btn");
 		
 		var i = 0,iLen = _btn_els.length,io;
 		for(;i<iLen;++i){
