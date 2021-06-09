@@ -2004,7 +2004,7 @@
 				}
 				else
 				{
-					r += "<td id='" + io.year + io.month + "' class='month_btn' style='border:1px solid #ccc;'>" + io.year + "년" + io.month + "월</td>";
+					r += "<td id='" + io.year + io.month + "' class='month_btn' style='background-color:green,color:#fff;'>" + io.year + "년" + io.month + "월</td>";
 				}
 				
 				window.PIEL.REPORT.makeLatestReport.data[ io.year + io.month ] = {
