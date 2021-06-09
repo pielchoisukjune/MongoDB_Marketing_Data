@@ -1986,9 +1986,6 @@
 			dataLen = rowCnt * cellCnt;
 		}
 
-		var dataLen = 6 * ( data.length / cellCnt )
-
-
 		var idx = 1;
 		var i = 0,iLen = dataLen,io;
 		for(;i<iLen;++i){
