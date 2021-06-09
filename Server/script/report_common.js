@@ -1974,12 +1974,16 @@
 		if( dataLen > ( cellCnt * rowCnt ) && ( dataLen % cellCnt ) == 0 )
 		{
 			rowCnt = dataLen / cellCnt;
-			dataLen = rowCnt * cellCnt
+			dataLen = rowCnt * cellCnt;
 		}
 		else if( dataLen > ( cellCnt * rowCnt ) && ( dataLen % cellCnt ) > 0 )
 		{
 			rowCnt = ( dataLen / cellCnt ) + 1;
-			dataLen = rowCnt * cellCnt
+			dataLen = rowCnt * cellCnt;
+		}
+		else if( dataLen => 6 )
+		{
+			dataLen = rowCnt * cellCnt;
 		}
 
 		var dataLen = 6 * ( data.length / cellCnt )
