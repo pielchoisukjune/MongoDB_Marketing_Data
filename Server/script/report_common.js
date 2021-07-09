@@ -2014,7 +2014,7 @@
 			}
 			else
 			{
-				r += "<td style='width:" + _td_width + "%;cursor: pointer;'></td>";
+				r += "<td class='month_btn' style='width:" + _td_width + "%;cursor: pointer;'></td>";
 			}
 			
 			
