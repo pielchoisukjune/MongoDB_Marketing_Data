@@ -1978,7 +1978,7 @@
 		}
 		else if( dataLen > ( cellCnt * rowCnt ) && ( dataLen % cellCnt ) > 0 )
 		{
-			rowCnt = ( dataLen / cellCnt ) + 1;
+			rowCnt = ( dataLen / cellCnt );
 			dataLen = rowCnt * cellCnt;
 		}
 		else if( dataLen => 6 )
