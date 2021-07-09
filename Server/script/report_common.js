@@ -361,7 +361,7 @@
 			if( i == 0 ){
 				_bg_check00 = io.indexOf( target_month );
 				//해당월 표시부분 정리 필요함 - 2021.07.09 - 최석준;
-				debugger;
+
 				_html0 += "<tr>"
 				var _tidx = 0;
 				io.forEach(function(item){
@@ -1994,7 +1994,7 @@
 			io = data[ i ];
 			
 			if( idx == 1 ){ r += "<tr>\n"; }
-			console.log( io )
+
 			if( io )
 			{
 				if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
