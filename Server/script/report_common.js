@@ -691,9 +691,7 @@
 				<tr>
 					<th>이름</th>
 					<th>이미지</th>
-					<th>유튜브</th>
-					<th>페이스북</th>
-					<th>인스타그램</th>
+					<th>URL</th>
 					<th>성별</th>
 					<th>구분</th>
 					<th>팔로워</th>
@@ -716,14 +714,18 @@
 			
 			var col0 = io[ "이름" ]?io[ "이름" ]:"";
 			var col1 = io[ "이미지" ]?io[ "이미지" ]:"";
-			var col2 = io[ "유튜브" ]?io[ "유튜브" ]:"";
-			var col3 = io[ "페이스북" ]?io[ "페이스북" ]:"";
-			var col4 = io[ "인스타그램" ]?io[ "인스타그램" ]:"";
-			var col5 = io[ "성별" ]?io[ "성별" ]:"";
-			var col6 = io[ "구분" ]?io[ "구분" ]:"";
-			var col7 = io[ "팔로워" ]?io[ "팔로워" ]:"";
-			var col8 = io[ "비고" ]?io[ "비고" ]:"";
-			var col9 = io[ "비고" ]?io[ "비고" ]:"";
+			
+			var yutubeUrl = io[ "유튜브" ]?io[ "유튜브" ]:"";
+			var facebookUrl = io[ "페이스북" ]?io[ "페이스북" ]:"";
+			var instagramUrl = io[ "인스타그램" ]?io[ "인스타그램" ]:"";
+
+			var col2 = yutubeUrl + "<br>" + facebookUrl + "<br>" + instagramUrl + "<br>" + 
+			
+			var col3 = io[ "성별" ]?io[ "성별" ]:"";
+			var col4 = io[ "구분" ]?io[ "구분" ]:"";
+			var col5 = io[ "팔로워" ]?io[ "팔로워" ]:"";
+			var col6 = io[ "비고" ]?io[ "비고" ]:"";
+			var col7 = io[ "비고" ]?io[ "비고" ]:"";
 
 			_html = _html + "<tr>";
 			_html = _html + "<td style='width:10%'>" + col0 + "</td>"
