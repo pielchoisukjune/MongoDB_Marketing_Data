@@ -361,7 +361,7 @@
 			if( i == 0 ){
 				_bg_check00 = io.indexOf( target_month );
 				//_bg_check01 = io.indexOf( target_month ) + 1;
-
+				debugger;
 				_html0 += "<tr>"
 				var _tidx = 0;
 				io.forEach(function(item){
