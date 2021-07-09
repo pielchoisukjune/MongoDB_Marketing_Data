@@ -360,7 +360,7 @@
 			io = data[ i ];
 			if( i == 0 ){
 				_bg_check00 = io.indexOf( target_month );
-				//_bg_check01 = io.indexOf( target_month ) + 1;
+				//해당월 표시부분 정리 필요함 - 2021.07.09 - 최석준;
 				debugger;
 				_html0 += "<tr>"
 				var _tidx = 0;

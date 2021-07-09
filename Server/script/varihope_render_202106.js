@@ -20,8 +20,8 @@
 		}
 		console.log( "window.PIEL.REPORT Loaded." );
         
-		var target_month = window.PAGE_SETTING._TARGET_MONTH_ +"월";
-        
+		//var target_month = window.PAGE_SETTING._TARGET_MONTH_ +"월";
+        var target_month = window.PAGE_SETTING._TARGET_YEAR_ + "." + window.COMMON.URIL.pad( window.PAGE_SETTING._TARGET_MONTH_, 2 );
         window.PIEL.REPORT.insertLogo();
         
 		if( window.document.getElementById("target_month") )
