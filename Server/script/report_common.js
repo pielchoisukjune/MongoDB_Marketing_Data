@@ -1994,7 +1994,7 @@
 			io = data[ i ];
 			
 			if( idx == 1 ){ r += "<tr>\n"; }
-
+			console.log( io )
 			if( io )
 			{
 				if( ( io.year + io.month ) == window.PAGE_SETTING._TARGET_YEAR_ + window.PAGE_SETTING._TARGET_MONTH_ )
