@@ -719,7 +719,7 @@
 			var facebookUrl = io[ "페이스북" ]?io[ "페이스북" ]:"";
 			var instagramUrl = io[ "인스타그램" ]?io[ "인스타그램" ]:"";
 
-			var col2 = yutubeUrl + "<br>" + facebookUrl + "<br>" + instagramUrl + "<br>" + 
+			var col2 = yutubeUrl + "<br>" + facebookUrl + "<br>" + instagramUrl + "<br>";
 			
 			var col3 = io[ "성별" ]?io[ "성별" ]:"";
 			var col4 = io[ "구분" ]?io[ "구분" ]:"";
