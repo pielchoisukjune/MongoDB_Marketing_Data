@@ -32,7 +32,7 @@
 		}
 	
         window.PIEL.REPORT.drawTable__monthly_marketing_plan( "monthly_planning", data.statistic_monthly, target_month );
-        window.PIEL.REPORT.drawCards__monthly_facebook_stastics( "monthly_facebook_stastics", data.total, target_month );
+       // window.PIEL.REPORT.drawCards__monthly_facebook_stastics( "monthly_facebook_stastics", data.total, target_month );
         //window.PIEL.REPORT.drawTable__make_facebook_location_htm( "facebook_map_cards", data.location_data, target_month );
         //window.PIEL.REPORT.makeInsight( "insight", data.insight[ 0 ], target_month );
        // window.PIEL.REPORT.drawTable__make_kols_html( "kols_cards", data.kols, target_month )
