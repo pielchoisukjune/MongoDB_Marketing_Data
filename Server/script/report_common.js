@@ -1991,7 +1991,7 @@
 		var _td_width = 100 & cellCnt;
 
 		var idx = 1;
-		var i = 0,iLen = dataLen,io;
+		var i = 0,iLen = dataLen - 1,io;
 		for(;i<iLen;++i){
 			io = data[ i ];
 			
