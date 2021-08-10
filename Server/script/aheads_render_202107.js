@@ -42,9 +42,9 @@
         window.PIEL.REPORT.drawTable__make_ads_total_statistic( "ads_total", data.ads_total, target_month )
 		window.PIEL.REPORT.getDataLatestReport(function(data){ return window.PIEL.REPORT.makeLatestReport( "latest_report", data );	})
     
-        am4core.ready(function() {
+        //am4core.ready(function() {
     
-            am4core.useTheme(am4themes_animated);
+           // am4core.useTheme(am4themes_animated);
     
            // window.charts.pie[ "연령별 도달" ] = window.PIEL.REPORT.pieChartAge( "chartdiv00", ["연령별 도달"], data.ages.d00 );
            // window.charts.pie[ "연령별 노출" ] = window.PIEL.REPORT.pieChartAge( "chartdiv01", ["연령별 노출"], data.ages.d01 );
@@ -55,7 +55,7 @@
             // window.charts.bar[ "구글 광고 시간별별 통계_00" ] = window.PIEL.REPORT.barChartTime( "chartdiv13", { title : "구글 광고 시간별별 통계\n( Google Search + Youtube ads. )",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_data );
             // window.charts.bar[ "구글 광고 시간별별 통계_01" ] = window.PIEL.REPORT.barChartTime( "chartdiv14", { title : "구글 광고 시간별별 통계\n( GDN + Google Shopping  )",label0 : "time",label1 : "view",label2 : "click" }, data.google_time_shopping_data );
     
-        });
+       // });
     
        // google.load('visualization', '1', { 'packages': ['geochart'], 'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY' });
 		//google.setOnLoadCallback( window.PIEL.REPORT.drawVisualization( data.location_data ) );

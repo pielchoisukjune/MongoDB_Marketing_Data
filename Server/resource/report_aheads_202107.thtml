@@ -39,61 +39,61 @@
 <div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
 
 <!--페이스북광고-->
-<div class="ui grid">
+<!--div class="ui grid">
 	<div class="sixteen wide column"><div id="monthly_facebook_stastics"></div></div>
-</div>
+</div-->
 <!--페이스북광고-->
 
-<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+<!--div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div-->
 
 <!--페이스북연령 Pie CHart-->
-<div class="ui grid">
+<!--div class="ui grid">
 	<div class="eight wide column"><div id="chartdiv00_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv00"></div></div>
 	<div class="eight wide column"><div id="chartdiv01_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv01"></div></div>
 	<div class="eight wide column"><div id="chartdiv02_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv02"></div></div>
 	<div class="eight wide column"><div id="chartdiv03_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div><div id="chartdiv03"></div></div>
-</div>
+</div-->
 <!--페이스북연령 Pie CHart-->
 
 
-<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+<!--div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div-->
 
 <!--페이스북시간대 Bar Chart-->
-<div class="ui grid">
+<!--div class="ui grid">
 	<div class="sixteen wide column">
 		<div id="chartdiv04_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div>
 		<div id="chartdiv04"></div>
 	</div>
-</div>
+</div-->
 <!--페이스북시간대 Bar Chart-->
 
-<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+<!--div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div-->
 
 		
 <!--페이스북 지역별통계 Map Chart-->	
-<div class="ui grid">
+<!--div class="ui grid">
 	<div id="map_chart_loader_title" class="sixteen wide column"></div>
 	<div class="sixteen wide column">
 		<div id="map_chart_loader" class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div>
 		<div id="visualization" style="height: 100%;"></div>
 	</div>
-</div>
+</div-->
 <!--페이스북 지역별통계 Map Chart-->	
 
-<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+<!--div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div-->
 
 <!--페이스북 지역별통계 Table-->	
-<div class="ui grid">
+<!--div class="ui grid">
 	<div id="facebook_map_cards" class="sixteen wide column"></div>
-</div>
+</div-->
 <!--페이스북 지역별통계 Table-->	
 
-<div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div>
+<!--div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div-->
 
 <!--KOLs-->
-<div class="ui grid">
+<!--div class="ui grid">
 	<div id="kols_cards" class="sixteen wide column"></div>
-</div>
+</div-->
 <!--KOLs-->
 
 <!--div class="widget line type01 _hide"><div class="line_box holder" style="width:100%; "><hr style=""></div></div-->
